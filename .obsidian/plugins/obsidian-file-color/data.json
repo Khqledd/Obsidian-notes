@@ -1,0 +1,72 @@
+{
+  "cascadeColors": false,
+  "colorBackground": false,
+  "palette": [
+    {
+      "id": "LtzSh_z51m76eAf0I-1GP",
+      "name": "",
+      "value": "#d11010"
+    },
+    {
+      "id": "lkdZlhfpThGoJI21QfCEy",
+      "name": "",
+      "value": "#1db2d7"
+    },
+    {
+      "id": "GkRksXCfgYYz4dFNetM5J",
+      "name": "",
+      "value": "#6a2fb1"
+    },
+    {
+      "id": "cZHYgt23Axy2cthIocVTu",
+      "name": "",
+      "value": "#146616"
+    },
+    {
+      "id": "tEVkFWbeBb4tTkITU3iOp",
+      "name": "",
+      "value": "#42ff45"
+    },
+    {
+      "id": "EdFiGJ_ze4PItVovIaeLt",
+      "name": "",
+      "value": "#324ac3"
+    },
+    {
+      "id": "967vkqPa9sBcwiI2DTcoW",
+      "name": "",
+      "value": "#d2de2b"
+    },
+    {
+      "id": "4Y9N0giwSuvoEGus2B_nJ",
+      "name": "",
+      "value": "#f07b2d"
+    }
+  ],
+  "fileColors": [
+    {
+      "path": "CTFs/Linux Commands.md",
+      "color": "lkdZlhfpThGoJI21QfCEy"
+    },
+    {
+      "path": "CTFs/Useful tips.md",
+      "color": "LtzSh_z51m76eAf0I-1GP"
+    },
+    {
+      "path": "CTFs/Poweshell Commands.md",
+      "color": "EdFiGJ_ze4PItVovIaeLt"
+    },
+    {
+      "path": "CTFs/Web red teaming.md",
+      "color": "967vkqPa9sBcwiI2DTcoW"
+    },
+    {
+      "path": "CTFs/Cryptography and hashing.md",
+      "color": "tEVkFWbeBb4tTkITU3iOp"
+    },
+    {
+      "path": "CTFs/Blue team.md",
+      "color": "4Y9N0giwSuvoEGus2B_nJ"
+    }
+  ]
+}
