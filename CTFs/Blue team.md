@@ -46,3 +46,7 @@ Logs can be viewed in the windows Event Viewer
     - `CFF Explorer`:Can generate file hashes for integrity verification, authenticate the source of system files
     - `PEStudio`: Static analysis, or studying executable file properties without running the files
     - `FLOSS`: Extracts and de-obfuscates all strings from malware programs (floss .\file.exe ) in powershell
+
+<span style="color:rgb(255, 255, 0)">Elasticstack</span>: Searching - (field_name : value),
+(Logical operators AND/OR/NOT ("value") )
+ -Also remember to change the date
