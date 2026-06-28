@@ -9,4 +9,4 @@ In the email source page:
 ---------------------------
 https://wheregoes.com/ : Investigate shortened URLs
 
-https://toolbox.googleapps.com/apps/messageheader/analyzeheader : Paste the full email header to 
+https://toolbox.googleapps.com/apps/messageheader/analyzeheader : Paste the full email header to extract key details for analysis
