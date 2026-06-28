@@ -2,3 +2,8 @@
 -  username: khaled
 - domain: gmail.com
 
+In the email source page:
+- **Content-Type** indicates the file type `application/pdf`
+- **Content-Disposition** specifies that the file is an attachment and includes its filename
+- **Content-Transfer-Encoding** shows that the file is `base64` encoded
+
