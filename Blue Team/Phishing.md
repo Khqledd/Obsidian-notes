@@ -11,4 +11,8 @@ https://wheregoes.com/ : Investigate shortened URLs
 
 https://toolbox.googleapps.com/apps/messageheader/analyzeheader : Paste the full email header to extract key details for analysis
 
-https://talosintelligence.com/reputation_center/ : asses IP / domains / networks
+https://talosintelligence.com/reputation_center/ : asses IP / domains / networks / hash value of a file
+
+https://www.convertcsv.com/url-extractor.htm : Extract URLs from email body
+
+https://app.any.run/ : Safely execute files / URLs in a sandbox
