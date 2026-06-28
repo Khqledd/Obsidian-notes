@@ -8,3 +8,5 @@ In the email source page:
 - **Content-Transfer-Encoding** shows that the file is `base64` encoded
 ---------------------------
 https://wheregoes.com/ : Investigate shortened URLs
+
+https://toolbox.googleapps.com/apps/messageheader/analyzeheader : Paste the full email header to 
