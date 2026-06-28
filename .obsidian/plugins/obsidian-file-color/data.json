@@ -65,8 +65,12 @@
       "color": "tEVkFWbeBb4tTkITU3iOp"
     },
     {
-      "path": "CTFs/Blue team.md",
+      "path": "Blue Team/Blue team.md",
       "color": "4Y9N0giwSuvoEGus2B_nJ"
+    },
+    {
+      "path": "Blue Team/Phishing.md",
+      "color": "967vkqPa9sBcwiI2DTcoW"
     }
   ]
 }

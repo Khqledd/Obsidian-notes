@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiAlarmPlus",
       "LiAirplay",
       "LiAnchor",
       "LiAlertTriangle",
-      "LiAlarmCheck",
-      "LiApple"
+      "LiAlarmCheck"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -38,6 +38,10 @@
   "CTFs/Linux Commands.md": "LiBadgeDollarSign",
   "CTFs/Useful tips.md": "LiApple",
   "CTFs/Poweshell Commands.md": "LiAlarmCheck",
-  "CTFs/Blue team.md": "LiAirplay",
-  "CTFs/Web red teaming.md": "LiAlertTriangle"
+  "CTFs/Web red teaming.md": "LiAlertTriangle",
+  "Blue Team/Blue team.md": "LiAirplay",
+  "Blue Team/Phishing.md": {
+    "iconName": "LiAnchor",
+    "iconColor": "#cc9393"
+  }
 }
