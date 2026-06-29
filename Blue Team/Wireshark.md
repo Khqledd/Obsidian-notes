@@ -1,0 +1,18 @@
+<span style="color:rgb(255, 0, 0)">Useful shortcuts</span>:
+- `Ctrl+F`: Find packets (strings/hex/regex)
+- `Ctrl+G`: Go to packet number
+- `Ctrl+D`: Mark packets
+- `Ctrl+E`: Export object (HTTP,SMB,FTP,etc..)
+- `Ctrl+Alt+Shift+T`: Follow TCP Stream
+
+Useful display filters:
+- http  (http traffic only)
+- tcp.port == 80
+- ip.addr == 192.168.1.1
+- http.request.method == "POST"
+- frame contains "flag"                  # Search for strings in packets
+- !(arp || dns || icmp)                     # cut noise
+- dns.qry.name contains ".tk"       # Suspicious DNS
+
+![[Pasted image 20260629183306.png]]
+
