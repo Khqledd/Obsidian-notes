@@ -5,7 +5,7 @@
 - `Ctrl+E`: Export object (HTTP,SMB,FTP,etc..)
 - `Ctrl+Alt+Shift+T`: Follow TCP Stream
 
-Useful display filters:
+<span style="color:rgb(255, 0, 0)">Useful display filters</span>:
 - http  (http traffic only)
 - tcp.port == 80
 - ip.addr == 192.168.1.1
@@ -16,3 +16,5 @@ Useful display filters:
 
 ![[Pasted image 20260629183306.png]]
 
+<span style="color:rgb(255, 0, 0)">Menu options</span>:
+- Statistics -> Resolved addresses: IP Addresses and DNS names available in the capture file
