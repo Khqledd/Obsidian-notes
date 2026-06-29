@@ -22,3 +22,10 @@
 - Statistics -> Resolved addresses: IP Addresses and DNS names available in the capture file
 - Statistics -> Endpoints: useful for filtering
 - Edit -> Preferences: Enable IP address name resolution or GeoIP
+
+_About nmap scans:_
+-`icmp.type==3 and icmp.code==3`: UDP close port
+
+-`tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size <= 1024`: TCP SYN scan patterns
+
+-`tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size > 1024`: TCP Connect scan pattern
