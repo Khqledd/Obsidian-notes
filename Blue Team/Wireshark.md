@@ -9,6 +9,7 @@
 - http  (http traffic only)
 - tcp.port == 80
 - ip.addr == 192.168.1.1
+- ip.src / ip.dst
 - http.request.method == "POST"
 - frame contains "flag"                  # Search for strings in packets
 - !(arp || dns || icmp)                     # cut noise
