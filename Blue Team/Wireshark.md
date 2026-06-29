@@ -18,3 +18,5 @@
 
 <span style="color:rgb(255, 0, 0)">Menu options</span>:
 - Statistics -> Resolved addresses: IP Addresses and DNS names available in the capture file
+- Statistics -> Endpoints: useful for filtering
+- Edit -> Preferences: Enable IP address name resolution or GeoIP
