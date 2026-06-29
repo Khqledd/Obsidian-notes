@@ -13,6 +13,7 @@
 - http.request.method == "POST"
 - frame contains "flag"                  # Search for strings in packets
 - !(arp || dns || icmp)                     # cut noise
+- http.host matches "`\`.(php|html)"   # Using regular expressions to find pages
 - dns.qry.name contains ".tk"       # Suspicious DNS
 
 ![[Pasted image 20260629183306.png]]
