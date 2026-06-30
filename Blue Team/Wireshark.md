@@ -57,3 +57,8 @@
 <span style="color:rgb(232, 150, 150)">DNS:</span>
 - Detect tunneling and C2: `dns contains "dnscat"` 
    or (`dns.qry.name.len > 15 and !mdns`)
+
+FTP:
+- x1x/x2x/x3x options: `ftp.response.code == ...`
+- brute force signal to list failed attempts: `ftp.response.code == 530`
+- 
