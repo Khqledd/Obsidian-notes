@@ -69,7 +69,7 @@
 - `http.connection == "Keep-Alive"`
 - `http.user_agent` (useful for detecting anomalies, could contain a value like wfuzz or sqlmap or nmap or nikto or misspelled mozilla)
 
-HTTPS:
+<span style="color:rgb(232, 150, 150)">HTTPS:</span>
 - TLS client request: `tls.handshake.type == 1`
 - TLS server response: `tls.handshake.type == 2`
-- 
+- `SSDP` is a network protocol that provides advertisement and discovery of network services, we use !(ssdp) with the first 2 commands to find the "Client hello" or "Server hello" to spot which ip addresses are involved in handshake
