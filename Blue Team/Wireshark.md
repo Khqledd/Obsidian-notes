@@ -46,3 +46,5 @@
 <span style="color:rgb(232, 150, 150)">NetBIOS (nbns):</span> 
 - `nbns.name contains "keyword"`
 
+Kerberos:
+- User account search: 
