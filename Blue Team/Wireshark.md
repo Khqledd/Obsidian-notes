@@ -60,5 +60,5 @@
 
 FTP:
 - x1x/x2x/x3x options: `ftp.response.code == ...`
-- brute force signal to list failed attempts: `ftp.response.code == 530`
-- 
+- Brute force signal to list failed attempts: `ftp.response.code == 530`
+- Follow TCP stream very helpful to see commands used in ftp
