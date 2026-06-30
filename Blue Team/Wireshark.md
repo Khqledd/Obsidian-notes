@@ -46,5 +46,8 @@
 <span style="color:rgb(232, 150, 150)">NetBIOS (nbns):</span> 
 - `nbns.name contains "keyword"`
 
-Kerberos:
-- User account search: 
+<span style="color:rgb(232, 150, 150)">Kerberos:</span>
+- User account search: `kerberos.CNameString contains "keyword"` 
+(the values ending with $ are hostnames so could filter them out using:
+`&& !(kerberos.CNameString contains "$")`
+
