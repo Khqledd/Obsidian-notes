@@ -63,8 +63,8 @@
 - Brute force signal to list failed attempts: `ftp.response.code == 530`
 - Follow TCP stream very helpful to see commands used in ftp
 
-HTTP:
+<span style="color:rgb(232, 150, 150)">HTTP:</span>
 - `http.request.method == POST/GET`
 - `http.resonse.code == 200` (for successful request)
 - `http.connection == "Keep-Alive"`
-- http.
+- `http.user_agent` (useful for detecting anomalies, could contain a value like wfuzz or sqlmap or nmap or nikto or misspelled mozilla)
