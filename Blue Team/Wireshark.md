@@ -22,6 +22,7 @@
 - Statistics -> Resolved addresses: IP Addresses and DNS names available in the capture file
 - Statistics -> Endpoints: useful for filtering
 - Edit -> Preferences: Enable IP address name resolution or GeoIP
+- Tools -> Credentials: view clear text credentials of certain protocols
 
 
 <span style="color:rgb(232, 150, 150)">About nmap scans:</span>
