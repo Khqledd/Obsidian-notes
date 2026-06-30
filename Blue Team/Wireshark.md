@@ -73,3 +73,4 @@
 - TLS client request: `tls.handshake.type == 1`
 - TLS server response: `tls.handshake.type == 2`
 - `SSDP` is a network protocol that provides advertisement and discovery of network services, we use !(ssdp) with the first 2 commands to find the "Client hello" or "Server hello" to spot which ip addresses are involved in handshake
+- `tls.handshake.extensions_server_name == accounts.google.com`: frames sent to accounts.google.com
