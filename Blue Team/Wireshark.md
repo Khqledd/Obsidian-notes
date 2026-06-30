@@ -35,3 +35,10 @@
 - ARP Request: `arp.opcode == 1`
 - ARP Response: `arp.opcode == 2`
 - ARP Poisioning Detection: `arp.duplicate-address-detected`
+
+<span style="color:rgb(232, 150, 150)">DHCP:</span>
+- DHCP Request: `dhcp.option.dhcp == 3`
+- DHCP ACK: `dhcp.option.dhcp == 5`
+- DHCP NAK: `dhcp.option.dhcp == 6`
+- Hostname in request, option 12: `dhcp.option.hostname contains "keyword"`
+- Domain in ACK, option 15: `dhcp.option.domain_name contains "keyword"`
