@@ -8,7 +8,7 @@
 <span style="color:rgb(255, 0, 0)">Useful display filters</span>:
 - http  (http traffic only)
 - tcp.port == 80
-- ip.addr == 192.168.1.1
+- ip.addr == 192.168.1.1 (eth.addr for MAC)
 - ip.src / ip.dst
 - http.request.method == "POST"
 - frame contains "flag"                  # Search for strings in packets
@@ -35,4 +35,3 @@
 - ARP Request: `arp.opcode == 1`
 - ARP Response: `arp.opcode == 2`
 - ARP Poisioning Detection: `arp.duplicate-address-detected`
-- 
