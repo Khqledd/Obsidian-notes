@@ -51,3 +51,9 @@
 (the values ending with $ are hostnames so could filter them out using:
 `&& !(kerberos.CNameString contains "$")`
 
+<span style="color:rgb(232, 150, 150)">ICMP:</span>
+- Detect ICMP tunneling: `icmp && data.len > 64`
+
+<span style="color:rgb(232, 150, 150)">DNS:</span>
+- Detect tunneling and C2: `dns contains "dnscat"` 
+   or (`dns.qry.name.len > 15 and !mdns`)
