@@ -42,3 +42,7 @@
 - DHCP NAK: `dhcp.option.dhcp == 6`
 - Hostname in request, option 12: `dhcp.option.hostname contains "keyword"`
 - Domain in ACK, option 15: `dhcp.option.domain_name contains "keyword"`
+
+<span style="color:rgb(232, 150, 150)">NetBIOS (nbns):</span> 
+- `nbns.name contains "keyword"`
+
