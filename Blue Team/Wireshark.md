@@ -58,7 +58,13 @@
 - Detect tunneling and C2: `dns contains "dnscat"` 
    or (`dns.qry.name.len > 15 and !mdns`)
 
-FTP:
+<span style="color:rgb(232, 150, 150)">FTP:</span>
 - x1x/x2x/x3x options: `ftp.response.code == ...`
 - Brute force signal to list failed attempts: `ftp.response.code == 530`
 - Follow TCP stream very helpful to see commands used in ftp
+
+HTTP:
+- `http.request.method == POST/GET`
+- `http.resonse.code == 200` (for successful request)
+- `http.connection == "Keep-Alive"`
+- http.
