@@ -68,3 +68,8 @@
 - `http.resonse.code == 200` (for successful request)
 - `http.connection == "Keep-Alive"`
 - `http.user_agent` (useful for detecting anomalies, could contain a value like wfuzz or sqlmap or nmap or nikto or misspelled mozilla)
+
+HTTPS:
+- TLS client request: `tls.handshake.type == 1`
+- TLS server response: `tls.handshake.type == 2`
+- 
