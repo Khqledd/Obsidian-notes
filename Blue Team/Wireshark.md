@@ -23,9 +23,16 @@
 - Statistics -> Endpoints: useful for filtering
 - Edit -> Preferences: Enable IP address name resolution or GeoIP
 
-_About nmap scans:_
+
+<span style="color:rgb(232, 150, 150)">About nmap scans:</span>
 -`icmp.type==3 and icmp.code==3`: UDP close port
 
 -`tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size <= 1024`: TCP SYN scan patterns
 
 -`tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size > 1024`: TCP Connect scan pattern
+
+<span style="color:rgb(232, 150, 150)">ARP:</span> 
+- ARP Request: `arp.opcode == 1`
+- ARP Response: `arp.opcode == 2`
+- ARP Poisioning Detection: `arp.duplicate-address-detected`
+- 
