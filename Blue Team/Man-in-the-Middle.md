@@ -25,3 +25,6 @@
      -`eth.src == 02:aa:bb:cc:00:01`
      -`_ws.col.info contains "192.168.10.1 is at"`: filter based on column (info) containing the " .... "
      -Check for duplicate IP-to-MAC mapping: `arp.duplicate-address-detected || arp.duplicate-address-frame`
+
+------------------------
+<span style="color:rgb(146, 208, 80)">DNS Spoofing:</span>
