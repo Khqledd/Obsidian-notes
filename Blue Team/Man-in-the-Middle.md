@@ -20,3 +20,4 @@
 *Wireshark:*
      -ARP Request (who has): `arp.opcode == 1`
      -ARP Response (is  at): `arp.opcode == 2`
+     -Host sending many unsolicited gratuitous ARP replies: `arp.isgratuitous`
