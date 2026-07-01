@@ -41,4 +41,13 @@
 
 -------------------
 <span style="color:rgb(232, 150, 150)">Data exfiltration throught ICMP:</span>
-- 
+<span style="color:rgb(232, 150, 150)">Indicators of attack:</span>
+- ICMP packet volumes: a single host sending many ICMP echo requests to an external IP.
+- Large `frame.len` or `icmp.payload`: pings with payloads much larger than typical (e.g., > 64 bytes). 
+- ICMP type/code unusual values: e.g., unusual use of timestamp(13/14) or custom codes.
+- Regular timing (periodicity): evenly spaced ICMP packets carrying similar-sized payloads.
+- Fragments with reassembly: multiple ICMP fragments from the same src/dst pair.
+- ICMP echo (type 8) / reply (type 0) tunneling
+
+**Wireshark:**
+     -Filter ICMP echo requests (used in attack): `icmp.type == 8`
