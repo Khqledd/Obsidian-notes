@@ -7,8 +7,10 @@
 - Queries at regular intervals (beaconing behaviour).
 
 **Wireshark:**
-    -Filter DNS queries with no response: `dns.flags.response == 0`
+    -Filter DNS queries with no response: `dns.flags.response == 0
+    `
     -Find long DNS queries: `dns && frame.len > 70`
+    
     -If the domain (khaled) has long suspicious subdomain (for example hksdfkhsdfh.khaled.net): `dns.qry.name contains "khaled"`
 
 --------------------------------------
@@ -21,3 +23,7 @@
 
 **Wireshark:**
      -Look for credentials: `ftp.request.command == "USER" || ftp.request.command == "PASS"`
+     -Look for anomalies in filenames or credentials: `ftp contains "STOR"`, follow TCP stream for more info about the user,pass,stor
+     -Look for suspicious files: `ftp contains "csv"` (csv/pdf/txt etc..)
+     -Look for traffic with large payload: `ftp && frame.len > 90`
+     
