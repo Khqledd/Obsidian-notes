@@ -21,3 +21,5 @@
      -ARP Request (who has): `arp.opcode == 1`
      -ARP Response (is  at): `arp.opcode == 2`
      -Host sending many unsolicited gratuitous ARP replies: `arp.isgratuitous`
+     -`arp.src.proto_ipv4 == 192.168.10.1`
+     -`eth.src == 02:aa:bb:cc:00:01`
