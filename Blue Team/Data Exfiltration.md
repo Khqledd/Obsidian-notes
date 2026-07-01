@@ -18,3 +18,6 @@
 - `STOR` (upload) and `RETR` (download) commands: repeated or large transfers.
 - Large data connections to unusual external IPs, especially outside business hours.
 - Data channel openings on ephemeral ports (PASV) paired with large payloads.
+
+**Wireshark:**
+     -Look for credentials: `ftp.request.command == "USER" || ftp.request.command == "PASS"`
