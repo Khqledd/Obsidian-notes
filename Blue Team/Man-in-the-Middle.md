@@ -23,3 +23,5 @@
      -Host sending many unsolicited gratuitous ARP replies: `arp.isgratuitous`
      -`arp.src.proto_ipv4 == 192.168.10.1`
      -`eth.src == 02:aa:bb:cc:00:01`
+     -`_ws.col.info contains "192.168.10.1 is at"`: filter based on column (info) containing the " .... "
+     -Check for duplicate IP-to-MAC mapping: `arp.duplicate-address-detected || arp.duplicate-address-frame`
