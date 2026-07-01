@@ -30,6 +30,7 @@ We use */* to print all files in all directories. However, this does not include
 note: -type f = files , -size 1033c = 1033 bytes
 
 <span style="color:rgb(231, 116, 8)">du</span>: estimate file space usage
+<span style="color:rgb(255, 149, 0)">wc</span>: count the number of like `wc -l`
 
 <span style="color:rgb(231, 116, 8)">find</span>: search for files in a directory (find "hello" file.txt) 
 -(ls -l: lists all files and directories in long format, 3rd column is the user and 4th column is group) 
