@@ -33,3 +33,6 @@
 - **DNS response from an unexpected source**: A DNS reply arrives from an IP address **that does not match any configured resolver** (like 8.8.8.8 or your DNS server).
 - **Suspiciously short TTL (Time-To-Live) values**: Attackers use very low TTLs (1 - 30s) to keep poisoned entries short-lived and reassert control.
 - **Unsolicited DNS responses**: A DNS reply appears without a corresponding DNS request from the victim.
+
+*Wireshark:*
+    
