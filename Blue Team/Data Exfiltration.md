@@ -26,4 +26,11 @@
      -Look for anomalies in filenames or credentials: `ftp contains "STOR"`, follow TCP stream for more info about the user,pass,stor
      -Look for suspicious files: `ftp contains "csv"` (csv/pdf/txt etc..)
      -Look for traffic with large payload: `ftp && frame.len > 90`
-     
+
+---------------------------
+<span style="color:rgb(232, 150, 150)">Data exflitration through HTTP:</span>
+- Unusually large HTTP POST requests to external/unexpected hosts.
+- GET requests with encoded data
+- HTTP requests to domains with low reputation / rarely seen in baseline traffic.
+- Frequent small requests (beaconing) to the same host, followed by large uploads.
+- Chunked or multipart transfers where multiple requests compose a larger file.
