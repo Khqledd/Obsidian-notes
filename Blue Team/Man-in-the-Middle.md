@@ -34,5 +34,9 @@
 - **Suspiciously short TTL (Time-To-Live) values**: Attackers use very low TTLs (1 - 30s) to keep poisoned entries short-lived and reassert control.
 - **Unsolicited DNS responses**: A DNS reply appears without a corresponding DNS request from the victim.
 
+We can filter out legitimate traffic like 8.8.8.8 which is the ip used by google.com
+
 *Wireshark:*
-    
+    DNS queries only: `dns.flags.response == 0`
+    DNS responses only: `dns.flags.response == 1`
+    DNS domain search: `dns.qry.name == ".."`
