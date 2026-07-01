@@ -30,7 +30,15 @@
 ---------------------------
 <span style="color:rgb(232, 150, 150)">Data exflitration through HTTP:</span>
 - Unusually large HTTP POST requests to external/unexpected hosts.
-- GET requests with encoded data
+- GET requests with encoded data. (can filter in splunk using method="GET")
 - HTTP requests to domains with low reputation / rarely seen in baseline traffic.
 - Frequent small requests (beaconing) to the same host, followed by large uploads.
 - Chunked or multipart transfers where multiple requests compose a larger file.
+
+**Wireshark:**
+     Large requests: `http.request.method == "POST" and frame.len > 500`
+     Follow HTTP stream for more info
+
+-------------------
+<span style="color:rgb(232, 150, 150)">Data exfiltration throught ICMP:</span>
+- 
