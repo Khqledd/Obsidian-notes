@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiAlarmSmoke",
       "LiArrowDownAz",
       "LiAlarmPlus",
       "LiAirplay",
-      "LiAnchor",
-      "LiAlertTriangle"
+      "LiAnchor"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -44,5 +44,6 @@
     "iconName": "LiAnchor",
     "iconColor": "#cc9393"
   },
-  "Blue Team/Wireshark.md": "LiArrowDownAz"
+  "Blue Team/Wireshark.md": "LiArrowDownAz",
+  "Blue Team/Data Exfiltration.md": "LiAlarmSmoke"
 }

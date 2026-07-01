@@ -71,6 +71,10 @@
     {
       "path": "Blue Team/Phishing.md",
       "color": "967vkqPa9sBcwiI2DTcoW"
+    },
+    {
+      "path": "Blue Team/Data Exfiltration.md",
+      "color": "cZHYgt23Axy2cthIocVTu"
     }
   ]
 }
