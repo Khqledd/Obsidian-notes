@@ -17,7 +17,7 @@ Logs can be viewed in the windows Event Viewer
 <span style="color:rgb(231, 116, 8)">Defensive Solutions/Tools</span>:
 - `SIEM`: Security Information and Event Management, it collets logs and correlates them for analysis
 
-- `IDS`: Intrusion Detection System to detect malicious activity even after a packet passes the firewall like Snort (/etc/snort/...)
+- `IDS`: Intrusion Detection System to detect malicious activity even after a packet passes the firewall like Snort (/etc/snort/...), Snort logs are in /var/log/snort
 
 - `Vulnerability scanners`: Tools like Nessus, Qualys, Nexpose, OpenVAS
 
