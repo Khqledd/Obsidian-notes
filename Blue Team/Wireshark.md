@@ -66,6 +66,7 @@
 
 <span style="color:rgb(232, 150, 150)">HTTP:</span>
 - `http.request.method == POST/GET`
+- `http.response.code == 302` (for successful login)
 - `http.resonse.code == 200` (for successful request)
 - `http.connection == "Keep-Alive"`
 - `http.user_agent` (useful for detecting anomalies, could contain a value like wfuzz or sqlmap or nmap or nikto or misspelled mozilla)
