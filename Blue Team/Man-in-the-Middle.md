@@ -44,5 +44,10 @@ We can filter out legitimate traffic like 8.8.8.8 which is the ip used by google
 ----------------------------------------
 <span style="color:rgb(146, 208, 80)">SSL Stripping:<br>Indicators of SSL Stripping:</span> 
 - **Initial Request vs. Response:** The user's initial request may be for `HTTPS` (port 443), but the subsequent packets immediately shift to unencrypted `HTTP` (port 80) for the same domain.
-- **Redirects/Link Rewriting**: Monitoring for redirects (HTTP Status Codes 301, 302) that persistently direct an HTTPS request to an resource.
+- **Redirects/Link Rewriting**: Monitoring for redirects (HTTP Status Codes 301, 302) that persistently direct an HTTPS request to an HTTP resource.
 - **Certificate Errors**: Although the attacker usually tries to hide this, the initial **TLS/SSL Handshake** may fail or display a self-signed certificate if the attacker uses a more direct proxying technique.
+
+*Wireshark:*
+     -Narrow down SSL traffic: `TLS || SSL`
+     -Prove the site uses TLS for communication: `tls.handshake.type == 1 && tls.handshake.extensions_server_name == "corp-login.acme-corp.local"`
+     
