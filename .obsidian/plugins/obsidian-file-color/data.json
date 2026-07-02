@@ -41,6 +41,16 @@
       "id": "4Y9N0giwSuvoEGus2B_nJ",
       "name": "",
       "value": "#f07b2d"
+    },
+    {
+      "id": "8uLcCFoPAq8StpkaREfu6",
+      "name": "",
+      "value": "#e36dd9"
+    },
+    {
+      "id": "Q3KyPhEVFc11tgprHQkSh",
+      "name": "",
+      "value": "#15f5f9"
     }
   ],
   "fileColors": [
@@ -75,6 +85,14 @@
     {
       "path": "Blue Team/Data Exfiltration.md",
       "color": "cZHYgt23Axy2cthIocVTu"
+    },
+    {
+      "path": "Blue Team/Snort.md",
+      "color": "8uLcCFoPAq8StpkaREfu6"
+    },
+    {
+      "path": "Blue Team/Wireshark.md",
+      "color": "Q3KyPhEVFc11tgprHQkSh"
     }
   ]
 }
