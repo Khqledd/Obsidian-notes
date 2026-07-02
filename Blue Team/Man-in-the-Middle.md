@@ -50,4 +50,7 @@ We can filter out legitimate traffic like 8.8.8.8 which is the ip used by google
 *Wireshark:*
      -Narrow down SSL traffic: `TLS || SSL`
      -Prove the site uses TLS for communication: `tls.handshake.type == 1 && tls.handshake.extensions_server_name == "corp-login.acme-corp.local"`
-     
+
+------------------------
+
+![[Pasted image 20260702032029.png]]
