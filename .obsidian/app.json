@@ -1,4 +1,5 @@
 {
   "spellcheck": false,
-  "attachmentFolderPath": "./attachments"
+  "attachmentFolderPath": "./attachments",
+  "promptDelete": false
 }

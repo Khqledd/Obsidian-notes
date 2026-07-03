@@ -7,11 +7,6 @@
 - `when turning a gps location from metadata to searchable format we replace 'deg' with ° and remove spaces:`
   51 deg 30' 51.90" N, 0 deg 5' 38.73" W -----> 51°30'51.9"N 0°05'38.7"W
 
-Logs in linux can be found in /var/log/... (depends on the type of log)
-Logs in windows:`C:\Windows\System32\winevt\Logs`
-Logs can be viewed in the windows Event Viewer
-![[Pasted image 20260227002428.png]]
-
 <span style="color:rgb(255, 255, 0)">Firewall in Windows</span>: Windows Defender Firewall
 <span style="color:rgb(255, 255, 0)">Firewall in Linux</span>: ufw (uncomplicated firewall)
 
