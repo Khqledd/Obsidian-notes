@@ -1,4 +1,3 @@
-
 <span style="color:rgb(255, 255, 0)">Common commands</span>:
 - <span style="color:rgb(255, 255, 0)">exiftool</span>: analyze image metadata
 - <span style="color:rgb(255, 255, 0)">pdfinfo</span>: details of a pdf file (can be installed with sudo apt install poppler-utils)
