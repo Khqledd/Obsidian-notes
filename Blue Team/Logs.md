@@ -5,6 +5,6 @@
 ![[Pasted image 20260703190728.png]]
 
 **Viewing Logs:**
-- Windows: `Win+R -> "eventvwr"` (we can apply filters to log list through Find.., Security log Event ID 4625 = failed login attempt) 
+- Windows: `Win+R -> "eventvwr"` (we can apply filters to log list through Find.., Security log Event ID 4625 = failed logon attempt, 4624 = successful logon) 
     Event ID meaning: https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/
 -
