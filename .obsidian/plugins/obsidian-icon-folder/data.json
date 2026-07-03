@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiAlbum",
       "LiAtom",
       "LiAnnoyed",
       "LiAlarmSmoke",
-      "LiArrowDownAz",
-      "LiAlarmPlus"
+      "LiArrowDownAz"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -47,5 +47,6 @@
   "Blue Team/Wireshark.md": "LiArrowDownAz",
   "Blue Team/Data Exfiltration.md": "LiAlarmSmoke",
   "Blue Team/Snort.md": "LiAnnoyed",
-  "Blue Team/Man-in-the-Middle.md": "LiAtom"
+  "Blue Team/Man-in-the-Middle.md": "LiAtom",
+  "Blue Team/Logs.md": "LiAlbum"
 }

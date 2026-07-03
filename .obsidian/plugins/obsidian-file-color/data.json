@@ -51,6 +51,11 @@
       "id": "Q3KyPhEVFc11tgprHQkSh",
       "name": "",
       "value": "#15f5f9"
+    },
+    {
+      "id": "oXceK6COXelTC3UxZGw5z",
+      "name": "",
+      "value": "#e79d9d"
     }
   ],
   "fileColors": [
@@ -93,6 +98,10 @@
     {
       "path": "Blue Team/Wireshark.md",
       "color": "Q3KyPhEVFc11tgprHQkSh"
+    },
+    {
+      "path": "Blue Team/Logs.md",
+      "color": "oXceK6COXelTC3UxZGw5z"
     }
   ]
 }
