@@ -1,6 +1,7 @@
 <span style="color:rgb(228, 73, 223)"><b>Logs in linux</b></span>: can be found in `/var/log/...` (depends on the type of log)
 <span style="color:rgb(228, 73, 223)"><b>Snort Logs</b>:</span> `/var/log/snort`
 <span style="color:rgb(228, 73, 223)"><b>Logs in windows</b></span>:`C:\Windows\System32\winevt\Logs`
+<span style="color:rgb(228, 73, 223)"><b>Logs in powershell</b></span>: `C:\Users\<USER>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt`
 
 ![[Pasted image 20260703190728.png]]
 
@@ -21,3 +22,4 @@ Persistence indicators in windows security logs:
      Event ID 11: File creation / Event ID 13: registry value set
      Event ID 3: Network connection / Event ID 22: DNS query
      https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+
