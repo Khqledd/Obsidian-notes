@@ -18,5 +18,6 @@ Persistence indicators in windows security logs:
 
 - <span style="color:rgb(0, 176, 240)">Sysmon logs in windows:</span> Contains additional info about processes and binary. In the event viewer, (`Applications & Services -> Microsoft -> Windows -> Sysmon -> Operational`)
      Event ID 1: Process creation / Event ID 15: check host URL
-     Event ID 11: File creation / 
+     Event ID 11: File creation / Event ID 13: registry value set
+     Event ID 3: Network connection / Event ID 22: DNS query
      https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
