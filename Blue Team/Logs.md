@@ -12,4 +12,5 @@
 ![[Pasted image 20260703195002.png]]
 
 Persistence indicators in windows security logs:
+(Subject is the account doing action, New account/member is the target)
 ![[Pasted image 20260703200921.png]]
