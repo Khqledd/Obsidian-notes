@@ -69,6 +69,7 @@
 - `http.response.code == 302` (for successful login)
 - `http.resonse.code == 200` (for successful request)
 - `http.connection == "Keep-Alive"`
+- `http.request.uri contains “.php”` (search for a web shell)
 - `http.user_agent` (useful for detecting anomalies, could contain a value like wfuzz or sqlmap or nmap or nikto or misspelled mozilla)
 
 <span style="color:rgb(232, 150, 150)">HTTPS:</span>

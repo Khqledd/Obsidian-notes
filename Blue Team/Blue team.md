@@ -50,3 +50,6 @@ Logs can be viewed in the windows Event Viewer
 <span style="color:rgb(255, 255, 0)">Elasticstack</span>: Searching - (field_name : value),
 (Logical operators AND/OR/NOT ("value") )
  -Also remember to change the date
+
+Forensics command to search for web shells created between two dates :
+`find /var/www -type f -name "*.php" -newerct "2025-07-01" ! -newerct "2025-08-01"`
