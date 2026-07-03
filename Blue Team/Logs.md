@@ -1,6 +1,10 @@
-**Logs in linux**: can be found in `/var/log/...` (depends on the type of log)
-**Snort Logs**: `/var/log/snort`
-**Logs in windows**:`C:\Windows\System32\winevt\Logs`
+<span style="color:rgb(228, 73, 223)"><b>Logs in linux</b></span>: can be found in `/var/log/...` (depends on the type of log)
+<span style="color:rgb(228, 73, 223)"><b>Snort Logs</b>:</span> `/var/log/snort`
+<span style="color:rgb(228, 73, 223)"><b>Logs in windows</b></span>:`C:\Windows\System32\winevt\Logs`
 
 ![[Pasted image 20260703190728.png]]
 
+**Viewing Logs:**
+- Windows: `Win+R -> "eventvwr"` (we can apply filters to log list through Find.., Security log Event ID 4625 = failed login attempt) 
+    Event ID meaning: https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/
+-
