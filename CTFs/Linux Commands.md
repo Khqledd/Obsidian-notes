@@ -45,6 +45,7 @@ note: -type f = files , -size 1033c = 1033 bytes
 
 <span style="color:rgb(231, 116, 8)">grep</span>: search for text patterns (we can use a command before grep and connect with ( | ) which takes output of the first command and uses it as input for the grep)
     `grep -v "CRON": exclude "CRON" from results`
+    `grep -E "Accepted|Failed": include results containing either`
 
 <span style="color:rgb(231, 116, 8)">chmod</span>: to change the mode of a file
 -to make a script executable we use (chmod +x script.sh) then we can run it with (./script.sh)

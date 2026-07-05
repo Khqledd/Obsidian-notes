@@ -23,3 +23,10 @@ Persistence indicators in windows security logs:
      Event ID 3: Network connection / Event ID 22: DNS query
      https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 
+
+- <span style="color:rgb(0, 176, 240)">Linux logs:</span> /var/log/...
+     `/var/log/auth.log`: stores user management events, format:
+         Time - Host name - PID - Message from the process 
+         -grep -E  "session opened|session closed": login/logout events, cron jobs and sudo
+         -grep "sshd" | grep -E "Accepted|Failed": ssh daemon stores logs here too in different format
+    
