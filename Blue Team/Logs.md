@@ -43,4 +43,6 @@ Persistence indicators in windows security logs:
         -x scp: Ingress tool transfer
     - --pid 3905 (filters by pid)
     - --ppid 3898 (filter by parent pid) (ppid is useful to keep going up the process try by searching {ausearch -i --pid 3898})
-    
+
+    Persistence in linux can be through cron or systemd, detect it through these
+    ![[Pasted image 20260705221409.png]]
