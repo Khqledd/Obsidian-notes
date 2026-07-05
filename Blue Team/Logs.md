@@ -34,5 +34,6 @@ Persistence indicators in windows security logs:
      `var/log/kern.log`: kernel messages and errors
      `/home/ubuntu/.bash_history`: per user, commands history (not so useful)
 
-     Normal linux logs dont log process creation / runtime events so we use "auditd" to monitor system calls (eg, execve system call is to execute)
-     ``
+    Normal linux logs dont log process creation / runtime events so we use "auditd" to monitor system calls (eg, execve system call is to execute)
+    {`var/log/audit/audit.log`, best used to with `ausearch -i` to filter} 
+    ![[Pasted image 20260705033810.png]]
