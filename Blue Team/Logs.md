@@ -29,7 +29,7 @@ Persistence indicators in windows security logs:
          Time - Host name - PID - Message from the process 
          -grep -E  "session opened|session closed": login/logout events, cron jobs and sudo
          -grep "sshd" | grep -E "Accepted|Failed": ssh daemon stores logs here too in different format
-         -more examples![[Pasted image 20260705030416.png]]
+        ![[Pasted image 20260705030416.png]]
 
      `var/log/kern.log`: kernel messages and errors
      `/home/ubuntu/.bash_history`: per user, commands history (not so useful)
@@ -45,4 +45,4 @@ Persistence indicators in windows security logs:
     - --ppid 3898 (filter by parent pid) (ppid is useful to keep going up the process try by searching {ausearch -i --pid 3898})
 
     Persistence in linux can be through cron or systemd, detect it through these
-    ![[Pasted image 20260705221409.png]]
+    ![[Pasted image 20260705221409.png|1113]]

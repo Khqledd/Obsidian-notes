@@ -2,5 +2,6 @@
   "spellcheck": false,
   "attachmentFolderPath": "./attachments",
   "promptDelete": false,
-  "readableLineLength": false
+  "readableLineLength": false,
+  "strictLineBreaks": false
 }
