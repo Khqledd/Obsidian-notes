@@ -29,4 +29,6 @@ Persistence indicators in windows security logs:
          Time - Host name - PID - Message from the process 
          -grep -E  "session opened|session closed": login/logout events, cron jobs and sudo
          -grep "sshd" | grep -E "Accepted|Failed": ssh daemon stores logs here too in different format
-    
+         -more examples![[Pasted image 20260705030416.png]]
+
+     
