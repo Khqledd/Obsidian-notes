@@ -31,4 +31,5 @@ Persistence indicators in windows security logs:
          -grep "sshd" | grep -E "Accepted|Failed": ssh daemon stores logs here too in different format
          -more examples![[Pasted image 20260705030416.png]]
 
-     
+     `var/log/kern.log`: kernel messages and errors
+     `/home/ubuntu/.bash_history`: per user, commands history (not so useful)
