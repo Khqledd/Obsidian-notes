@@ -39,5 +39,8 @@ Persistence indicators in windows security logs:
     ![[Pasted image 20260705033810.png]]
     More ausearch filters: 
     - -x whoami (filters by command name)
+        -x socat: detect reverse shells
+        -x scp: Ingress tool transfer
     - --pid 3905 (filters by pid)
     - --ppid 3898 (filter by parent pid) (ppid is useful to keep going up the process try by searching {ausearch -i --pid 3898})
+    
