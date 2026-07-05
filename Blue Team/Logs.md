@@ -37,3 +37,7 @@ Persistence indicators in windows security logs:
     Normal linux logs dont log process creation / runtime events so we use "auditd" to monitor system calls (eg, execve system call is to execute)
     {`var/log/audit/audit.log`, best used to with `ausearch -i` to filter} 
     ![[Pasted image 20260705033810.png]]
+    More ausearch filters: 
+    - -x whoami (filters by command name)
+    - --pid 3905 (filters by pid)
+    - --ppid 3898 (filter by parent pid) (ppid is useful to keep going up the process try by searching {ausearch -i --pid 3898})
