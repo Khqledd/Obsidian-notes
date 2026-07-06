@@ -47,6 +47,8 @@
     - `FLOSS`: Extracts and de-obfuscates all strings from malware programs (floss .\file.exe ) in powershell
 
 Analyze suspicious URL/IP/Domain/Hash/File: https://www.virustotal.com/gui/home/search
+Windows living off the land scripts and binaries: https://lolbas-project.github.io/
+Executables for Unix systems: https://gtfobins.org/
 
 <span style="color:rgb(255, 255, 0)">Elasticstack</span>: Searching - (field_name : value),
 (Logical operators AND/OR/NOT ("value") )
