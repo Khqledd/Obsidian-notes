@@ -1,6 +1,8 @@
 <span style="color:rgb(255, 255, 0)">Common commands</span>:
 - <span style="color:rgb(255, 255, 0)">exiftool</span>: analyze image metadata
 - <span style="color:rgb(255, 255, 0)">pdfinfo</span>: details of a pdf file (can be installed with sudo apt install poppler-utils)
+- <span style="color:rgb(255, 255, 0)">strings</span>: show strings in a file
+- <span style="color:rgb(255, 255, 0)">file</span>: show file type
 
 **Random advice:**
 - `when turning a gps location from metadata to searchable format we replace 'deg' with ° and remove spaces:`
@@ -8,6 +10,8 @@
 
 <span style="color:rgb(255, 255, 0)">Firewall in Windows</span>: Windows Defender Firewall
 <span style="color:rgb(255, 255, 0)">Firewall in Linux</span>: ufw (uncomplicated firewall)
+
+-------------------------------
 
 <span style="color:rgb(231, 116, 8)">Defensive Solutions/Tools</span>:
 - `SIEM`: Security Information and Event Management, it collets logs and correlates them for analysis
@@ -42,9 +46,13 @@
     - `PEStudio`: Static analysis, or studying executable file properties without running the files
     - `FLOSS`: Extracts and de-obfuscates all strings from malware programs (floss .\file.exe ) in powershell
 
+Analyze suspicious URL/IP/Domain/Hash/File: https://www.virustotal.com/gui/home/search
+
 <span style="color:rgb(255, 255, 0)">Elasticstack</span>: Searching - (field_name : value),
 (Logical operators AND/OR/NOT ("value") )
  -Also remember to change the date
 
 Forensics command to search for web shells created between two dates :
 `find /var/www -type f -name "*.php" -newerct "2025-07-01" ! -newerct "2025-08-01"`
+
+-----------------------------
