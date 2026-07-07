@@ -59,6 +59,7 @@
 <span style="color:rgb(0, 176, 240)">Get-NetTCPConnection</span>: to monitor active network connections, displays current TCP connections (useful in incident response and malware analysis because it can uncover hidden backdoors)
 
 <span style="color:rgb(0, 176, 240)">Get-FileHash</span>: generate file hashes for file integrity
+     `Get-Filehash -Algorithm SHA256 bl0gger.exe`
 
 <span style="color:rgb(0, 176, 240)">-Stream *</span>: view alternate data stream (ADS) of a file
      `Get-Item -Path "C:\House\house_log.txt" -Stream *`
