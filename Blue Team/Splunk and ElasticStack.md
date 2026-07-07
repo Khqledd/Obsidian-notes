@@ -19,4 +19,5 @@ index=winenv EventCode=1 *powershell* AND *EncodedCommand*
 ```
 index=linux source="auth.log" *ubuntu* process=sshd   
 | search "Accepted password" OR "Failed password"
-```
+``` 
+(can replace auth.log with syslog to search for persistence through services or cron jobs)
