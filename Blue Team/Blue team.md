@@ -52,7 +52,9 @@ Windows living off the land scripts and binaries: https://lolbas-project.github.
 Executables for Unix systems: https://gtfobins.org/
 Information about the Autonomous system (AS) : https://bgp.tools/
 Information about DNS domains: https://www.nslookup.io/ / https://dnschecker.org/ / https://whois.domaintools.com/
-Check if a domain has weird
+Check if a domain has non-ASCII characters: https://www.punycoder.com/ (if it returns xn--... ,then yes)
+Check an IP location: https://www.iplocation.net/
+IP analysis to check open ports / services: https://www.shodan.io/ / https://search.censys.io/
 
 <span style="color:rgb(255, 255, 0)">Elasticstack</span>: Searching - (field_name : value),
 (Logical operators AND/OR/NOT ("value") )
