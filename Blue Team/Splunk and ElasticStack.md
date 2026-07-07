@@ -8,7 +8,8 @@ Searching - (field_name : value),
 ----------------------------
 ## <span style="color:rgb(255, 0, 0)">Splunk</span> 
 
-Example Splunk search: 
+<span style="color:rgb(247, 156, 156)">Splunk search examples:</span>
+- Windows sysmon logs:
 ```
 index=winenv EventCode=1 *powershell* AND *EncodedCommand*  
 | table _time ComputerName ParentUser ParentImage ParentCommandLine Image CommandLine
