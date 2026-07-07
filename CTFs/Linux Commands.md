@@ -37,7 +37,7 @@ note: -type f = files , -size 1033c = 1033 bytes
 -(ls -l: lists all files and directories in long format, 3rd column is the user and 4th column is group) 
     -find / -type f -user bandit7 -group bandit6: searched for the file that is owned by user bandit7 in group bandit 6, / means start searching from the root, we can replace it with . to start searching from the current directory. 
     -(2>/dev/null) hides error messages or permission denied
-    -find -name (STAR).txt (all files with the .txt extension)
+    -find ~ -name (STAR).txt (all files with the .txt extension)
     -find / -type f -user root -perm -u=s 2>/dev/null (files with SUID perms)
     -for i in $(cat filenames); do find / -name "$i" -exec sha1sum '{}' \; 2>/dev/null; done
 
