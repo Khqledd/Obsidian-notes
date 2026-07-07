@@ -14,3 +14,9 @@ Searching - (field_name : value),
 index=winenv EventCode=1 *powershell* AND *EncodedCommand*  
 | table _time ComputerName ParentUser ParentImage ParentCommandLine Image CommandLine
 ```
+
+- Linux logs:
+```
+index=linux source="auth.log" *ubuntu* process=sshd   
+| search "Accepted password" OR "Failed password"
+```
