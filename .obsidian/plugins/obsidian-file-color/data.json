@@ -56,6 +56,11 @@
       "id": "oXceK6COXelTC3UxZGw5z",
       "name": "",
       "value": "#e79d9d"
+    },
+    {
+      "id": "3tobGF_Q1drdCFhFy3Soy",
+      "name": "",
+      "value": "#f04747"
     }
   ],
   "fileColors": [
@@ -102,6 +107,10 @@
     {
       "path": "Blue Team/Logs.md",
       "color": "oXceK6COXelTC3UxZGw5z"
+    },
+    {
+      "path": "Blue Team/Splunk and ElasticStack.md",
+      "color": "3tobGF_Q1drdCFhFy3Soy"
     }
   ]
 }
