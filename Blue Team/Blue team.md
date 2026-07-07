@@ -55,6 +55,7 @@ Information about DNS domains: https://www.nslookup.io/ / https://dnschecker.org
 Check if a domain has non-ASCII characters: https://www.punycoder.com/ (if it returns xn--... ,then yes)
 Check an IP location: https://www.iplocation.net/
 IP analysis to check open ports / services: https://www.shodan.io/ / https://search.censys.io/
+Information about TLS certificates: https://www.sslshopper.com/ssl-checker.html / https://crt.sh/
 
 <span style="color:rgb(255, 255, 0)">Elasticstack</span>: Searching - (field_name : value),
 (Logical operators AND/OR/NOT ("value") )
