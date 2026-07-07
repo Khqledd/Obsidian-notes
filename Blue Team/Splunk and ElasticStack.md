@@ -26,3 +26,14 @@ index=linux source="auth.log" *ubuntu* process=sshd 
 index=linux sourcetype=syslog ("CRON" OR "cron")  
 |  search ("python" OR "perl" OR "ruby" OR ".sh" OR "bash" OR "nc")
 ```
+
+- <span style="color:rgb(255, 149, 0)">Web logs:</span> 
+Brute force detection example:
+```
+index=* method=POST uri_path="/wp-login.php"  
+| bin _time span=5m  
+| stats values(referer_domain) as referer_domain values(status) as status values(useragent) as UserAgent values(uri_path) as uri_path count by clientip _time  
+| where count > 25  
+| table referer_domain clientip UserAgent uri_path count status
+```
+Web shell detection example:
