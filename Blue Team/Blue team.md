@@ -57,9 +57,6 @@ Check an IP location: https://www.iplocation.net/
 IP analysis to check open ports / services: https://www.shodan.io/ / https://search.censys.io/
 Information about TLS certificates: https://www.sslshopper.com/ssl-checker.html / https://crt.sh/
 
-<span style="color:rgb(255, 255, 0)">Elasticstack</span>: Searching - (field_name : value),
-(Logical operators AND/OR/NOT ("value") )
- -Also remember to change the date
 
 Forensics command to search for web shells created between two dates :
 `find /var/www -type f -name "*.php" -newerct "2025-07-01" ! -newerct "2025-08-01"`
