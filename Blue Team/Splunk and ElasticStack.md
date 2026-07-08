@@ -70,3 +70,6 @@ index=* status=503
 | where count > 100000  
 | table _time referer_domain clientip UserAgent uri_path count status
 ```
+
+Username that is not Katrina or James or Moin
+`index=win_eventlogs schtasks AND username NOT (Moin OR Katrina OR James)`
