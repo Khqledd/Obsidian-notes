@@ -1,7 +1,7 @@
 
 ## <span style="color:rgb(255, 0, 0)">Elastic Stack</span>
 
-`_index:.`
+`_index:....`
 Searching - (field_name : value),
 (Logical operators AND/OR/NOT ("value") )
  -Also remember to change the date
