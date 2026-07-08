@@ -13,6 +13,9 @@ Example:
 _index:weblogs and client.ip=203.0.113.55 and http.request.method:POST and uri.path= *cmd=*
 ```
 
+For events after the given timestamp and this Windows log event ID:
+`@timestamp >= "2025-07-20T05:11:22" and winlog.event_id:1`
+
 ----------------------------
 ## <span style="color:rgb(255, 0, 0)">Splunk</span> 
 
