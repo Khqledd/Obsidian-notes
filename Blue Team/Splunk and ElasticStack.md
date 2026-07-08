@@ -6,6 +6,11 @@ Searching - (field_name : value),
 (Logical operators AND/OR/NOT ("value") )
  -Also remember to change the date
 
+Example:
+```
+_index:weblogs and client.ip=203.0.113.55 and http.request.method: POST
+```
+
 ----------------------------
 ## <span style="color:rgb(255, 0, 0)">Splunk</span> 
 
