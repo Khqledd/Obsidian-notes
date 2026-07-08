@@ -39,7 +39,7 @@ index=* method=POST uri_path="/wp-login.php"
 Web shell detection example:
 ```
 index=*  
-| search status=200 AND uri_path IN(*.php, *.phtm, *.asp, *.aspx, *.jsp, *.exe) AND (method=POST AND method=GET)  
+| search status=200 AND uri_path IN(*.php, *.phtm, *.asp, *.aspx, *.jsp, *.exe) AND (method=POST OR method=GET)  
 | stats values(status) as status values(useragent) as UserAgent values(method) as method  
   values(uri) as uri values(clientip) as clientip count by referer_domain  
 | where count > 2  
