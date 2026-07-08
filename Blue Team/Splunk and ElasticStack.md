@@ -13,11 +13,14 @@ Example:
 _index:weblogs and client.ip=203.0.113.55 and http.request.method:POST and uri.path= *cmd=*
 ```
 
-For events after the given timestamp and this Windows log event ID:
+<span style="color:rgb(255, 149, 0)">For events after the given timestamp and this Windows log event ID:</span>
 `@timestamp >= "2025-07-20T05:11:22" and winlog.event_id:1`
 
-Other useful fields:
+<span style="color:rgb(255, 149, 0)">Other useful fields:</span>
 `process.command_line / process.name / process.parent.name`
+
+<span style="color:rgb(255, 149, 0)">Powershell logs example:</span>
+![[Pasted image 20260708175132.png]]
 
 ----------------------------
 ## <span style="color:rgb(255, 0, 0)">Splunk</span> 
