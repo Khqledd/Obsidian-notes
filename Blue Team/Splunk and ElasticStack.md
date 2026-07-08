@@ -1,14 +1,16 @@
-
+ Also remember to change the date for both
 ## <span style="color:rgb(255, 0, 0)">Elastic Stack</span>
 
-`_index:....`
-Searching - (field_name : value),
-(Logical operators AND/OR/NOT ("value") )
- -Also remember to change the date
+<span style="color:rgb(247, 156, 156)">Searching: </span> 
+    `_index:....`
+    field_name : value
+    Logical operators AND/OR/NOT ("value") )
+
+We can use wildcards here instead of 'contains', like in the example below with uri.path
 
 Example:
 ```
-_index:weblogs and client.ip=203.0.113.55 and http.request.method: POST
+_index:weblogs and client.ip=203.0.113.55 and http.request.method:POST and uri.path= *cmd=*
 ```
 
 ----------------------------
