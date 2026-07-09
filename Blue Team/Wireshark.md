@@ -84,7 +84,7 @@
      <span style="color:rgb(255, 149, 0)">grep</span>: search plaintext data
      <span style="color:rgb(255, 149, 0)">cut</span>: cut parts of lines from  a specified data source
      <span style="color:rgb(255, 149, 0)">uniq</span>: filter repeated lines/values
-     <span style="color:rgb(255, 149, 0)">nl</span>: view the number of shown lines
+     <span style="color:rgb(255, 149, 0)">| nl</span>: view the number of shown lines
      <span style="color:rgb(255, 149, 0)">sed</span>: a stream editor
      <span style="color:rgb(255, 149, 0)">awk</span>: scripting language that helps pattern search and processing
 
@@ -93,4 +93,4 @@
      <span style="color:rgb(255, 149, 0)">-c:</span> stop after capturing x packets, `tshark -c 10`
      <span style="color:rgb(255, 149, 0)">-x:</span> display packet bytes (details in hex and ASCII)
      <span style="color:rgb(255, 149, 0)">-w:</span> output file, `tshark -r demo.pcapng -c 1 -w write-demo.pcap`
-     -Y: display filters like in wireshark, `tshark -r capture.pcap -Y "http.request.method==POST"`
+     <span style="color:rgb(255, 149, 0)">-Y:</span> display filters like in wireshark, `tshark -r capture.pcap -Y "http.request.method==POST"`
