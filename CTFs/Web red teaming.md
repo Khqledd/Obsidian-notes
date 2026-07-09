@@ -64,4 +64,7 @@ sqlmap: tool used for sql injection
 <span style="color:rgb(255, 255, 0)">SSRF</span>:
 - (Server-side Request Forgery), cause the server-side application to make requests to a destination of the attacker's choosing
 - Examples:
-     Full URL in paramate
+     <span style="color:rgb(146, 208, 80)">Full URL in a paramater:</span> `https://website.thm/item/2?server=api` directs to `https://server.website.thm/api/item?id=2`, so replacing the value in server= changes destination. 
+     `server=server.website.thm/flag?id=9&x=` ---> `https://server.website.thm/flag?id=9&x=/api/item?id=2`, adding &x= at the end causes whatever the application appends to be useless
+    
+     <span style="color:rgb(146, 208, 80)">Partial URL (Hostname or Path only):</span> Some application accept only hostname or path segment and construct the rest of the URL on the server side: `https://website.thm/stock?server=api.internal` can become --> `https://website.thm/stock?server=attacker.com`
