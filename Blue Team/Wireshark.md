@@ -95,3 +95,10 @@
      <span style="color:rgb(255, 149, 0)">-w:</span> output file, `tshark -r demo.pcapng -c 1 -w write-demo.pcap`
      <span style="color:rgb(255, 149, 0)">-Y:</span> display filters like in wireshark, `tshark -r capture.pcap -Y "http.request.method==POST"`
      <span style="color:rgb(255, 149, 0)">-T fields -e <i>fieldname</i></span>: extract a field, `tshark -r dns.cap -Y "dns.qry.type == 1" -T fields -e dns.qry.name` (return the dns query name of the ones with record A)
+
+Example to extract the subdomains of every dns packet and make them together into 1 string:
+`tshark -r demo.pcap -T fields -e "dns.qry.name" | uniq | cut -d'.' -f1 | paste -sd' ' | tr -d ' '`
+     `uniq`: remove duplicate lines
+     `cut -d'.' -f1`: remove after the first dot and show the first column only
+     `paste -sd' '`: connect all rows together in 1 line with space between them
+     `tr -d ' '`: remove the space between the strings to form 1 connect string line
