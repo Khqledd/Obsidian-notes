@@ -73,4 +73,6 @@ sqlmap: tool used for sql injection
      <span style="color:rgb(146, 208, 80)"> Path Traversal:</span> directory traversal sequences. `https://website.thm/stock?url=/item/123/details`. An attacker can supply (/../admin) causing the server to request: `https://website.thm/admin`
      
      <span style="color:rgb(146, 208, 80)">Hidden form fields:</span> Not all SSRF is in URL, `<input type="hidden" name="avatar" value="/images/avatars/default.png">`: Image path is stored in a hidden field, attacker can modify using browser developer tools or burp suite
-     
+
+     **Defeating SSRF Defences:**
+     Deny list: if there is input validation on "localhost" or "127.0.0.1": replace with "127.0.0.1.nip.io" or "2130706433"  (Cloud applications would block the ip address 169.254.169.254)
