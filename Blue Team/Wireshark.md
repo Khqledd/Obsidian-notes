@@ -90,4 +90,7 @@
 
 - <span style="color:rgb(247, 156, 156)">Main parameters:</span> 
      <span style="color:rgb(255, 149, 0)">-r:</span> read a capture file, `tshark -r demo.pcapng`
+     <span style="color:rgb(255, 149, 0)">-c:</span> stop after capturing x packets, `tshark -c 10`
+     <span style="color:rgb(255, 149, 0)">-x:</span> display packet bytes (details in hex and ASCII)
+     <span style="color:rgb(255, 149, 0)">-w:</span> output file, `tshark -r demo.pcapng -c 1 -w write-demo.pcap`
      
