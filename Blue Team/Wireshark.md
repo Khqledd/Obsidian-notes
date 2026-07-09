@@ -87,3 +87,6 @@
      <span style="color:rgb(255, 149, 0)">nl</span>: view the number of shown lines
      <span style="color:rgb(255, 149, 0)">sed</span>: a stream editor
      <span style="color:rgb(255, 149, 0)">awk</span>: scripting language that helps pattern search and processing
+
+- <span style="color:rgb(247, 156, 156)">Main parameters:</span> 
+    
