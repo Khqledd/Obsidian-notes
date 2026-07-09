@@ -93,4 +93,4 @@
      <span style="color:rgb(255, 149, 0)">-c:</span> stop after capturing x packets, `tshark -c 10`
      <span style="color:rgb(255, 149, 0)">-x:</span> display packet bytes (details in hex and ASCII)
      <span style="color:rgb(255, 149, 0)">-w:</span> output file, `tshark -r demo.pcapng -c 1 -w write-demo.pcap`
-     
+     -Y: display filters like in wireshark, `tshark -r capture.pcap -Y "http.request.method==POST"`
