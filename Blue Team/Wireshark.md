@@ -79,3 +79,11 @@
 - `tls.handshake.extensions_server_name == accounts.google.com`: frames sent to accounts.google.com
 --------------------------------------------
 ## **Tshark:**
+- <span style="color:rgb(247, 156, 156)">Tools used with Tshark to filter:</span>
+     <span style="color:rgb(255, 149, 0)">capinfos</span>: provides details of a capture file (Hashes / size / no. of packets)
+     <span style="color:rgb(255, 149, 0)">grep</span>: search plaintext data
+     <span style="color:rgb(255, 149, 0)">cut</span>: cut parts of lines from  a specified data source
+     <span style="color:rgb(255, 149, 0)">uniq</span>: filter repeated lines/values
+     <span style="color:rgb(255, 149, 0)">nl</span>: view the number of shown lines
+     <span style="color:rgb(255, 149, 0)">sed</span>: a stream editor
+     <span style="color:rgb(255, 149, 0)">awk</span>: scripting language that helps pattern search and processing
