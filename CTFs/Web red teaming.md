@@ -62,7 +62,8 @@ sqlmap: tool used for sql injection
 
 
 <span style="color:rgb(255, 255, 0)">SSRF</span>:
-- (Server-side Request Forgery), cause the server-side application to make requests to a destination of the attacker's choosing
+- (Server-side Request Forgery), cause the server-side application to make requests to a destination of the attacker's choosing, can be regular or blind.
+- Confirming Blind SSRF: through requestbin.com / burp collaborator / python3 listener
 - Examples:
      <span style="color:rgb(146, 208, 80)">Full URL in a paramater:</span> `https://website.thm/item/2?server=api` directs to `https://server.website.thm/api/item?id=2`, so replacing the value in server= changes destination. 
      `server=server.website.thm/flag?id=9&x=` ---> `https://server.website.thm/flag?id=9&x=/api/item?id=2`, adding &x= at the end causes whatever the application appends to be useless
@@ -72,3 +73,4 @@ sqlmap: tool used for sql injection
      <span style="color:rgb(146, 208, 80)"> Path Traversal:</span> directory traversal sequences. `https://website.thm/stock?url=/item/123/details`. An attacker can supply (/../admin) causing the server to request: `https://website.thm/admin`
      
      <span style="color:rgb(146, 208, 80)">Hidden form fields:</span> Not all SSRF is in URL, `<input type="hidden" name="avatar" value="/images/avatars/default.png">`: Image path is stored in a hidden field, attacker can modify using browser developer tools or burp suite
+     
