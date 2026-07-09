@@ -63,3 +63,5 @@ sqlmap: tool used for sql injection
 
 <span style="color:rgb(255, 255, 0)">SSRF</span>:
 - (Server-side Request Forgery), cause the server-side application to make requests to a destination of the attacker's choosing
+- Examples:
+     Full URL in paramate
