@@ -89,4 +89,5 @@
      <span style="color:rgb(255, 149, 0)">awk</span>: scripting language that helps pattern search and processing
 
 - <span style="color:rgb(247, 156, 156)">Main parameters:</span> 
-    
+     <span style="color:rgb(255, 149, 0)">-r:</span> read a capture file, `tshark -r demo.pcapng`
+     
