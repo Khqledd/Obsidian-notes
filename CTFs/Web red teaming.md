@@ -68,3 +68,7 @@ sqlmap: tool used for sql injection
      `server=server.website.thm/flag?id=9&x=` ---> `https://server.website.thm/flag?id=9&x=/api/item?id=2`, adding &x= at the end causes whatever the application appends to be useless
     
      <span style="color:rgb(146, 208, 80)">Partial URL (Hostname or Path only):</span> Some application accept only hostname or path segment and construct the rest of the URL on the server side: `https://website.thm/stock?server=api.internal` can become --> `https://website.thm/stock?server=attacker.com`
+     
+     <span style="color:rgb(146, 208, 80)"> Path Traversal:</span> directory traversal sequences. `https://website.thm/stock?url=/item/123/details`. An attacker can supply (/../admin) causing the server to request: `https://website.thm/admin`
+     
+     <span style="color:rgb(146, 208, 80)">Hidden form fields:</span> Not all SSRF is in URL, `<input type="hidden" name="avatar" value="/images/avatars/default.png">`: Image path is stored in a hidden field, attacker can modify using browser developer tools or burp suite
