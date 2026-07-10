@@ -101,4 +101,4 @@ Example to extract the subdomains of every dns packet and make them together int
      `uniq`: remove duplicate lines
      `cut -d'.' -f1`: remove after the first dot and show the first column only
      `paste -sd' '`: connect all rows together in 1 line with space between them
-     `tr -d ' '`: remove the space between the strings to form 1 connect string line
+     `tr -d ' '`: remove the space between the strings to form 1 connect string line (or: `tr -d '\\n'` without paste)
