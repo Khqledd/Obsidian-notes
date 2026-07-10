@@ -77,3 +77,6 @@ sqlmap: tool used for sql injection
      **Defeating SSRF Defences:**
      - Deny list: if there is input validation on "localhost" or "127.0.0.1": replace with "127.0.0.1.nip.io" or "2130706433"  (Cloud applications would block the ip address 169.254.169.254)
      - If url cant start with `/private` because its denied, we can replace with `x/../private` which turns to `/private` 
+
+
+<span style="color:rgb(255, 255, 0)">Race conditions:</span> h
