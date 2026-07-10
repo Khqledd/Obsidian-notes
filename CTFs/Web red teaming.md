@@ -79,7 +79,7 @@ sqlmap: tool used for sql injection
      - If url cant start with `/private` because its denied, we can replace with `x/../private` which turns to `/private` 
 
 
-<span style="color:rgb(255, 255, 0)">Race conditions:</span> Abuse features like applying coupons or money transfer in a vulnerabe website using Burp Suite
+<span style="color:rgb(255, 255, 0)">Race conditions:</span> Abuse features like applying coupons or money transfer in a vulnerabe website using Burp Suite (if a challenge requires an account to reach 100$ for example through transfers)
      <span style="color:rgb(146, 208, 80)">Example</span>:
      1- Right click a successful money transfer POST request in burp suite and sent to repeater,
      2- In the repeater tab, click on the + icon and create "New tab group"
