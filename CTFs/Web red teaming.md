@@ -84,6 +84,7 @@ sqlmap: tool used for sql injection
      1- Right click a successful money transfer POST request in burp suite and sent to repeater,
      2- In the repeater tab, click on the + icon and create "New tab group"
      3- Name the group, then select the request you just sent in "Add tabs to group", then create group
-     4- Right click on the request tab and choose "Duplicate-Tab"
+     4- Right click on the request tab and choose "Duplicate Tab" (or CTRL+R) for example 20 times
+     5- Next to the send button, click the arrow and choose how to send the duplicated requests
      
      
