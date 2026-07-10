@@ -80,3 +80,10 @@ sqlmap: tool used for sql injection
 
 
 <span style="color:rgb(255, 255, 0)">Race conditions:</span> Abuse features like applying coupons or money transfer in a vulnerabe website using Burp Suite
+     <span style="color:rgb(146, 208, 80)">Example</span>:
+     1- Right click a successful money transfer POST request in burp suite and sent to repeater,
+     2- In the repeater tab, click on the + icon and create "New tab group"
+     3- Name the group, then select the request you just sent in "Add tabs to group", then create group
+     4- Right click on the request tab and choose "Duplicate-Tab"
+     
+     
