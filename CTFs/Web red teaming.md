@@ -79,4 +79,4 @@ sqlmap: tool used for sql injection
      - If url cant start with `/private` because its denied, we can replace with `x/../private` which turns to `/private` 
 
 
-<span style="color:rgb(255, 255, 0)">Race conditions:</span> h
+<span style="color:rgb(255, 255, 0)">Race conditions:</span> Abuse features like applying coupons or money transfer in a vulnerabe website using Burp Suite
