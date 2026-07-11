@@ -17,3 +17,5 @@ https://github.com/volatilityfoundation/volatility3
 **windows.memmap is used in memory forensics to map out and dump the memory pages belonging to a specific process, we need to specify a directory to dump (in this case /tmp/) and the pid of the process, we will end up with a .dmp file in the /tmp/ directory:
     `vol -f Investigation-1.vmem -o /tmp/ windows.memmap --pid 1640 --dump` produces: {pid.1640.dmp}
 Then use `strings` with `grep` to search
+
+Using `strings file.mem` is also possible
