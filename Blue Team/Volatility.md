@@ -1,6 +1,6 @@
 
 https://github.com/volatilityfoundation/volatility3
-<span style="color:rgb(112, 48, 160)"><b>Volatility</b></span>: Tools used for memory image forensics `(vol -f example.mem)`
+<span style="color:rgb(112, 48, 160)"><b>Volatility</b></span>: Tools used for memory image forensics `(vol -f <example.mem> windows.x)`
   some common commands to include after the .mem file:-  (can replace windows with linux/mac)
     - `windows.pstree`:  List all processes based on their PPID
     - `windows.pslist`:  List of all current and terminated processes
@@ -9,6 +9,7 @@ https://github.com/volatilityfoundation/volatility3
     - `windows.dlllist`: List all DLLs associated with processes at the time of extraction
     - `windows.malfind`: Scans process memory looking for signs of code injection
     - `windows.cmdline`: Shows the full command line each running process was launched with
+    - `windows.ssdt`: Search for SSDT hooking (one of techniques used by malware), In this case SSDT hooking, 
     -<span style="color:rgb(255, 255, 255)">for plugin in windows.malfind.Malfind windows.psscan.PsScan windows.pstree.PsTree .. ; do vol -q -f wcry.mem $plugin > wcry.$plugin.txt; done</span>
 
 `vol -f <file> windows.info`: Information about what the host is running from the memory dump
