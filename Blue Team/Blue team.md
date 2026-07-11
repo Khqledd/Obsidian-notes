@@ -27,16 +27,8 @@
 
 - `oledump.py:` is a tool used to analyze OLE files (.doc, .xls, .ppt) where we can find VBA scripts and (M)acros, we can add -s 4 to check stream number 4, or add --vbadecompress the understand the hexdump
 
-- `Volatility`: Tools used for memory image forensics (vol3 -f example.mem)
-  some common commands to include after the .mem file:- 
-    - windows.pstree.PsTree
-    - windows.pslist.PsList
-    - windows.cmdline.CmdLine
-    - windows.filescan.FileScan
-    - windows.dlllist.DllList
-    - windows.malfind.Malfind
-    - windows.psscan.PsScan
-    -<span style="color:rgb(255, 255, 255)">for plugin in windows.malfind.Malfind windows.psscan.PsScan windows.pstree.PsTree .. ; do vol3 -q -f wcry.mem $plugin > wcry.$plugin.txt; done</span>
+- `Olevba` - a tool for analysing and extracting VBA macros from Microsoft Office documents
+     Not pre-installed, {`olevba example.doc`}
 
 - `FlareVM`: Powershell (windows) framework that installs hundreds of reverse engineering/malware analysis tools like the ones below:
     - `procmon`: Tracking system activity and process monitoring
