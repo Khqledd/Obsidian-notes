@@ -9,7 +9,7 @@ https://github.com/volatilityfoundation/volatility3
     - `windows.dlllist`: List all DLLs associated with processes at the time of extraction
     - `windows.malfind`: Scans process memory looking for signs of code injection
     - `windows.cmdline`: Shows the full command line each running process was launched with
-    - `windows.ssdt`: Search for SSDT hooking (one of techniques used by malware), In this case SSDT hooking, 
-    -<span style="color:rgb(255, 255, 255)">for plugin in windows.malfind.Malfind windows.psscan.PsScan windows.pstree.PsTree .. ; do vol -q -f wcry.mem $plugin > wcry.$plugin.txt; done</span>
+    - `windows.ssdt`: Search for SSDT hooking (one of techniques used by malware), In this case SSDT hooking, windows uses SSDT to look up              system functions, an adversary can hook into this table and modify pointers. other hooking methods are (IAT/IRP/EAT/Inline)
+    
 
 `vol -f <file> windows.info`: Information about what the host is running from the memory dump
