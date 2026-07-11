@@ -5,10 +5,10 @@ https://github.com/volatilityfoundation/volatility3
     - `windows.pstree`:  List all processes based on their PPID
     - `windows.pslist`:  List of all current and terminated processes
     - `windows.psscan`:  Another technique to list processes, some processes can evade detection in pslist
-    - `windows.netstat`: Network connections present at the time of extraction from the host machine, utilize with other tools like bulk-extractor to extract a pcap file from a memory file https://www.kali.org/tools/bulk-extractor/]
-    - `windows.dlllist`
-    - `windows.malfind`
-    - `windows.cmdline`
+    - `windows.netstat`: Network connections present at the time of extraction from the host machine, utilize with other tools like bulk-extractor to               extract a pcap file from a memory file: https://www.kali.org/tools/bulk-extractor/
+    - `windows.dlllist`: List all DLLs associated with processes at the time of extraction
+    - `windows.malfind`: Scans process memory looking for signs of code injection
+    - `windows.cmdline`: Shows the full command line each running process was launched with
     -<span style="color:rgb(255, 255, 255)">for plugin in windows.malfind.Malfind windows.psscan.PsScan windows.pstree.PsTree .. ; do vol -q -f wcry.mem $plugin > wcry.$plugin.txt; done</span>
 
 `vol -f <file> windows.info`: Information about what the host is running from the memory dump
