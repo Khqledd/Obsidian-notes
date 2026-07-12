@@ -87,4 +87,5 @@ sqlmap: tool used for sql injection
      4- Right click on the request tab and choose "Duplicate Tab" (or CTRL+R) for example 20 times
      5- Next to the send button, click the arrow and choose how to send the duplicated requests
      
-     
+
+<span style="color:rgb(255, 255, 0)">Command Injection: </span>f
