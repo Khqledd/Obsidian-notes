@@ -15,7 +15,7 @@ _index:weblogs and client.ip=203.0.113.55 and http.request.method:POST and uri.p
 ```
 
 <span style="color:rgb(255, 149, 0)">For events after the given timestamp and this Windows log event ID:</span>
-`@timestamp >= "2025-07-20T05:11:22" and winlog.event_id:1`
+`@timestamp >= "2025-07-20T05:11:22" and winlog.event_id:1` (event.code to filter sysmon logs)
 
 <span style="color:rgb(255, 149, 0)">Other useful fields:</span>
 `process.command_line / process.name / process.parent.name`
