@@ -6,8 +6,9 @@
     field_name : value
     Logical operators AND/OR/NOT ("value") )
 
-- We can use wildcards here instead of 'contains', like in the example below with uri.path
+- We can use wildcards * here instead of 'contains', like in the example below with uri.path
 - **View surrounding documents** is VERY helpful to see events before and after the one selected
+- Sorting from oldest to newest timestamp is also helpful
 
 Example:
 ```
