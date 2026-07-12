@@ -91,3 +91,8 @@ sqlmap: tool used for sql injection
 <span style="color:rgb(255, 255, 0)">Command Injection: </span>attacker manipulates input fields to inject malicious commands. many languages provide built-in functions that allow application code to execute commands directly on the underlying OS like (They can be exploited if there is no input validation): 
      PHP: `exec()` / `system()` / `shell_exec()` / `passthru()`           Python: `subprocess`            Node.js: `chill_process.exec()`
      ![[Pasted image 20260713000239.png]] (dont forget the ; before any input)
+     
+Detecting blind command injection (no output on screen):
+- payloads with observable delay: `; ping -c 10 127.0.0.1`
+- forcing output into a file: `; whoami > /var/www/html/output.txt` then navigate to `http://target.thm/output.txt`
+- curl with the payload: `curl http://vulnerable.app/process.php%3Fsearch%3DThe%20Beatles%3B%20whoami`, the last part is URL encoded and its equivalent to (?search=The Beatles; whoami)
