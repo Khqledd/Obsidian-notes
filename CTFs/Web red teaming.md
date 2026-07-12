@@ -93,6 +93,8 @@ sqlmap: tool used for sql injection
      ![[Pasted image 20260713000239.png]] (dont forget the ; before any input)
      
 Detecting blind command injection (no output on screen):
-- payloads with observable delay: `; ping -c 10 127.0.0.1`
+- payloads with observable delay: `; ping -c 10 127.0.0.1` or commands like `timeout` in windows
 - forcing output into a file: `; whoami > /var/www/html/output.txt` then navigate to `http://target.thm/output.txt`
 - curl with the payload: `curl http://vulnerable.app/process.php%3Fsearch%3DThe%20Beatles%3B%20whoami`, the last part is URL encoded and its equivalent to (?search=The Beatles; whoami)
+
+**More payloads and info about command injection:** https://github.com/payload-box/command-injection-payload-list#payload-files
