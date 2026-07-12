@@ -90,4 +90,4 @@ sqlmap: tool used for sql injection
 
 <span style="color:rgb(255, 255, 0)">Command Injection: </span>attacker manipulates input fields to inject malicious commands. many languages provide built-in functions that allow application code to execute commands directly on the underlying OS like (They can be exploited if there is no input validation): 
      PHP: `exec()` / `system()` / `shell_exec()` / `passthru()`           Python: `subprocess`            Node.js: `chill_process.exec()`
-     ![[Pasted image 20260713000239.png]]
+     ![[Pasted image 20260713000239.png]] (dont forget the ; before any input)
