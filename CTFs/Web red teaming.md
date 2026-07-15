@@ -107,6 +107,6 @@ Detecting blind command injection (no output on screen):
 - <span style="color:rgb(146, 208, 80)">RCE: </span>
     - Web shells: use gobuster to find where uploaded files go, (/uploads or /resources or etc..), then upload the suitable shell. 
     Example webshell:
-    ![[Pasted image 20260715211017.png]]
+    ![[Pasted image 20260715211017.png]]![[Pasted image 20260715211121.png]]
 
-    - Reverse shells:
+    - Reverse shells: Upload it like a web shell (https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php), Change the IP to the attackbox IP and set up a listener using nc -lvnp 4444
