@@ -114,6 +114,6 @@ Detecting blind command injection (no output on screen):
 Common filters can be file extension / file size / file-type filtering (MIME validation or Magic Number validation)
 MIME is Content-Type in the request header and consists of `<type>/<subtype>` (example: image/jpeg)
      Two ways to bypass (assume image/jpeg):
-     1- Upload the shell in php, intercept the server response (Do Intercept), remove the javascript function filtering file.type
+     1- Upload any file in jpg intercept the server response (Do Intercept), remove the javascript function filtering file.type, then upload the shell
      2- Upload the shell in jpg, intercept the request, change the MIME to `text/x-php` and the extension to `.php` 
 **SO CHECK SOURCE CODE FOR FILTERS**
