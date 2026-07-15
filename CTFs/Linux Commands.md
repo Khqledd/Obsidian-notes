@@ -164,7 +164,7 @@ running (xxd file.data) alone doesnt change anything it just prints out the hex 
          systemctl start apache2
 
 <span style="color:rgb(231, 116, 8)">gobuster</span>: directory and file brute-forcing tool used to find hidden folders and pages on websites (replacing dir with dns enumerates for subdomains like fuzz)
-       gobuster dir -u http://TARGET -w /usr/share/wordlists/dirb/common.txt -t 64
+       gobuster dir -u http://TARGET -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 64
        gobuster dns -d example.thm -w /usr/share/wordlists....
        gobuster vhost -u "http://TARGET" --domain example.thm -w /usr/share/wordlists/dirb/common.txt --append-domain --exclude-length 250-320
 
