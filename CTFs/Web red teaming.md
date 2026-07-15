@@ -117,3 +117,5 @@ MIME is Content-Type in the request header and consists of `<type>/<subtype>` (e
      1- Upload any file in jpg intercept the server response (Do Intercept), remove the javascript function filtering file.type, then upload the shell
      2- Upload the shell in jpg, intercept the request, change the MIME to `text/x-php` and the extension to `.php` 
 **SO CHECK SOURCE CODE FOR FILTERS**
+
+Server-side filtering is in php code that we can't see, example: .PHP is blacklisted but (.php3 / .php4 / .php5 / .php7 / .phps / .php-s / .pht / .phar) all work or double extensions like `shell.jpg.php` if it checks after the first dot only
