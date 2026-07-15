@@ -110,3 +110,7 @@ Detecting blind command injection (no output on screen):
     ![[Pasted image 20260715211017.png]]![[Pasted image 20260715211121.png]]
 
     - Reverse shells: Upload it like a web shell (https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php), Change the IP to the attackbox IP and set up a listener using nc -lvnp 4444
+
+Common filters can be file extension / file size / file-type filtering (MIME validation or Magic Number validation)
+MIME is Content-Type in the request header and consists of `<type>/<subtype>` (example: image/jpeg)
+**SO CHECK SOURCE CODE FOR FILTERS**
