@@ -102,4 +102,4 @@ Detecting blind command injection (no output on screen):
 
 
 <span style="color:rgb(255, 255, 0)">Upload Vulnerability:</span>
-     
+     - Overwriting existing files:
