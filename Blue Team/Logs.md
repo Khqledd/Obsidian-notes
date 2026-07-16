@@ -31,8 +31,9 @@ Persistence indicators in windows security logs:
          -grep "sshd" | grep -E "Accepted|Failed": ssh daemon stores logs here too in different format
         ![[Pasted image 20260705030416.png]]
 
-     `var/log/kern.log`: kernel messages and errors
+     `/var/log/kern.log`: kernel messages and errors
      `/home/ubuntu/.bash_history`: per user, commands history (not so useful)
+     `/var/log/apache2 (or nginx)`: web server logs
 
     Normal linux logs dont log process creation / runtime events so we use "auditd" to monitor system calls (eg, execve system call is to execute)
     {`var/log/audit/audit.log`, best used to with `ausearch -i` to filter} 
