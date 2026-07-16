@@ -9,6 +9,7 @@
 - We can use wildcards * here instead of 'contains', like in the example below with uri.path
 - **View surrounding documents** is VERY helpful to see events before and after the one selected
 - Sorting from oldest to newest timestamp is also helpful
+- Special characters need a backslash like `\+` unless they are wrapped in quotation marks
 
 Example:
 ```
