@@ -14,8 +14,10 @@
 
 <span style="color:rgb(237, 115, 115)">Nested values:</span>
      Sometimes fields can contain structured data objects instead of simple text, 
-     Example: `comments field -> [{author: Alice, text: Mitigated DDoS attack}, {author: Bob, text: Checked logs}]`
-     - In this case we filter like: `comments.author : "Alice"`
+     Example: `comments field -> [{author: Alice, text: Mitigated DDoS attack}, {author: Bob, text: Checked logs}]` (JSON format)
+     - In this case we filter like: 
+      1-   `comments.author : "Alice"`
+      2-  `comments.author: ("Alice" AND "Bob") AND comments.text: "attack"`
 
 Example:
 ```
