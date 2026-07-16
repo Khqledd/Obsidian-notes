@@ -1,15 +1,21 @@
  Also remember to change the date for both
 ## <span style="color:rgb(255, 0, 0)">Elastic Stack</span>
 
-<span style="color:rgb(247, 156, 156)">Searching: </span> 
+<span style="color:rgb(237, 115, 115)">Searching:</span>
     `_index:....`
     field_name : value
     Logical operators AND/OR/NOT ("value") )
 
-- We can use wildcards * here instead of 'contains', like in the example below with uri.path
-- **View surrounding documents** is VERY helpful to see events before and after the one selected
-- Sorting from oldest to newest timestamp is also helpful
-- Special characters need a backslash like `\+` unless they are wrapped in quotation marks (`"User \"bob\" Created"`)
+<span style="color:rgb(237, 115, 115)">Tips:</span>
+    - We can use wildcards * here instead of 'contains', like in the example below with uri.path
+    - **View surrounding documents** is VERY helpful to see events before and after the one selected
+    - Sorting from oldest to newest timestamp is also helpful
+    - Special characters need a backslash like `\+` unless they are wrapped in quotation marks (`"User \"bob\" Created"`)
+
+<span style="color:rgb(237, 115, 115)">Nested values:</span>
+     Sometimes fields can contain structured data objects instead of simple text, 
+     Example: `comments field -> [{author: Alice, text: Mitigated DDoS attack}, {author: Bob, text: Checked logs}]`
+     - In this case we filter like: `comments.author : "Alice"`
 
 Example:
 ```
