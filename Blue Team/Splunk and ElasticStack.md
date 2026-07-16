@@ -5,6 +5,7 @@
     `_index:....`
     field_name : value
     Logical operators AND/OR/NOT ("value") )
+    We can use regular expressions by changing KQL to Lucene
 
 <span style="color:rgb(237, 115, 115)">Tips:</span>
     - We can use wildcards * here instead of 'contains', like in the example below with uri.path
