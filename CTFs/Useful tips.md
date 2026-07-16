@@ -46,6 +46,7 @@
 
 https://osintframework.com/
 https://www.idcrawl.com/: for OSINT to find accounts
+https://epieos.com/: email/phone data
 
 for timeline explorer
 ```
