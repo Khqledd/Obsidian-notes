@@ -3,10 +3,12 @@
 
 <span style="color:rgb(237, 115, 115)">Searching:</span>
     `_index:....`
-    field_name : value
-    Logical operators AND/OR/NOT ("value") )
-    We can use regular expressions by changing KQL to Lucene, wrap the expression in slashes `/EVenis/`
-    We can filter by ranges in values or timestamps: `@timestamp >= "2023-01-01" AND @timestamp < "2023-03-01"` :between Jan and March
+    -field_name : value
+    -Logical operators AND/OR/NOT ("value") )
+    -We can use regular expressions by changing KQL to Lucene, wrap the expression in slashes `/EVenis/`
+    -We can filter by ranges in values or timestamps: `@timestamp >= "2023-01-01" AND @timestamp < "2023-03-01"` :between Jan and March
+    -In Lucene, `host_name: server01~1`: ~1 means that one character difference will return too like `serber01` (for misspelling purposes)
+    -In Lucene, proximity searching like: `log_message: "server error"~1`: would also return if there is 1 word between server and error like in                   `Server: Detected Error connections`
 
 <span style="color:rgb(237, 115, 115)">Tips:</span>
     - We can use wildcards * here instead of 'contains', like in the example below with uri.path
