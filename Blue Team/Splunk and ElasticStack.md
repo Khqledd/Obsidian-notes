@@ -6,6 +6,7 @@
     field_name : value
     Logical operators AND/OR/NOT ("value") )
     We can use regular expressions by changing KQL to Lucene, wrap the expression in slashes `/EVenis/`
+    We can filter by ranges in values or timestamps: `@timestamp >= "2023-01-01" AND @timestamp < "2023-03-01"` :between Jan and March
 
 <span style="color:rgb(237, 115, 115)">Tips:</span>
     - We can use wildcards * here instead of 'contains', like in the example below with uri.path
