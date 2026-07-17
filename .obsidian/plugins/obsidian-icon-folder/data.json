@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiArrowDownLeft",
+      "LiAlignVerticalDistributeEnd",
       "LiApple",
       "LiAperture",
-      "LiAlbum",
-      "LiAtom",
-      "LiAnnoyed"
+      "LiAlbum"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -50,5 +50,7 @@
   "Blue Team/Man-in-the-Middle.md": "LiAtom",
   "Blue Team/Logs.md": "LiAlbum",
   "Blue Team/Splunk and ElasticStack.md": "LiAperture",
-  "Blue Team/Volatility.md": "LiApple"
+  "Blue Team/Volatility.md": "LiApple",
+  "CTFs/Privilege Escalation (Linux).md": "LiAlignVerticalDistributeEnd",
+  "pwn/General.md": "LiArrowDownLeft"
 }

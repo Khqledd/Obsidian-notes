@@ -115,6 +115,10 @@
     {
       "path": "Blue Team/Volatility.md",
       "color": "EdFiGJ_ze4PItVovIaeLt"
+    },
+    {
+      "path": "CTFs/Privilege Escalation (Linux).md",
+      "color": "8uLcCFoPAq8StpkaREfu6"
     }
   ]
 }
