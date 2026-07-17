@@ -26,8 +26,6 @@
          `ret`
          (Create stack frame, Reserve 32 bytes)
          (`call` pushes return address, `ret` pops it back into `rip`)
-    
-    g
 
 **Memory Addressing:**
      `[rax]`: Returns the value stored at that address
@@ -42,5 +40,13 @@
          `.data`: holds initialized global and static variables (those given a nonzero/explicit value at compile time)
          `.bss`: holds uninitialized (or zero-initialized) global/static variables
          `.rodata:` read-only data, string literals and const globals
+         ``
+    ``
+    <span style="color:rgb(146, 208, 80)">Effective Address Calculation:</span> `[base + index*scale + displacement]`
+
+**Control Flow:**
+    mov: featches data from memory
+    lea: calculates the address: `lea rax, [rbp+8]` (pure arithmetic)
+
 
 
