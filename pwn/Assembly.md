@@ -25,11 +25,13 @@
          (`call` pushes return address, `ret` pops it back into `rip`)
 
 **Memory Addressing:**
-     `[rax]`: Memory address in rax
-     `[rax+8]`: Memory address in rax+8
+     `[rax]`: Returns the value stored at that address
+     `[rax+8]`: Value stored in address (rax + 8 bytes)
      `[rbp-0x10]`: dereference an address (stack local) "take the value in rbp, subtract 0x10 from it, treat that result as a memory address, and access what's stored at that address"
      `[rdi]`: pointer dereference
-     b
+     `mov rbx, rax`: rbx now holds 0x4000 (the address)
+     `mov rbx, [rax]`: rbx now holds the data stored at memory loca
+     ===============================
      Assembly directives: begin with a "." and are directions to the assembler.:
          `.text`: tells assembler that the information that follows is program text (assembly instructions), contains the executable machine code
          `.data`: holds initialized global and static variables (those given a nonzero/explicit value at compile time)
