@@ -6,10 +6,14 @@
      <span style="color:rgb(146, 208, 80)">r</span><span style="color:rgb(146, 208, 80)">di:</span> 1st function argument
      <span style="color:rgb(146, 208, 80)">rsi:</span> 2nd function argument
      <span style="color:rgb(146, 208, 80)">rbp:</span> Base pointer (stack frame)
-     <span style="color:rgb(146, 208, 80)">rsp:</span> Stack pointer
+     <span style="color:rgb(146, 208, 80)">rsp:</span> Stack pointer (top of stack)
      <span style="color:rgb(146, 208, 80)">rip:</span> Instruction pointer
      <span style="color:rgb(146, 208, 80)">r8-r15:</span> Additional registers
 
+**The Stack:**
+     ![[Pasted image 20260718013323.png]]
+     push: add item to the top of the stack
+     pop: remove the top item
 
 
 
