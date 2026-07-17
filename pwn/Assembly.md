@@ -12,8 +12,19 @@
 
 **The Stack:**
      ![[Pasted image 20260718013323.png]]
-     push: add item to the top of the stack
-     pop: remove the top item
+    <span style="color:rgb(146, 208, 80)"> push:</span> add item to the top of the stack (decrements rsp)
+     <span style="color:rgb(146, 208, 80)">pop:</span> remove the top item (increments rsp)
+     Example:
+         `push rbp`               //save old base pointer
+         `mov rbp, rsp`       //establish new frame
+         `sub rsp, 0x20`     //allocate local space
+         . . .
+         `leave`                   //mov rsp, rbp; pop rbp
+         `ret`
+         (Create stack frame, Reserve 32 bytes)
+         (`call` pushes return address, `ret` pops it back into `rip`)
+
+**
 
 
 
