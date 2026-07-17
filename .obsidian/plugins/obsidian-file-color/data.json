@@ -119,6 +119,10 @@
     {
       "path": "CTFs/Privilege Escalation (Linux).md",
       "color": "8uLcCFoPAq8StpkaREfu6"
+    },
+    {
+      "path": "pwn/Assembly.md",
+      "color": "cZHYgt23Axy2cthIocVTu"
     }
   ]
 }
