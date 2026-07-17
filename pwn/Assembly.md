@@ -24,7 +24,8 @@
          (Create stack frame, Reserve 32 bytes)
          (`call` pushes return address, `ret` pops it back into `rip`)
 
-**
+**Memory Addressing:**
+     
 
 
 
