@@ -25,7 +25,16 @@
          (`call` pushes return address, `ret` pops it back into `rip`)
 
 **Memory Addressing:**
-     
+     `[rax]`: Memory address in rax
+     `[rax+8]`: Memory address in rax+8
+     `[rbp-0x10]`: dereference an address (stack local) "take the value in rbp, subtract 0x10 from it, treat that result as a memory address, and access what's stored at that address"
+     `[rdi]`: pointer dereference
+     b
+     Assembly directives: begin with a "." and are directions to the assembler.:
+         `.text`: tells assembler that the information that follows is program text (assembly instructions), contains the executable machine code
+         `.data`: holds initialized global and static variables (those given a nonzero/explicit value at compile time)
+         `.bss`: holds uninitialized (or zero-initialized) global/static variables
+         `.rodata:` read-only data, string literals and const globals
 
 
 
