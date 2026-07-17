@@ -45,8 +45,14 @@
     <span style="color:rgb(146, 208, 80)">Effective Address Calculation:</span> `[base + index*scale + displacement]`
 
 **Control Flow:**
-    mov: featches data from memory
-    lea: calculates the address: `lea rax, [rbp+8]` (pure arithmetic)
+    <span style="color:rgb(146, 208, 80)">mov:</span> featches data from memory: `mov rax, [rbp+8]` (rax = the value stored AT address rbp+8) -memory is read
+    <span style="color:rgb(146, 208, 80)">lea:</span> calculates the address: `lea rax, [rbp+8]` (rax = address of rbp+8, pure arithmetic) -no memory read
+    <span style="color:rgb(146, 208, 80)">cmp:</span> `cmp rax,rbx` basically does rax-rbx only to set CPU flags based on subtraction, no modification on both
+    <span style="color:rgb(146, 208, 80)">test:</span> `test rax, rax` (basically does bitwise rax AND rax, mostly used to check if register is zero or non-zero). used right after a function call
 
-
+**Conditional Jumps:**
+    They always come after a cmp or test and interpret the flags that instruction set:
+    je/jz: jump if equal / jump if zero
+    jne/jnz: jump if not equal / not zero
+    
 
