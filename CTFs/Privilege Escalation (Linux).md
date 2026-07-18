@@ -1,4 +1,6 @@
 ## <span style="color:rgb(255, 0, 247)">Enumeration commands</span>
+
+**OS ENUMERATION:-**
 (Any file containing system information can be modified so check them all)
 - <span style="color:rgb(166, 127, 173)">hostname</span>: the host name of the target machine
 - <span style="color:rgb(166, 127, 173)">uname -a</span>: system information, details about the kernel: 
