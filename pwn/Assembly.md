@@ -52,7 +52,19 @@
 
 **Conditional Jumps:**
     They always come after a cmp or test and interpret the flags that instruction set:
-    je/jz: jump if equal / jump if zero
-    jne/jnz: jump if not equal / not zero
-    
+    <span style="color:rgb(146, 208, 80)">je / jz:</span> jump if equal / jump if zero
+    <span style="color:rgb(146, 208, 80)">jne / jnz:</span> jump if not equal / not zero
+    ``
+    **Signed comparison (for int, signed types):**
+         <span style="color:rgb(146, 208, 80)">jg / jnle:</span> jump if greater
+         <span style="color:rgb(146, 208, 80)">jge:</span> jump if greater or equal
+         <span style="color:rgb(146, 208, 80)">jl / jnge:</span> jump if less
+        <span style="color:rgb(146, 208, 80)"> jle:</span> jump if less or equal
+    ``
+    **Unsigned comparison (for unsigned int, pointers,sizes):**
+         <span style="color:rgb(146, 208, 80)">ja / jnbe:</span> jump if above
+         <span style="color:rgb(146, 208, 80)">jae:</span> jump if above or equal
+         <span style="color:rgb(146, 208, 80)">jb / jnae:</span> jump if below
+         <span style="color:rgb(146, 208, 80)">jbe:</span> jump if below or equal
+
 
