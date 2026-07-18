@@ -31,5 +31,5 @@
 - <span style="color:rgb(166, 127, 173)">netstat</span>: display information about network connections, routing tables, interface statistics. common usage is 
     `netstat -tuln` → List all listening ports with protocol, IP, and port number. 
     `netstat -anp` → Show all connections with the process ID/program using them. 
-    `netstat -r → Display routing table in numeric form. 
+    `netstat -r` → Display routing table in numeric form. 
     `netstat -i` → Show interface statistics
