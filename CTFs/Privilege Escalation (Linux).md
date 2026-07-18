@@ -7,5 +7,7 @@
     `Linux home 6.8.0-41-generic` -----> Linux: OS / home: hostname / 6.8.0-41-generic: kernel version
 - <span style="color:rgb(166, 127, 173)">cat /proc/version</span>: information about the target system processes, kernel version and compiler used to create it
 - <span style="color:rgb(166, 127, 173)">cat /etc/issue</span>: information about the OS
-- ps: see the running processes on a linux system
-    `ps aux`: 
+- <span style="color:rgb(166, 127, 173)">ps</span>: see the running processes on a linux system
+    `ps aux`: show processes for all users, display the user who launched the process, and processes not attached to a terminal
+    `ps axjf`: show processes for all users, include processes with no controlling terminal, jobs format output and tree view
+-  
