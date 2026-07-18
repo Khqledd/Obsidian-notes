@@ -20,5 +20,7 @@
 
 **USER ENUMERATION:-**
 - <span style="color:rgb(166, 127, 173)">id</span>: overview of the user privileges and group memberships, can specify other users too like `id khaled`
-- env: show environmental varianbles (the PATH variable may have a compiler or a scripting language that could be used to run code on target system)
-- 
+- <span style="color:rgb(166, 127, 173)">env</span>: show environmental varianbles (the PATH variable may have a compiler or a scripting language that could be used to run code on target system)
+- <span style="color:rgb(166, 127, 173)">history</span>: check earlier commands, it is per-user
+- <span style="color:rgb(166, 127, 173)">sudo -l</span>: the target system may be configured to allow users to run some (or all) commands with root privileges. this command can be used to list all commands your user can run using sudo, its used to check for possible bins to escalate using GTFObins (example in Useful tips)
+- /etc/passwd: discord users on the system
