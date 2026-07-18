@@ -12,6 +12,8 @@
      <span style="color:rgb(146, 208, 80)">rsp:</span> Stack pointer (top of stack)
      <span style="color:rgb(146, 208, 80)">rip:</span> Instruction pointer
      <span style="color:rgb(146, 208, 80)">r8-r15:</span> Additional registers
+     **Function call convention slot orders:** rdi / rsi / rdx / rcx / r8 / r9
+     **System call convention slot orders:** <span style="color:rgb(146, 208, 80)">rdi / rsi / rdx / r10 / r8 / r9</span>
 
 **The Stack:**
      ![[Pasted image 20260718013323.png]]
