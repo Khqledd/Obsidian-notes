@@ -47,6 +47,7 @@
 
 **Control Flow:**
     <span style="color:rgb(146, 208, 80)">mov:</span> featches data from memory: `mov rax, [rbp+8]` (rax = the value stored AT address rbp+8) -memory is read (`mov dst, src --> dst = src`)
+    <span style="color:rgb(146, 208, 80)">movsx</span>: move with sign-extend, copies a smaller value into a larger register while preserving its sign (two's complement value)
     <span style="color:rgb(146, 208, 80)">lea:</span> calculates the address: `lea rax, [rbp+8]` (rax = address of rbp+8, pure arithmetic) -no memory read (`lea dst, [addr] --> dst = computed address`)
     <span style="color:rgb(146, 208, 80)">cmp:</span> `cmp rax,rbx` basically does (rax-rbx) only to set CPU flags based on subtraction, no modification on both
     <span style="color:rgb(146, 208, 80)">test:</span> `test rax, rax` (basically does bitwise rax AND rax, mostly used to check if register is zero or non-zero). used right after a function call
@@ -85,3 +86,4 @@
      <span style="color:rgb(146, 208, 80)">and / or / not / xor</span>.
      **Note: cqo or cdq instructions immediately before a divison: signed divison. xor rdx,rdx before a divison: unsigned divison**
 
+t
