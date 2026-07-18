@@ -35,4 +35,15 @@
     `netstat -i` → Show interface statistics
 
 **FILE ENUMERATION:-**
-- ls: 
+- <span style="color:rgb(166, 127, 173)">ls -la</span>: list the contents of the current directory in long format including hidden files 
+- find: searching the target system for information
+    `find . -name flag.txt`: finds the file in the current directory and subdirectories
+    `find /home -name flag.txt:`finds the file in /home directory and subdirectories
+    `find / -type d -name config`: finds the directory named config under "/" (root directory)
+    `find / -type f -perm 0777`: finds files with the 777 permissions (readable,writable,executable by all users)
+    `find / -perm -a=x`: finds executable files
+    `find /home -user frank`: finds all files for user "frank" under "/home"
+    `find / -cmin -60`: find files changed within the last hour ('a' instead of 'c' for "accessed")
+    `find / -mtime -10`: find files that were modified in the last 10 days ('a' instead of 'm' for accessed)
+    `find / -size +50M`: finds files with at least 50MB size (can be used with + or -)
+    **ADD `2>/dev>null` TO REMOVE ERROR MESSAGES**
