@@ -33,3 +33,6 @@
     `netstat -anp` → Show all connections with the process ID/program using them. 
     `netstat -r` → Display routing table in numeric form. 
     `netstat -i` → Show interface statistics
+
+**FILE ENUMERATION:-**
+- ls: 
