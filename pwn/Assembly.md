@@ -81,9 +81,16 @@
      <span style="color:rgb(146, 208, 80)">add</span>: addition
      <span style="color:rgb(146, 208, 80)">sub</span>: subtraction, `sub dst, src ---> dst=dst-src`
      <span style="color:rgb(146, 208, 80)">inc</span>: increment +1      <span style="color:rgb(146, 208, 80)">dec</span>: decrement -1
+     <span style="color:rgb(146, 208, 80)">neg</span>: negate register in terms of numerical value
+     <span style="color:rgb(146, 208, 80)">not</span>: negate each bit of the register
+     <span style="color:rgb(146, 208, 80)">and / or / not / xor</span>: logical values
+     <span style="color:rgb(146, 208, 80)">shl</span>: `shl rax, 10`: shift rax's bits left by 10, filling 10 zeros to the right
+     <span style="color:rgb(146, 208, 80)">shr</span>: `shr rax, 10`: shift rax's bits right by 10, filling 10 zeros to the left
+     <span style="color:rgb(146, 208, 80)">sar</span>: `sar rax, 10`: shift rax's bits right by 10, with sign extension to fill the now missing 10 bits
+     <span style="color:rgb(146, 208, 80)">ror</span>: rotate the bits of rax right by 10
+     <span style="color:rgb(146, 208, 80)">rol</span>: rotate the bits of rax left by 10
     <span style="color:rgb(146, 208, 80)"> imul / mul:</span> multiplication, signed / unsigned
     <span style="color:rgb(146, 208, 80)"> idiv / div:</span> division, signed / unsigned
-     <span style="color:rgb(146, 208, 80)">and / or / not / xor</span>.
      **Note: cqo or cdq instructions immediately before a divison: signed divison. xor rdx,rdx before a divison: unsigned divison**
 
 t
