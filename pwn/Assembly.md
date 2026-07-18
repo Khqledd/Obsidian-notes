@@ -67,4 +67,12 @@
          <span style="color:rgb(146, 208, 80)">jb / jnae:</span> jump if below
          <span style="color:rgb(146, 208, 80)">jbe:</span> jump if below or equal
 
+**Functions:**
+    ![[Pasted image 20260718233207.png|484]]
+    - The function has a stack that grows downwards
+    - `push`: decrements rsp, stores value, pushes return value into the stack
+    - `pop`: load value, increments rsp, return address into rip
+    ![[Pasted image 20260718233653.png]]
+
+d
 
