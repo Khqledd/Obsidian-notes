@@ -52,6 +52,7 @@
     <span style="color:rgb(146, 208, 80)">cmp:</span> `cmp rax,rbx` basically does (rax-rbx) only to set CPU flags based on subtraction, no modification on both
     <span style="color:rgb(146, 208, 80)">test:</span> `test rax, rax` (basically does bitwise rax AND rax, mostly used to check if register is zero or non-zero). used right after a function call
     <span style="color:rgb(146, 208, 80)">xchg</span>: swap two values
+    <span style="color:rgb(146, 208, 80)">syscall</span>: invokes a syscall, which is the number stored inside rax, `line1: mov rax, 42   line2: syscall`
 
 **Conditional Jumps:**
     They always come after a cmp or test and interpret the flags that instruction set:
