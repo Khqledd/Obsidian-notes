@@ -43,6 +43,7 @@
          ``
     ``
     <span style="color:rgb(146, 208, 80)">Effective Address Calculation:</span> `[base + index*scale + displacement]`
+    ![[Pasted image 20260718235150.png]]
 
 **Control Flow:**
     <span style="color:rgb(146, 208, 80)">mov:</span> featches data from memory: `mov rax, [rbp+8]` (rax = the value stored AT address rbp+8) -memory is read (`mov dst, src --> dst = src`)
@@ -79,7 +80,8 @@
      <span style="color:rgb(146, 208, 80)">add</span>: addition
      <span style="color:rgb(146, 208, 80)">sub</span>: subtraction, `sub dst, src ---> dst=dst-src`
      <span style="color:rgb(146, 208, 80)">inc</span>: increment +1      <span style="color:rgb(146, 208, 80)">dec</span>: decrement -1
-    <span style="color:rgb(146, 208, 80)"> imul / mul:</span> multiplication, unsigned / signed
-    <span style="color:rgb(146, 208, 80)"> idiv / div:</span> division, unsigned / signed
+    <span style="color:rgb(146, 208, 80)"> imul / mul:</span> multiplication, signed / unsigned
+    <span style="color:rgb(146, 208, 80)"> idiv / div:</span> division, signed / unsigned
      <span style="color:rgb(146, 208, 80)">and / or / not / xor</span>.
+     **Note: cqo or cdq instructions immediately before a divison: signed divison. xor rdx,rdx before a divison: unsigned divison**
 
