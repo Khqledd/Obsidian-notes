@@ -19,4 +19,6 @@
 - <span style="color:rgb(166, 127, 173)">dpkg -l</span>: all installed packages and their version
 
 **USER ENUMERATION:-**
-- id: 
+- <span style="color:rgb(166, 127, 173)">id</span>: overview of the user privileges and group memberships, can specify other users too like `id khaled`
+- env: show environmental varianbles (the PATH variable may have a compiler or a scripting language that could be used to run code on target system)
+- 
