@@ -1,4 +1,4 @@
-## <span style="color:rgb(255, 0, 247)">Enumeration commands</span>
+## <span style="color:rgb(255, 0, 247)">Enumeration Commands</span>
 
 **OS ENUMERATION:-**
 (Any file containing system information can be modified so check them all)
@@ -50,3 +50,5 @@
     `find / -name python*`: find development tools and supported languages
     `find / -perm -u=s -type f 2>/dev/null`: find files with the SUID bit, which allows us to run files with higher privilege than current user
     **ADD `2>/dev/null` TO REMOVE ERROR MESSAGES**
+
+## <span style="color:rgb(255, 0, 247)">Escalation Techniques</span>
