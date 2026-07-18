@@ -15,4 +15,8 @@
     `cd /var/spool/cron/` : holds per-user crontabs
     `cd /etc/cron.d/`: packages or admins can drop system-wide crontab-style files
     **FORMAT: minute - hour - day of month - month - day of week - user - task to be run (any executable string or binary)**
-- dpkg -l: all 
+    Note: in minutes field, `5`: runs once per hour at minute 5, `*/5`: run every 5 minutes
+- <span style="color:rgb(166, 127, 173)">dpkg -l</span>: all installed packages and their version
+
+**USER ENUMERATION:-**
+- id: 
