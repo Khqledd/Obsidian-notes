@@ -51,4 +51,6 @@
     `find / -perm -u=s -type f 2>/dev/null`: find files with the SUID bit, which allows us to run files with higher privilege than current user
     **ADD `2>/dev/null` TO REMOVE ERROR MESSAGES**
 
+*Tools to help with enumeration phase:* LinPeas: https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
+other tools like: LinEnum / LES (Linux exploit suggester) / 
 ## <span style="color:rgb(255, 0, 247)">Escalation Techniques</span>
