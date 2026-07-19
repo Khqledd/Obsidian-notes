@@ -67,3 +67,5 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 - `find / -type f -user root -perm -u=s 2>/dev/null`:  Finds files with SUID bit set that are owned by root, then use GTFObins SUID
 - **Example:** we found /usr/bin/base64 with the suid bit, in gtfobins we used it to read flag3.txt with the command: `base64 /home/ubuntu/flag3.txt | base64 --decode`
 
+<span style="color:rgb(172, 57, 163)"><b>Capabilities:</b></span> 
+- 
