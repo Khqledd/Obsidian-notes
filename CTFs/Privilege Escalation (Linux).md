@@ -52,5 +52,5 @@
     **ADD `2>/dev/null` TO REMOVE ERROR MESSAGES**
 
 *Tools to help with enumeration phase:* LinPeas: https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
-other tools like: LinEnum / LES (Linux exploit suggester) / 
+other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumeration / Linux priv checker
 ## <span style="color:rgb(255, 0, 247)">Escalation Techniques</span>
