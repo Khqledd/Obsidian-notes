@@ -54,3 +54,8 @@
 *Tools to help with enumeration phase:* LinPeas: https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
 other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumeration / Linux priv checker
 ## <span style="color:rgb(255, 0, 247)">Escalation Techniques</span>
+
+<span style="color:rgb(172, 57, 163)"><b>Kernel exploits:</b></span>
+- Find a CVE based on the kernel version found in `uname -a`
+- Example: Linux kernel version 3.13.0-24-generic ---> CVE-2015-1328
+- 
