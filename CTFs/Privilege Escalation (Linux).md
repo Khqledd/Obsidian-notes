@@ -57,4 +57,8 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 
 <span style="color:rgb(172, 57, 163)"><b>Sudo exploits:</b></span>
 - run `sudo -l` to see the commands you can run as sudo
-- go to https://gtfobins.org/ 
+- go to https://gtfobins.org/ then search for the command and go to "sudo"
+- for example if we have /usr/bin/nano, we go to nano and do these steps
+ ![[Pasted image 20260719192540.png]]
+
+
