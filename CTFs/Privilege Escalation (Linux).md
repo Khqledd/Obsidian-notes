@@ -56,4 +56,5 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 ## <span style="color:rgb(255, 0, 247)">Escalation Techniques</span>
 
 <span style="color:rgb(172, 57, 163)"><b>Sudo exploits:</b></span>
-
+- run `sudo -l` to see the commands you can run as sudo
+- go to https://gtfobins.org/ 
