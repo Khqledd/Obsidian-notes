@@ -61,4 +61,6 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 - for example if we have /usr/bin/nano, we go to nano and do these steps
  ![[Pasted image 20260719192540.png]]
 
-
+<span style="color:rgb(172, 57, 163)"><b>SUID exploits:</b></span>
+- SUID (set user identification) or SGID (set group identification) allow files to be executed with the permission level of the file owner or group owner respectively.
+- they have an 's' 
