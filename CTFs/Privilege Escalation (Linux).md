@@ -58,10 +58,12 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 <span style="color:rgb(172, 57, 163)"><b>Sudo exploits:</b></span>
 - run `sudo -l` to see the commands you can run as sudo
 - go to https://gtfobins.org/ then search for the command and go to "sudo"
-- for example if we have /usr/bin/nano, we go to nano and do these steps
+- for **example** if we have /usr/bin/nano, we go to nano and do these steps
  ![[Pasted image 20260719192540.png]]
 
 <span style="color:rgb(172, 57, 163)"><b>SUID exploits:</b></span>
 - SUID (set user identification) or SGID (set group identification) allow files to be executed with the permission level of the file owner or group owner respectively.
 - they have an 's' bit set in their permissions, example: `-rwsr-xr-x` (these files are executed as the owner)
-- `find / -type f -user root -perm -u=s 2>/dev/null`:  Finds files with SUID bit set that are owned by root
+- `find / -type f -user root -perm -u=s 2>/dev/null`:  Finds files with SUID bit set that are owned by root, then use GTFObins SUID
+- **Example:** we found /usr/bin/base64 with the suid bit, in gtfobins we used it to read flag3.txt with the command: `base64 /home/ubuntu/flag3.txt | base64 --decode`
+
