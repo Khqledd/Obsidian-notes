@@ -71,3 +71,5 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 - Used to increase the privilege level of a process or binary
 - `getcap -r / 2>/dev/null`: List enabled capabilities
 - Some of the findings dont even have a SUID bit set so we only discover by getcap
+- ![[Pasted image 20260720021659.png]]
+    in GTFObins go to vim, then go to python under it, go to shell a
