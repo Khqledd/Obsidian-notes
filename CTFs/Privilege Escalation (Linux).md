@@ -22,7 +22,7 @@
 - <span style="color:rgb(166, 127, 173)">id</span>: overview of the user privileges and group memberships, can specify other users too like `id khaled`
 - <span style="color:rgb(166, 127, 173)">env</span>: show environmental varianbles (the PATH variable may have a compiler or a scripting language that could be used to run code on target system)
 - <span style="color:rgb(166, 127, 173)">history</span>: check earlier commands, it is per-user
-- <span style="color:rgb(166, 127, 173)">sudo -l</span>: the target system may be configured to allow users to run some (or all) commands with root privileges. this command can be used to list all commands your user can run using sudo, its used to check for possible bins to escalate using GTFObins (example in Useful tips)
+- <span style="color:rgb(166, 127, 173)">sudo -l</span>: the target system may be configured to allow users to run some (or all) commands with root privileges. this command can be used to list all commands your user can run using sudo, its used to check for possible bins to escalate using [GTFObins](https://gtfobins.org/) (example in Useful tips)
 - <span style="color:rgb(166, 127, 173)">/etc/passwd</span>: discover users on the system
     To show a list of all *real* users: `cat /etc/passwd | grep /home | cut -d ":" -f1`
 
@@ -55,4 +55,5 @@
 other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumeration / Linux priv checker
 ## <span style="color:rgb(255, 0, 247)">Escalation Techniques</span>
 
-<span style="color:rgb(172, 57, 163)"><b>Kernel exploits:</b></span>
+<span style="color:rgb(172, 57, 163)"><b>Sudo exploits:</b></span>
+
