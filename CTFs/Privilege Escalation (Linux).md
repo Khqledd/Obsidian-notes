@@ -63,4 +63,5 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 
 <span style="color:rgb(172, 57, 163)"><b>SUID exploits:</b></span>
 - SUID (set user identification) or SGID (set group identification) allow files to be executed with the permission level of the file owner or group owner respectively.
-- they have an 's' 
+- they have an 's' bit set in their permissions, example: `-rwsr-xr-x` (these files are executed as the owner)
+- `find / -type f -user root -perm -u=s 2>/dev/null`:  Finds files with SUID bit set that are owned by root
