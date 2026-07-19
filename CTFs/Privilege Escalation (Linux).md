@@ -68,4 +68,6 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 - **Example:** we found /usr/bin/base64 with the suid bit, in gtfobins we used it to read flag3.txt with the command: `base64 /home/ubuntu/flag3.txt | base64 --decode`
 
 <span style="color:rgb(172, 57, 163)"><b>Capabilities:</b></span> 
-- 
+- Used to increase the privilege level of a process or binary
+- `getcap -r / 2>/dev/null`: List enabled capabilities
+- Some of the findings dont even have a SUID bit set so we only discover by getcap
