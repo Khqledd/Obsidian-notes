@@ -84,3 +84,6 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 <span style="color:rgb(172, 57, 163)"><b>PATH:</b></span> 
 - If a folder for which your user has write permission is located in the path (`echo $PATH`), you could potentially hijack an application to run a script
 - If we type “thm” to the command line, these are the locations Linux will look in for an executable called "thm".
+- So if there is no path defined for "THM" the system will look at the PATH environment variable:
+    ![[Pasted image 20260720231646.png]]
+- 
