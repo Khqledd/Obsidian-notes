@@ -89,3 +89,8 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 - We can add a directory to the PATH so the script looks for the executable there first, using the command: `export PATH=/tmp:$PATH`
 - We create a script, compile it using gcc, set the SUID bit using `chmod u+s`
 - If any writable folder is listed under PATH we could create a binary named "thm" under that directory and have our “path” script run it. As the SUID bit is set, this binary will run with root privilege, search for writable folders using: `find / -writable 2>/dev/null | cut -d "/" -f 2,3 | grep -v proc | sort -u`, so for example if tmp is writable we can just create a /tmp directory and add it to $PATH then place the executable there
+
+<span style="color:rgb(172, 57, 163)"><b>NFS (Network file sharing):</b></span>
+- NFS configuration is kept in: `cat /etc/exports`
+- The critical element for privilege escalation is the "no_root_squash" option
+- If the "no_root_squash" option is available, 
