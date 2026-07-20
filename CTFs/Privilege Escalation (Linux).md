@@ -88,4 +88,4 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
     ![[Pasted image 20260720231646.png]]
 - We can add a directory to the PATH so the script looks for the executable there first, using the command: `export PATH=/tmp:$PATH`
 - We create a script, compile it using gcc, set the SUID bit using `chmod u+s`
-- If any writable folder is listed under PATH we could create a binary named "thm" under that directory and have our “path” script run it. As the SUID bit is set, this binary will run with root privilege
+- If any writable folder is listed under PATH we could create a binary named "thm" under that directory and have our “path” script run it. As the SUID bit is set, this binary will run with root privilege, search for writable folders using: `find / -writable 2>/dev/null | cut -d "/" -f 2,3 | grep -v proc | sort -u`, so for example if tmp is writable we can just create a /tmp directory and add it to $PATH then place the executable there
