@@ -86,4 +86,5 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 - If we type “thm” to the command line, these are the locations Linux will look in for an executable called "thm".
 - So if there is no path defined for "THM" the system will look at the PATH environment variable:
     ![[Pasted image 20260720231646.png]]
+- We can add a directory to the PATH so the script looks for the executable there first, using the command: `export PATH=/tmp:$PATH`
 - 
