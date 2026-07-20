@@ -16,6 +16,7 @@
     `cd /etc/cron.d/`: packages or admins can drop system-wide crontab-style files
     **FORMAT: minute - hour - day of month - month - day of week - user - task to be run (any executable string or binary)**
     Note: in minutes field, `5`: runs once per hour at minute 5, `*/5`: run every 5 minutes
+    When a task has `* * * * *` this means it runs every minute
 - <span style="color:rgb(166, 127, 173)">dpkg -l</span>: all installed packages and their version
 
 **USER ENUMERATION:-**
@@ -77,4 +78,4 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 <span style="color:rgb(172, 57, 163)"><b>Cron Jobs:</b></span>
 - They run scripts at specific times with the privilege of their owner
 - If there is a scheduled task that runs with root privileges and we can change the script that will be run, then our script will run with root privileges
-- 
+- When a task has `* * * * *` this means it runs every minute
