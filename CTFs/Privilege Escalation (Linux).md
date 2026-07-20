@@ -74,3 +74,7 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 - ![[Pasted image 20260720021659.png]]
     in GTFObins go to vim, then go to python under it, go to shell and then capabilities and copy the command between ' '. also change py to py3
 
+<span style="color:rgb(172, 57, 163)"><b>Cron Jobs:</b></span>
+- They run scripts at specific times with the privilege of their owner
+- If there is a scheduled task that runs with root privileges and we can change the script that will be run, then our script will run with root privileges
+- 
