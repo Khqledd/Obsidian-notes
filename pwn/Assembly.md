@@ -97,5 +97,3 @@
     <span style="color:rgb(146, 208, 80)"> imul / mul:</span> multiplication, signed / unsigned
     <span style="color:rgb(146, 208, 80)"> idiv / div:</span> division, signed / unsigned
      **Note: cqo or cdq instructions immediately before a divison: signed divison. xor rdx,rdx before a divison: unsigned divison**
-
-t
