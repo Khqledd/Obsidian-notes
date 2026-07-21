@@ -15,7 +15,7 @@
      **Function call convention slot orders:** <span style="color:rgb(146, 208, 80)">rdi / rsi / rdx / rcx / r8 / r9</span>
      **System call convention slot orders:** <span style="color:rgb(146, 208, 80)">rdi / rsi / rdx / r10 / r8 / r9</span> (to pass arguments for the syscall)
      `mov rdi,42 --> mov rax,60 ` : 60 is the syscall for exit, 42 is the exit code, its like saying exit(42)
-    ![[Pasted image 20260719031249.png|222]] first assemble the .s file with `as` ---> then link it with `ld`
+    ![[Pasted image 20260719031249.png|222]] first assemble the .s file with `as <file.s> -o output` ---> then link it with `ld <file>`
 
 **The Stack:**
      ![[Pasted image 20260718013323.png]]
