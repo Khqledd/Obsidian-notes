@@ -95,7 +95,7 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 - The critical element for privilege escalation is the "no_root_squash" option
 - If the "no_root_squash" option is presenet on a writable share, we can create an executable with SUID bit set and run it on the target system
 
-- 1- Start by enumerating mountable shares on the attacking machine using: `showmount -e <Target IP>`, (ASSUME WE GOT /home/backup)
+- 1- Start by enumerating mountable shares on the attacking machine using: `showmount -e <Target IP>`, (ASSUME WE GOT /home/backup) (cd to it on the target machine first to make sure you have the permissions)
 - 2- Mount one of the "no_root_squash" shares to our attacker machine: 
     `mkdir /tmp/backupsonattackermachine` 
     `mount -o rw <Target IP>:/home/backup /tmp/backupsonattackermachine`
