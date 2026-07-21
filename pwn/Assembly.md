@@ -33,7 +33,7 @@
 
 **Memory Addressing:**
      `[rax]`: Returns the value stored at that address
-     `[rax+8]`: Value stored in address (rax + 8 bytes) 
+     `[rax+8]`: Value stored in address (rax + 8 bytes) {Dereferencing with Offsets}
      `[rbp-0x10]`: dereference an address (stack local) "take the value in rbp, subtract 0x10 from it, treat that result as a memory address, and access what's stored at that address"
      `[rdi]`: pointer dereference
      `mov rbx, rax`: rbx now holds 0x4000 (the address)
