@@ -93,4 +93,8 @@ other tools like: LinEnum / LES (Linux exploit suggester) / Linux smart enumerat
 <span style="color:rgb(172, 57, 163)"><b>NFS (Network file sharing):</b></span>
 - NFS configuration is kept in: `cat /etc/exports`
 - The critical element for privilege escalation is the "no_root_squash" option
-- If the "no_root_squash" option is available, 
+- If the "no_root_squash" option is presenet on a writable share, we can create an executable with SUID bit set and run it on the target system
+
+- 1- Start by enumerating mountable shares on the attacking machine using: `showmount -e <Target IP>`
+- 2- Mount one of the "no_root_squash" shares to our attacker machine: 
+    `mkdir /tmp/backupsonattackermachine`  ##
