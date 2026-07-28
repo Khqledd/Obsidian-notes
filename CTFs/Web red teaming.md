@@ -42,6 +42,7 @@ sqlmap: tool used for sql injection
 - <span style="color:rgb(156, 102, 92)">.git</span>: `/.git` directory is a hidden folder git creates to save version history (commits, branches etc) so if .git is exposed we can reconstruct the entire source code and commit history including codes, routes or secrets that were removed from the site
     -to confirm that its exposed, check `/.git/HEAD` or `/.git/config` and if you get real content back then its exposed
     -dump the repo using `git-dumper` (`git-dumper http://target:port/.git/ ./dumped-repo`) then explore the /dumped-repo
+    -`wget -r` works too but havent tried
     -if you want to check manually, clicking on a directory removes /.git from the url so it returns 404, must add /.git back to the url
     ![[Pasted image 20260728203504.png]]
 
