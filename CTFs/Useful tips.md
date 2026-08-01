@@ -47,6 +47,7 @@
 https://osintframework.com/
 https://www.idcrawl.com/: for OSINT to find accounts
 https://epieos.com/: email/phone data
+https://gravatar.com/site/check: email info
 
 for timeline explorer
 ```
