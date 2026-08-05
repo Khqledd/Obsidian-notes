@@ -97,3 +97,10 @@
     <span style="color:rgb(146, 208, 80)"> imul / mul:</span> multiplication, signed / unsigned
     <span style="color:rgb(146, 208, 80)"> idiv / div:</span> division, signed / unsigned
      **Note: cqo or cdq instructions immediately before a divison: signed divison. xor rdx,rdx before a divison: unsigned divison**
+
+**Commands:**
+     <span style="color:rgb(146, 208, 80)">objdump:</span> Disassemble a binary to view assembly instructions: 
+        `objdump -d -M intel /tmp/your-program` 
+     <span style="color:rgb(146, 208, 80)">strace</span>: Trace system calls
+         `strace /tmp/your-program`
+     <span style="color:rgb(146, 208, 80)">gdb:</span> GNU Debugger
