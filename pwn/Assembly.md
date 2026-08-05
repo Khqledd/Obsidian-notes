@@ -107,4 +107,4 @@
          `gdb /path-to/binary-file`
          -start a program and stop before the entry point of the binary: `(gdb) starti`
          -disassemble after starting: `(gdb) disassemble`
-         -to execute a single instruction: `(gdb) stepi`
+         -to execute a single instruction: `(gdb) stepi`    {or read a value like `print $rdi` // `set $rax = 42`}
