@@ -104,3 +104,6 @@
      <span style="color:rgb(146, 208, 80)">strace</span>: Trace system calls
          `strace /tmp/your-program`
      <span style="color:rgb(146, 208, 80)">gdb:</span> GNU Debugger
+         `gdb /path-to/binary-file`
+         start a program: `(gdb) starti`
+         disassemble after starting: `(gdb) disassemble`
