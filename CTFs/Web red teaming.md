@@ -105,7 +105,7 @@ Detecting blind command injection (no output on screen):
 - curl with the payload: `curl http://vulnerable.app/process.php%3Fsearch%3DThe%20Beatles%3B%20whoami`, the last part is URL encoded and its equivalent to (?search=The Beatles; whoami)
 
 **More payloads and info about command injection:** https://github.com/payload-box/command-injection-payload-list#payload-files
-(can input reverse shells like the ones here: https://hackviser.com/tactics/pentesting/web/command-injection )
+(can input reverse shells like the ones here: https://hackviser.com/tactics/pentesting/web/command-injection, dont forget ; before the command)
 
 
 <span style="color:rgb(255, 255, 0)">Upload Vulnerability:</span>
