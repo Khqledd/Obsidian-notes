@@ -53,3 +53,5 @@ for timeline explorer
 ```
 .\EvtxECmd.exe -f 'C:\Users\user\Desktop\Incident Files\sysmon.evtx' --csv 'C:\Users\user\Desktop\Incident Files' --csvf sysmon.csv
 ```
+
+**STABALIZE A REVERSE SHELL**: `python3 -c 'import pty; pty.spawn("/bin/bash")'`
