@@ -108,4 +108,7 @@
          -start a program and stop before the entry point of the binary: `(gdb) starti`
          -disassemble after starting: `(gdb) disassemble`
          -to execute a single instruction: `(gdb) stepi`    {or read a value like `print $rdi` // `set $rax = 42`}
-         -to examine a value (look at memory content): `(gdb) x $rsp`
+         -to examine a value (look at memory content): `(gdb) x $rsp` || examine as address `x/a` || examine as string `x/s`
+
+**Random shit:**
+    -to set up a breakpoint in the assembly code, add `int3`
