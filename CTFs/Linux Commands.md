@@ -208,6 +208,7 @@ running (xxd file.data) alone doesnt change anything it just prints out the hex 
 <span style="color:rgb(231, 116, 8)">steghide</span>: tool used for steganography
      steghide info image.jpg: show hidden files in an image
      steghide extract -sf image.jpg: extract hidden data from image
+    `stegseek image.jpg rockyou.txt (brute force password)`
 
 <span style="color:rgb(231, 116, 8)">cewl</span>: generate a custom wordlist from a website (d = depth)
      cewl -d 2 -w $(pwd)/example.txt https://example.org
