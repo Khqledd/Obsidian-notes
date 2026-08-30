@@ -113,6 +113,7 @@
 **Random shit:**
     -to set up a breakpoint in the assembly code, add `int3`
 
-**Read and Write:**
+**Output and Input:**
     ![[Pasted image 20260830235136.png]]
     <span style="color:rgb(0, 176, 80)">System call numbers</span>: read(): 0 / write(): 1 / open(): 2 / exit(): 60
+    <span style="color:rgb(0, 176, 80)">File descriptors</span>: stdin: 0 / stdout: 1 / stderr: 2
