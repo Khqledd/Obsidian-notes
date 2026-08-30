@@ -112,3 +112,6 @@
 
 **Random shit:**
     -to set up a breakpoint in the assembly code, add `int3`
+
+**Read and Write:**
+    ![[Pasted image 20260830235136.png]]
