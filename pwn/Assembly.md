@@ -115,3 +115,4 @@
 
 **Read and Write:**
     ![[Pasted image 20260830235136.png]]
+    <span style="color:rgb(0, 176, 80)">System call numbers</span>: read(): 0 / write(): 1 / open(): 2 / exit(): 60
