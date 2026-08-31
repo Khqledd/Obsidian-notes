@@ -118,4 +118,5 @@
     ![[Pasted image 20260830235136.png]]
     <span style="color:rgb(0, 176, 80)">System call numbers</span>: read(): 0 / write(): 1 / open(): 2 / exit(): 60
     <span style="color:rgb(0, 176, 80)">File descriptors</span>: stdin: 0 / stdout: 1 / stderr: 2
-    `read stores how many bytes were exactly read into rax, so we can use it in write like this (mov rdx, rax) `
+    -`read stores how many bytes were exactly read into rax, so we can use it in write like this (mov rdx, rax) `
+    -`when you open a file, first parax
