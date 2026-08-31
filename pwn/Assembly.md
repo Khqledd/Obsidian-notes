@@ -62,6 +62,7 @@
     They always come after a cmp or test and interpret the flags that instruction set:
     <span style="color:rgb(146, 208, 80)">je / jz:</span> jump if equal / jump if zero
     <span style="color:rgb(146, 208, 80)">jne / jnz:</span> jump if not equal / not zero
+    <span style="color:rgb(146, 208, 80)">jo / jno</span>: jump if overflow / jump if not overflow
     ``
     **Signed comparison (for int, signed types):**
          <span style="color:rgb(146, 208, 80)">jg / jnle:</span> jump if greater
