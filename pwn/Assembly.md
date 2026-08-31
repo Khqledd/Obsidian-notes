@@ -119,4 +119,5 @@
     <span style="color:rgb(0, 176, 80)">System call numbers</span>: read(): 0 / write(): 1 / open(): 2 / exit(): 60
     <span style="color:rgb(0, 176, 80)">File descriptors</span>: stdin: 0 / stdout: 1 / stderr: 2
     -`read stores how many bytes were exactly read into rax, so we can use it in write like this (mov rdx, rax) `
-    -`when you open a file, first parax
+    
+    -`when you open a file, 1st param is pointer to filename string in memory, 2nd is the mode (0 = read-only), open() returns the fd number in rax starting    from 3 because 0,1,2 are taken. we use this fd number as the first arg for read()
