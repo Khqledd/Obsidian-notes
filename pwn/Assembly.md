@@ -112,6 +112,7 @@
 
 **Random shit:**
     -to set up a breakpoint in the assembly code, add `int3`
+    -[https://godbolt.org/]to write code in C and see what it looks like in assembly
 
 **Output and Input:**
     (File descriptor, memory_address, number_of_characters)
