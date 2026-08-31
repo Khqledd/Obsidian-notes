@@ -122,4 +122,4 @@
     <span style="color:rgb(0, 176, 80)">-</span>when you open a file, 1st param is pointer to filename string in memory, 2nd is the mode (0 = read-only), open() returns the fd number in rax starting from 3 because 0,1,2 are taken. we use this fd number as the first arg for read()
     <span style="color:rgb(0, 176, 80)">-</span> hardcoding file name: 
     ![[Pasted image 20260831185441.png]]
-    or an easier way is adding `path:` at the end of the program with `.asciz "/flag"` inside, then use it in the parameter of open `mov rdi, path`
+    or an easier way is adding `path:` at the end of the program with `.asciz "/flag"` inside, then use it in the parameter of open `lea rdi, [rip+path]`
