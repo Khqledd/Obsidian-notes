@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiAlertTriangle",
       "LiBadge",
       "LiAngry",
       "LiArrowDownLeft",
-      "LiAlignVerticalDistributeEnd",
-      "LiApple"
+      "LiAlignVerticalDistributeEnd"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -53,5 +53,6 @@
   "Blue Team/Volatility.md": "LiApple",
   "CTFs/Privilege Escalation (Linux).md": "LiAlignVerticalDistributeEnd",
   "pwn/General.md": "LiAngry",
-  "pwn/Assembly.md": "LiBadge"
+  "pwn/Assembly.md": "LiBadge",
+  "pwn/gdb.md": "LiAlertTriangle"
 }
