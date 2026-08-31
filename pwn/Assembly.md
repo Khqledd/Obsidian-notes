@@ -61,8 +61,9 @@
 **Conditional Jumps:**
     They always come after a cmp or test and interpret the flags that instruction set:
     ![[Pasted image 20260831215631.png]]
+    <span style="color:rgb(146, 208, 80)">setz</span>: Set If Zero, if ZF =1 then whatever after setz becomes 1, same logic with 0
+    <span style="color:rgb(146, 208, 80)">setnz</span>: Set If Not Zero
   
-
 **Functions:**
     ![[Pasted image 20260718233207.png|484]]
     - The function has a stack that grows downwards
