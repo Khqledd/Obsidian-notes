@@ -114,3 +114,6 @@
     <span style="color:rgb(0, 176, 80)">-</span> hardcoding file name: 
     ![[Pasted image 20260831185441.png]]
     or an easier way is adding `path:` at the end of the program with `.asciz "/flag"` inside, then use it in the parameter of open `lea rdi, [rip+path]`
+
+**Endian Escapades:**
+     ![[Pasted image 20260902013938.png]]![[Pasted image 20260902014042.png]]
