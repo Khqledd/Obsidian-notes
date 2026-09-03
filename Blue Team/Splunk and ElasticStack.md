@@ -1,5 +1,6 @@
  Also remember to change the date for both
 ## <span style="color:rgb(255, 0, 0)">Elastic Stack</span>
+All fields: https://www.elastic.co/docs/reference/ecs/ecs-event#field-event-code
 
 <span style="color:rgb(237, 115, 115)">Searching:</span>
     `_index:....`
