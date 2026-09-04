@@ -11,6 +11,7 @@
 - <span style="color:rgb(0, 176, 240)">Windows</span>: `Win+R -> "eventvwr"` (we can apply filters to log list through Find.., Security log Event ID 4625 = failed logon attempt, 4624 = successful logon) 
     Event ID meaning: https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/
     Logon ID can be used for correlating events together (keep it noted)
+    `.evtx` extension
 ![[Pasted image 20260703195002.png]]
 
 Persistence indicators in windows security logs:
