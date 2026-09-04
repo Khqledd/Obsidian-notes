@@ -65,3 +65,6 @@
      `Get-Item -Path "C:\House\house_log.txt" -Stream *`
 
 <span style="color:rgb(0, 176, 240)">Invoke-Command</span>: runs command on local and remote computers
+
+<span style="color:rgb(0, 176, 240)">Get-WinEvent:</span>  Retrieve different types of event logs including ETW 
+    https://academy.hackthebox.com/app/module/216/section/2322]
