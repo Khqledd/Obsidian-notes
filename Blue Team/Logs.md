@@ -19,7 +19,8 @@ Persistence indicators in windows security logs:
 ![[Pasted image 20260703200921.png]]
 
 **example XML filter:**
-```<QueryList>
+```
+<QueryList>
   <Query Id="0" Path="Security">
     <Select Path="Security">*[EventData[Data[@Name='SubjectLogonId']='0x3E7']]</Select>
   </Query>
