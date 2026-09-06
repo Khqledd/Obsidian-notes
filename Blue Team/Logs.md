@@ -33,6 +33,7 @@ Persistence indicators in windows security logs:
      Event ID 1: Process creation / Event ID 15: check host URL
      Event ID 11: File creation / Event ID 13: registry value set
      Event ID 3: Network connection / Event ID 22: DNS query
+     Event ID 15: FileCreateStreamHash (browser file download)
      https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 
 ---------------------------------------------------
