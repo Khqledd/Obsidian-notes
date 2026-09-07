@@ -102,4 +102,6 @@ Username that is not Katrina or James or Moin
     <span style="color:rgb(245, 112, 112)">| stats</span>: statistical operations (<span style="color:rgb(146, 208, 80)">| stats count by _time, Image</span>: return a table where each row represents a unique combination of a timestamp and a process)
     <span style="color:rgb(245, 112, 112)">| chart</span>: creates a data visualization based on statistical operations (<span style="color:rgb(146, 208, 80)">| chart count by _time, Image</span>)
     <span style="color:rgb(245, 112, 112)">| eval</span>: creates or redefines fields: (<span style="color:rgb(146, 208, 80)">eval Process_Path=lower(Image)</span>: creates a new field Process_Path which contains the lowercase version of the Image field)
-    <span style="color:rgb(245, 112, 112)">| rex</span>: extracts new fields from existing ones using regular expressions (| rex max_match=0 "[^%](?<guid>{.*})" | table guid
+    <span style="color:rgb(245, 112, 112)">| rex</span>: extracts new fields from existing ones using regular expressions (`| rex max_match=0 "[^%](?<guid>{.*})" | table guid`)
+    <span style="color:rgb(245, 112, 112)">| lookup</span>: enriches the data with external sources, used after adding a CSV file for example to lookups table in the settings
+    <span style="color:rgb(245, 112, 112)">| inputlookup</span>: retrieves data from a lookup file without joining it to the search results (<span style="color:rgb(146, 208, 80)">| inputlookup malware_lookup.csv</span>)
