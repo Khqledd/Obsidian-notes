@@ -117,4 +117,7 @@
     or an easier way is adding `path:` at the end of the program with `.asciz "/flag"` inside, then use it in the parameter of open `lea rdi, [rip+path]`
 
 **Endian Escapades:**
-     ![[Pasted image 20260902013938.png]]![[Pasted image 20260902014042.png]]
+     ![[Pasted image 20260902013938.png]]
+     ![[Pasted image 20260902014042.png]]
+     DWORD endian reversing:
+     ![[Pasted image 20260907192333.png]]
