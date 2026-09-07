@@ -90,3 +90,5 @@ index=* status=503
 
 Username that is not Katrina or James or Moin
 `index=win_eventlogs schtasks AND username NOT (Moin OR Katrina OR James)`
+
+Commands summary (what ):
