@@ -91,4 +91,12 @@ index=* status=503
 Username that is not Katrina or James or Moin
 `index=win_eventlogs schtasks AND username NOT (Moin OR Katrina OR James)`
 
-Commands summary (what ):
+
+
+<span style="color:rgb(218, 121, 43)">Commands summary (what comes after the | ):</span>
+    <span style="color:rgb(245, 112, 112)">| fields</span> : specifies which fields should be included or excluded in the search results (`|fields - User: search results contain all fields except User)
+    <span style="color:rgb(245, 112, 112)">| table</span>: presents search results in a tabular format (`| table _time, host, Image`)
+    <span style="color:rgb(245, 112, 112)">| rename</span>: renames a field in the search results (`| rename Image as Process`)
+    <span style="color:rgb(245, 112, 112)">| dedup</span>: removes duplicate events (`| dedup Image: if the same process (Image) is created multiple times, it will appear only once in the results)
+    <span style="color:rgb(245, 112, 112)">| sort</span>: sort search results (`| sort - _time: sort events in descending order of their timestamps`)
+    <span style="color:rgb(245, 112, 112)">| stats</span>: statistical operations (``)
