@@ -52,7 +52,7 @@
   "Blue Team/Splunk and ElasticStack.md": "LiAperture",
   "Blue Team/Volatility.md": "LiApple",
   "CTFs/Privilege Escalation (Linux).md": "LiAlignVerticalDistributeEnd",
-  "Reverse Engineering/gdb.md": "LiAlertTriangle",
   "Reverse Engineering/Assembly.md": "LiBadge",
-  "Reverse Engineering/General.md": "LiAngry"
+  "Reverse Engineering/General.md": "LiAngry",
+  "Reverse Engineering/pwndbg.md": "LiAlertTriangle"
 }
