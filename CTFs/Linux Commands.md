@@ -229,3 +229,6 @@ running (xxd file.data) alone doesnt change anything it just prints out the hex 
 
 - brute forcing (easier with hydra)
     `ffuf -w usernames.txt:W1,/usr/share/wordlists:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.112.134.214/customers/login -fc 200`
+
+<span style="color:rgb(240, 121, 10)">xfreerdp</span>: Connect to remote desktop
+     `xfreerdp /v:10.10.10.10 /u:admin /p:password /dynamic-resolution`
