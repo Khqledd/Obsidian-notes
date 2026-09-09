@@ -131,6 +131,10 @@
     {
       "path": "Windows Attacks/Kerberoasting.md",
       "color": "oXceK6COXelTC3UxZGw5z"
+    },
+    {
+      "path": "Windows Attacks/AS-REP roasting.md",
+      "color": "3tobGF_Q1drdCFhFy3Soy"
     }
   ]
 }
