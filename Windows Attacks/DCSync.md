@@ -36,4 +36,9 @@ Object Relative ID   : 500
 Credentials:
   Hash NTLM: fcdc65703dd2b0bd789977f1f3eeae
 ```
+It is possible to specify the `/all` parameter instead of a specific username
 
+-----------------------
+## Detection:
+
+- Domain Controller replication generates an event with the ID <span style="color:rgb(255, 0, 0)">4662</span>. We can pick up abnormal requests immediately by monitoring for this event ID and checking whether the initiator account is a Domain Controller
