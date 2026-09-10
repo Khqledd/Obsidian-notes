@@ -15,4 +15,3 @@
 - <span style="color:rgb(255, 255, 0)">finish</span>: runs the program until the current function returns
 - <span style="color:rgb(255, 255, 0)">delete</span>: delete a breakpoint
     `delete 2: deletes breakpoint number 2`
-- 
