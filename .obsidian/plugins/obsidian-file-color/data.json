@@ -143,6 +143,10 @@
     {
       "path": "Windows Attacks/Credential in Shares.md",
       "color": "4Y9N0giwSuvoEGus2B_nJ"
+    },
+    {
+      "path": "Windows Attacks/DCSync.md",
+      "color": "LtzSh_z51m76eAf0I-1GP"
     }
   ]
 }
