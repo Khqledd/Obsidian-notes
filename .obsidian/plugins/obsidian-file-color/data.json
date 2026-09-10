@@ -135,6 +135,10 @@
     {
       "path": "Windows Attacks/AS-REP roasting.md",
       "color": "3tobGF_Q1drdCFhFy3Soy"
+    },
+    {
+      "path": "Windows Attacks/GPO Perms and Files.md",
+      "color": "lkdZlhfpThGoJI21QfCEy"
     }
   ]
 }
