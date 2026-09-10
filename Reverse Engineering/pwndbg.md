@@ -15,3 +15,5 @@
 - <span style="color:rgb(255, 255, 0)">finish</span>: runs the program until the current function returns
 - <span style="color:rgb(255, 255, 0)">delete</span>: delete a breakpoint
     `delete 2: deletes breakpoint number 2`
+- <span style="color:rgb(255, 255, 0)">info</span>: inspect the state of the program / registers / breakpoints etc...
+    ![[Pasted image 20260911024008.png]]
