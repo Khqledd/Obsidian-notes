@@ -1,4 +1,4 @@
 - <span style="color:rgb(146, 208, 80)">SYSVOL</span>: is a network share on all Domain Controllers, containing logon scripts, group policy data, and other required domain-wide data
 - AD stores all group policies in `\\<DOMAIN>\SYSVOL\<DOMAIN>\Policies\`
-- Windows let admins push passwords (local admin, service accounts, etc.) via Group Policy Preferences (GPP), stored in SYSVOL XML files, encrypted with AES
+- Windows let admins push passwords (local admin, service accounts, etc.) via Group Policy Preferences (GPP), stored in SYSVOL XML files, encrypted with AES, in a field called `cpassword`
 - 
