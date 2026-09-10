@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiAxis3d",
       "LiAlignVerticalSpaceAround",
       "LiAlarmSmoke",
       "LiAirVent",
-      "LiAlertTriangle",
-      "LiBadge"
+      "LiAlertTriangle"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -56,5 +56,6 @@
   "Reverse Engineering/General.md": "LiAngry",
   "Reverse Engineering/pwndbg.md": "LiAlertTriangle",
   "Windows Attacks/Kerberoasting.md": "LiAlarmSmoke",
-  "Windows Attacks/AS-REP roasting.md": "LiAlignVerticalSpaceAround"
+  "Windows Attacks/AS-REP roasting.md": "LiAlignVerticalSpaceAround",
+  "Windows Attacks/GPP Passwords.md": "LiAxis3d"
 }

@@ -20,3 +20,4 @@ sudo hashcat -m 18200 -a 0 asrep.txt passwords.txt --outfile asrepcrack.txt --fo
 ## Detection:
 
 - Event with ID <span style="color:rgb(240, 121, 10)">4768</span> was generated, signaling that a `Kerberos Authentication ticket` was generated:
+- In the event viewer log, `Pre-Authentication Type: 0`
