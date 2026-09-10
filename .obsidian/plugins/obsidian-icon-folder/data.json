@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiAccessibility",
       "LiActivitySquare",
       "LiAxis3d",
       "LiAlignVerticalSpaceAround",
-      "LiAlarmSmoke",
-      "LiAirVent"
+      "LiAlarmSmoke"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -58,5 +58,6 @@
   "Windows Attacks/Kerberoasting.md": "LiAlarmSmoke",
   "Windows Attacks/AS-REP roasting.md": "LiAlignVerticalSpaceAround",
   "Windows Attacks/GPP Passwords.md": "LiAxis3d",
-  "Windows Attacks/GPO Perms and Files.md": "LiActivitySquare"
+  "Windows Attacks/GPO Perms and Files.md": "LiActivitySquare",
+  "Windows Attacks/Credential in Shares.md": "LiAccessibility"
 }
