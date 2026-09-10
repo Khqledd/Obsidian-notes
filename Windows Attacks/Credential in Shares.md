@@ -13,4 +13,17 @@ PS C:\Users\bob\Downloads> Invoke-ShareFinder -domain eagle.local -ExcludeStanda
 \\DC1.eagle.local\SYSVOL     
 ```
 
-2) 
+2) Share with the name `dev$`. Because of the dollar sign, if we were to browse the server which contains the share using Windows Explorer, 
+   we would be presented with an empty list
+
+3) Parse a collection of files and pick up matching words using `findstr` (we can replace "pass" with "pw")
+   Remove /m if you want to view the line containing "pass"
+```
+PS C:\Users\bob\Downloads> cd \\Server01.eagle.local\dev$
+PS Microsoft.PowerShell.Core\FileSystem::\\Server01.eagle.local\dev$> findstr /m /s /i "pass" *.bat
+PS Microsoft.PowerShell.Core\FileSystem::\\Server01.eagle.local\dev$> findstr /m /s /i "pass" *.cmd
+PS Microsoft.PowerShell.Core\FileSystem::\\Server01.eagle.local\dev$> findstr /m /s /i "pass" *.ini
+setup.ini
+PS Microsoft.PowerShell.Core\FileSystem::\\Server01.eagle.local\dev$> findstr /m /s /i "pass" *.config
+4\5\4\web.config
+```
