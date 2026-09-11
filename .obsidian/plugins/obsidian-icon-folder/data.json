@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "🐉",
       "LiAmphora",
       "LiAccessibility",
       "LiActivitySquare",
-      "LiAxis3d",
-      "LiAlignVerticalSpaceAround"
+      "LiAxis3d"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -60,5 +60,6 @@
   "Windows Attacks/GPP Passwords.md": "LiAxis3d",
   "Windows Attacks/GPO Perms and Files.md": "LiActivitySquare",
   "Windows Attacks/Credential in Shares.md": "LiAccessibility",
-  "Windows Attacks/DCSync.md": "LiAmphora"
+  "Windows Attacks/DCSync.md": "LiAmphora",
+  "Reverse Engineering/Ghidra.md": "🐉"
 }

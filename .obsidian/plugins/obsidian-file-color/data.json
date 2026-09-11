@@ -147,6 +147,10 @@
     {
       "path": "Windows Attacks/DCSync.md",
       "color": "LtzSh_z51m76eAf0I-1GP"
+    },
+    {
+      "path": "Reverse Engineering/Ghidra.md",
+      "color": "Q3KyPhEVFc11tgprHQkSh"
     }
   ]
 }
