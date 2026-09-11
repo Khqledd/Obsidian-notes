@@ -88,17 +88,6 @@
     <span style="color:rgb(146, 208, 80)"> idiv / div:</span> division, signed / unsigned
      **Note: cqo or cdq instructions immediately before a divison: signed divison. xor rdx,rdx before a divison: unsigned divison**
 
-**Commands:**
-     <span style="color:rgb(146, 208, 80)">objdump:</span> Disassemble a binary to view assembly instructions: 
-        `objdump -d -M intel /tmp/your-program` 
-     <span style="color:rgb(146, 208, 80)">strace</span>: Trace system calls
-         `strace /tmp/your-program`
-     <span style="color:rgb(146, 208, 80)">gdb:</span> GNU Debugger
-         -start a program and stop before the entry point of the binary: `(gdb) starti`
-         -disassemble after starting: `(gdb) disassemble`
-         -to execute a single instruction: `(gdb) stepi`    {or read a value like `print $rdi` // `set $rax = 42`}
-         -to examine a value (look at memory content): `(gdb) x $rsp` || examine as address `x/a` || examine as string `x/s`
-
 **Random shit:**
     -to set up a breakpoint in the assembly code, add `int3`
     -[https://godbolt.org/]to write code in C and see what it looks like in assembly
