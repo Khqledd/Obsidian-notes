@@ -202,6 +202,7 @@ running (xxd file.data) alone doesnt change anything it just prints out the hex 
      `-r`: read packets from a file (-r FILE)
      `-c`: limit the number of captured packets (-c COUNT)
      `-n`: don't resolve ip addresses, no DNS lookups (numeric format output)
+     `-l`: line-buffered output which helps when using grep
      we can filter with these while using logical operators instead of slash (and or not): host example.com / port 53 / protocol / dst host IP / src host IP
      -more filters in (man pcap-filter)
 
