@@ -1,6 +1,7 @@
 ## <span style="color:rgb(218, 121, 43)">Basic commands:</span> 
 - <span style="color:rgb(255, 255, 0)">pwndbg</span>: launch the debugger
 - <span style="color:rgb(255, 255, 0)">si</span>: step one assembly instruction (pwndbg highlights the registers that changed in red in the "registers" panel)
+- <span style="color:rgb(255, 255, 0)">ni</span>: step OVER the next instruction
 - <span style="color:rgb(255, 255, 0)">p</span>: print value, use $ before registers / & for address
     `p $rax: prints value of rax / p &first: prints address of variable called 'first'`
     `p 0x7fffffffda70 - 0x7fffffffd7c0: difference between two addresses`
@@ -8,6 +9,7 @@
     `x/x 0x7fffffffdb98: examine hex value at this address (could specify the number of hex characters like x/10x / or the full 8 hex bytes with x/gx)`
     `x/c 0x7fffffffdb98: examine character at this address`
     `x/s 0x7fffffffdb98: examine string at this address`
+    `d for decimal, u for unsigned decimal`
 - <span style="color:rgb(255, 255, 0)">context</span>: refresh the page, show everything again
 - <span style="color:rgb(255, 255, 0)">finish</span>: runs the program until the current function returns
 - <span style="color:rgb(255, 255, 0)">info</span>: inspect the state of the program / registers / breakpoints etc...
@@ -19,6 +21,8 @@
 - <span style="color:rgb(255, 255, 0)">objdump</span>: Disassemble a binary to view assembly instructions: 
     `objdump -d -M intel /tmp/your-program` 
 - <span style="color:rgb(255, 255, 0)">disassemble</span>: (short form **disas**) by itself will show you assembly surrounding the current location you are stopped at.
+- <span style="color:rgb(255, 255, 0)">set</span>: modify a register
+    `set $rax = 0xdeadbeeff00dface`
 ## <span style="color:rgb(240, 121, 10)">Breakpoints:</span> 
 - <span style="color:rgb(255, 255, 0)">break</span>: set a breakpoint for the debugger to stop at
     `break main: Stop as soon as the main function starts executing`
