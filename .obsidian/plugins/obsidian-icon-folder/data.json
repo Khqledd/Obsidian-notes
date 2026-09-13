@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiBadge",
       "🐷",
       "🐉",
       "LiAmphora",
-      "LiAccessibility",
-      "LiActivitySquare"
+      "LiAccessibility"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -62,5 +62,6 @@
   "Windows Attacks/DCSync.md": "LiAmphora",
   "Reverse Engineering/Ghidra.md": "🐉",
   "IDS and IPS/Snort.md": "🐷",
-  "IDS and IPS/Suricata.md": "LiAmphora"
+  "IDS and IPS/Suricata.md": "LiAmphora",
+  "IDS and IPS/Zeek.md": "LiBadge"
 }
