@@ -12,3 +12,8 @@
 ```
 /usr/local/zeek/bin/zeek -C -r /home/htb-student/pcaps/psempire.pcap
 ```
+
+- Filter DNS using zeek-cut (For DNS Exfiltration):
+```
+cat dns.log | /usr/local/zeek/bin/zeek-cut query | cut -d . -f1-7
+```
