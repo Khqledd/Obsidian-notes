@@ -2,3 +2,6 @@
 
 - <span style="color:rgb(0, 176, 240)">To view Suricata rules</span>: `ls -lah /etc/suricata/rules`
 - Rules can contain <span style="color:rgb(0, 176, 240)">variables</span> like `$HOME_NET` which are defined in: `/etc/suricata/suricata.yaml` , where you can add rule files under rule-files: by specifying their path
+
+- <span style="color:rgb(0, 176, 240)">Reading offline input</span>: `suricata -r /home/htb-student/file.pcap`, (This will create various logs).
+- <span style="color:rgb(0, 176, 240)">Reading live input</span>: `sudo suricata --pcap=ens160 -vv`, (ens160 is the interface name from ifconfig).
