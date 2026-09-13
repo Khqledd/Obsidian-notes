@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "🐷",
       "🐉",
       "LiAmphora",
       "LiAccessibility",
-      "LiActivitySquare",
-      "LiAxis3d"
+      "LiActivitySquare"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -46,7 +46,6 @@
   },
   "Blue Team/Wireshark.md": "LiArrowDownAz",
   "Blue Team/Data Exfiltration.md": "LiAlarmSmoke",
-  "Blue Team/Snort.md": "LiAnnoyed",
   "Blue Team/Man-in-the-Middle.md": "LiAtom",
   "Blue Team/Logs.md": "LiAlbum",
   "Blue Team/Splunk and ElasticStack.md": "LiAperture",
@@ -61,5 +60,7 @@
   "Windows Attacks/GPO Perms and Files.md": "LiActivitySquare",
   "Windows Attacks/Credential in Shares.md": "LiAccessibility",
   "Windows Attacks/DCSync.md": "LiAmphora",
-  "Reverse Engineering/Ghidra.md": "🐉"
+  "Reverse Engineering/Ghidra.md": "🐉",
+  "IDS and IPS/Snort.md": "🐷",
+  "IDS and IPS/Suricata.md": "LiAmphora"
 }

@@ -97,7 +97,7 @@
       "color": "cZHYgt23Axy2cthIocVTu"
     },
     {
-      "path": "Blue Team/Snort.md",
+      "path": "IDS and IPS/Snort.md",
       "color": "8uLcCFoPAq8StpkaREfu6"
     },
     {
@@ -151,6 +151,10 @@
     {
       "path": "Reverse Engineering/Ghidra.md",
       "color": "Q3KyPhEVFc11tgprHQkSh"
+    },
+    {
+      "path": "IDS and IPS/Suricata.md",
+      "color": "oXceK6COXelTC3UxZGw5z"
     }
   ]
 }
