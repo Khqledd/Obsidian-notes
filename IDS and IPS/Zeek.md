@@ -6,3 +6,9 @@
     - `http.log`: This log captures the details of HTTP requests and responses.
     - `ftp.log`: Details of FTP requests and responses are logged here.
     - `smtp.log`: This log covers SMTP transactions, such as sender and recipient details.
+
+
+- Process the entire `psempire.pcap` file and generate Zeek logs:
+```
+/usr/local/zeek/bin/zeek -C -r /home/htb-student/pcaps/psempire.pcap
+```
