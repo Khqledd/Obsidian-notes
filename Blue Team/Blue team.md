@@ -38,6 +38,7 @@
     - `PEStudio`: Static analysis, or studying executable file properties without running the files
     - `FLOSS`: Extracts and de-obfuscates all strings from malware programs (floss .\file.exe ) in powershell
 
+- `Noriben`: Dynamic malware analysis
 
 Analyze suspicious URL/IP/Domain/Hash/File: https://www.virustotal.com/gui/home/search / https://www.abuseipdb.com/
 Windows living off the land scripts and binaries: https://lolbas-project.github.io/
