@@ -137,3 +137,5 @@ Server-side filtering is in php code that we can't see, example: .PHP is blackli
     
     Test javascript output: https://jsconsole.com/
     Minify the script to 1 line: https://www.toptal.com/developers/javascript-minifier
+    Turn minified code back to pretty: https://prettier.io/playground/ or https://beautifier.io/ (or the `{}` symbol in `CTRL+Shift+Z (debugger)`)
+    Deobfuscated (p,a,c,k,e,d) code: https://matthewfl.com/unPacker.html
