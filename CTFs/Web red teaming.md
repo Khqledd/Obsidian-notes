@@ -126,3 +126,14 @@ MIME is Content-Type in the request header and consists of `<type>/<subtype>` (e
 **SO CHECK SOURCE CODE FOR FILTERS**
 
 Server-side filtering is in php code that we can't see, example: .PHP is blacklisted but (.php3 / .php4 / .php5 / .php7 / .phps / .php-s / .pht / .phar) all work or double extensions like `shell.jpg.php` if it checks after the first dot only
+
+
+- Javascript code obfuscators:
+    https://obfuscator.io/
+    https://jsfuck.com/
+    https://beautifytools.com/javascript-obfuscator.php#
+    https://utf-8.jp/public/jjencode.html
+    https://utf-8.jp/public/aaencode.html
+    
+    Test javascript output: https://jsconsole.com/
+    Minify the script to 1 line: https://www.toptal.com/developers/javascript-minifier
