@@ -35,3 +35,9 @@
 - <span style="color:rgb(255, 255, 0)">disable</span>: disable a breakpoint by its number
 - <span style="color:rgb(255, 255, 0)">enable</span>: enable a breakpoint by its number
 - <span style="color:rgb(255, 255, 0)">info b</span>: list all breakpoints and their number
+
+## <span style="color:rgb(247, 145, 29)">Tracing</span>:
+(Used outside of pwndbg)
+- <span style="color:rgb(255, 255, 0)">strace</span>: trace system calls
+- <span style="color:rgb(255, 255, 0)">ltrace</span>: trace library calls
+    running ltrace with different input changes things
