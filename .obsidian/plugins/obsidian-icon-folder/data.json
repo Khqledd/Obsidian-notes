@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiChartBarStacked",
       "LiBadge",
       "🐷",
       "🐉",
-      "LiAmphora",
-      "LiAccessibility"
+      "LiAmphora"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -63,5 +63,6 @@
   "IDS and IPS/Snort.md": "🐷",
   "IDS and IPS/Suricata.md": "LiAmphora",
   "IDS and IPS/Zeek.md": "LiBadge",
-  "PWN/pwndbg.md": "LiAlertTriangle"
+  "PWN/pwndbg.md": "LiAlertTriangle",
+  "PWN/Stack Buffer Overflow.md": "LiChartBarStacked"
 }

@@ -159,6 +159,10 @@
     {
       "path": "IDS and IPS/Zeek.md",
       "color": "lkdZlhfpThGoJI21QfCEy"
+    },
+    {
+      "path": "PWN/Stack Buffer Overflow.md",
+      "color": "tEVkFWbeBb4tTkITU3iOp"
     }
   ]
 }
