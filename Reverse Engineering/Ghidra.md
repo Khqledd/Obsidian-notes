@@ -10,7 +10,16 @@
 
 - In Ghidra variable names: `local_28._4_2_ == 1`:   4 ---> offset / 2 ---> bytes long
 - In Ghidra variable names: `local_28;` means (rbp - 0x28)
+
+**Same variable used as win and lose condition:**
 ![[Pasted image 20260924004943.png]]
+     rbp - 0x48 → input_buffer ← you write from here (low address)
+     rbp - 0x40 → local_40
+     rbp - 0x38 → local_38 
+     rbp - 0x30 → local_30 
+     rbp - 0x28 → local_28 
+     rbp - 0x20 → win_variable ← lower 4 bytes of local_20 
+     rbp - 0x1c → lose_variable ← upper 4 bytes of local_20
 
 
 - <span style="color:rgb(152, 226, 185)">undefined8 local_98[14];</span> means "14 elements, 8 bytes of unknown type"  so the TOTAL SPACE = 14 x 8 = 112 bytes
