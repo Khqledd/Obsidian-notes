@@ -49,7 +49,7 @@ Check if a domain has non-ASCII characters: https://www.punycoder.com/ (if it re
 Check an IP location: https://www.iplocation.net/
 IP analysis to check open ports / services: https://www.shodan.io/ / https://search.censys.io/
 Information about TLS certificates: https://www.sslshopper.com/ssl-checker.html / https://crt.sh/
-
+GOOD TOOLS: https://ericzimmerman.github.io/ (`PS C:\Users\johndoe\Desktop\Get-ZimmermanTools> .\Get-ZimmermanTools.ps1`)
 
 Forensics command to search for web shells created between two dates :
 `find /var/www -type f -name "*.php" -newerct "2025-07-01" ! -newerct "2025-08-01"`
