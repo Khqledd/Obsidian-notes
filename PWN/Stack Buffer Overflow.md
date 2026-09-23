@@ -55,7 +55,7 @@ p win                   # print address of win()
  - `system("/bin/sh")` for a shell
  - Your shellcode (only if NX is disabled)
 
-## <span style="color:rgb(146, 208, 80)">3- Build Payload</span>
+## <span style="color:rgb(146, 208, 80)"><span style="color:rgb(146, 208, 80)">3- Build Payload</span></span>
 ```python
 from pwn import *
 
