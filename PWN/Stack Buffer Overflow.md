@@ -23,10 +23,31 @@ Redirect execution
      ↓
 Get flag
 
-## <span style="color:rgb(146, 208, 80)">1- Finding Offset</span>
+### <span style="color:rgb(146, 208, 80)">1- Finding Offset (Variable Overwrite)</span>
+
 - In terminal:
 ```bash
-cyclic 200          # generate pattern, feed it to the program
+pwn cyclic 200 | ./binary         # pipe pattern to binary, program keeps running
+# read printed variable value from output
+pwn cyclic -l <value>             # outputs the offset number
+```
+
+- In Python:
+```python
+from pwn import *
+
+p = process('./binary')
+payload = cyclic(200)
+p.send(payload)                   # send() NOT sendline() (avoid \n on lose_variable)
+print(p.recvall().decode())       # read win variable value from output
+offset = cyclic_find(0x????????)  # put win variable value here
+```
+(If there is a lose_variable, always use `p.send()` not `p.sendline()`)
+
+## <span style="color:rgb(146, 208, 80)">2- Finding Offset (Return address/RIP overwrite)</span>
+- In terminal:
+```bash
+pwn cyclic 200 | ./binary         # generate pattern, feed it to the program
 # program crashes
 info registers rip  # in GDB, check RIP value
 x/gx $rsp           # return value it crashed at
@@ -44,7 +65,7 @@ offset = cyclic_find(0x6161616b)  # RIP value here
 (If RIP is truncated and cyclic can't find it, check RSP instead: `x/gx $rsp`)
 
 
-## <span style="color:rgb(146, 208, 80)">2- Find Target Address</span> 
+## <span style="color:rgb(146, 208, 80)">3- Find Target Address</span> 
 ```bash
 # In GDB
 info functions          # list all functions, find win()
@@ -55,7 +76,7 @@ p win                   # print address of win()
  - `system("/bin/sh")` for a shell
  - Your shellcode (only if NX is disabled)
 
-## <span style="color:rgb(146, 208, 80)"><span style="color:rgb(146, 208, 80)">3- Build Payload</span></span>
+## <span style="color:rgb(146, 208, 80)"><span style="color:rgb(146, 208, 80)">4- Build Payload</span></span>
 ```python
 from pwn import *
 
