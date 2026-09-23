@@ -10,4 +10,5 @@
 
 - In Ghidra variable names: `local_28._4_2_ == 1`:   4 ---> offset / 2 ---> bytes long
 
-- <span style="color:rgb(152, 226, 185)">undefined8 local_98[14];</span> means "14 elements, 8 bytes of unknown type"  so the TOTAL SPACE = 14 x 8 = 
+- <span style="color:rgb(152, 226, 185)">undefined8 local_98[14];</span> means "14 elements, 8 bytes of unknown type"  so the TOTAL SPACE = 14 x 8 = 112 bytes
+  unlike <span style="color:rgb(152, 226, 185)">char local_98[14];</span> which is "14 elements, char is 1 byte" so the TOTAL SPACE = 14 x 1 = 14 bytes
