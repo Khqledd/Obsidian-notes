@@ -38,7 +38,7 @@ from pwn import *
 
 p = process('./binary')
 payload = cyclic(200)
-p.send(payload)                   # send() NOT sendline() (avoid \n on lose_variable)
+p.send(payload)                   # send() if input read by read() or recv() / sendline() if read by fgets() or scanf()
 print(p.recvall().decode())       # read win variable value from output
 offset = cyclic_find(0x????????)  # put win variable value here
 ```
