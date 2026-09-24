@@ -51,8 +51,8 @@ offset = cyclic_find(0x????????)  # put win variable value here
 gdb ./binary
 r <<< $(pwn cyclic 200)       # run with pattern, program crashes
 info registers rip            # check RIP value after crash
-x/gx $rsp                    # if RIP truncated, check RSP
-cyclic -l <value>             # outputs the offset number
+x/gx $rsp                     # if RIP truncated, check RSP
+cyclic -l <cyclic value>      # outputs the offset number (cyclic value looks like 0x61616171)
 ```
 
 - In Python:
