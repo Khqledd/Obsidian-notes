@@ -1,4 +1,4 @@
-Complete list of standard HTTP headers: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers
+Complete list of standard HTTP headers and methods: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers
 ## <span style="color:rgb(152, 226, 185)">General Headers</span>
 
 | **Header**   | **Example**                           | **Description**                                                                                                                                                                                                                                                                                                                                                                           |
