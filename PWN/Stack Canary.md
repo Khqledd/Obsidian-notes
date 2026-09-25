@@ -144,3 +144,13 @@ payload += p64(win)            # return address
 p.sendline(payload)
 p.interactive()
 ```
+
+### <span style="color:rgb(255, 192, 0)">Things That Go Wrong:</span>
+
+|PROBLEM|FIX|
+|---|---|
+|`stack smashing detected`|Canary value is wrong — re-check leak|
+|Canary leaked as string, ends early|Null byte cut it — use `recv(7)` + prepend `\x00`|
+|Format string index off|Try indices 1–30, look for value ending in `00`|
+|Offset to canary wrong|GDB: `x/gx $rbp-0x8` to confirm canary location|
+|`p.sendline()` corrupts canary|Use `p.send()` — the `\n` might land in the canary|
