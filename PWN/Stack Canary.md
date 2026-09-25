@@ -1,6 +1,6 @@
 ### <span style="color:rgb(255, 192, 0)">What is a Stack Canary?</span>
 
-- In function prologue **A random value placed on the stack between the buffer and the return address**, checked before the function returns
+- In function prologue **A random value placed on the stack between the buffer and the return address**, checked before the function returns (epilogue)
 - If it's been modified → program calls `__stack_chk_fail()` → **abort**
 - Set at program start, stored in `gs:0x28` (thread-local storage)
 
