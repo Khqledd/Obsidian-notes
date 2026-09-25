@@ -163,6 +163,10 @@
     {
       "path": "PWN/Stack Buffer Overflow.md",
       "color": "tEVkFWbeBb4tTkITU3iOp"
+    },
+    {
+      "path": "PWN/Stack Canary.md",
+      "color": "967vkqPa9sBcwiI2DTcoW"
     }
   ]
 }
