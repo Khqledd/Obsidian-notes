@@ -238,3 +238,5 @@ running (xxd file.data) alone doesnt change anything it just prints out the hex 
      `-O`: download a page or a file and output the content into a file (`curl -O http://.../index.html `)
      `-k`: skip the certificate check for HTTPS websites
      `-v`: see the full HTTP response and request
+     `-I`: sends a HEAD request and only display response header
+     `-A`: to set our User-Agent
