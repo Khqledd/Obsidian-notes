@@ -240,4 +240,4 @@ running (xxd file.data) alone doesnt change anything it just prints out the hex 
      `-v`: see the full HTTP response and request
      `-I`: sends a HEAD request and only display response header
      `-A`: to set our User-Agent
-     `-u`: provide crede
+     `-u`: provide credentials (`curl -u admin:admin http://<SERVER_IP>:<PORT>/`) or (`curl http://admin:admin@<SERVER_IP>:<PORT>/`)
