@@ -3,6 +3,15 @@
 - In function prologue **A random value placed on the stack between the buffer and the return address**, checked before the function returns (epilogue)
 - If it's been modified → program calls `__stack_chk_fail()` → **abort**
 - Set at program start, stored in `gs:0x28` (thread-local storage)
+```bash
+mov    rax,QWORD PTR fs:0x28          # Strong indication of a canary
+mov    QWORD PTR [rbp-0x8],rax        # Canary is located at [rbp-0x8] (inspect it usi)
+
+mov    rax,QWORD PTR [rbp-0x8]
+sub    rax,QWORD PTR fs:0x28
+jne    ...
+call   __stack_chk_fail
+```
 
 Typical stack layout **with** canary:
 ```
