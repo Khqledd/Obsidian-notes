@@ -1,11 +1,12 @@
 ### <span style="color:rgb(255, 192, 0)">What is a Stack Canary?</span>
 
 - In function prologue **A random value placed on the stack between the buffer and the return address**, checked before the function returns (epilogue)
+- Canary usually looks like `0x7a91f3c4008e1200`, it ends with `00`
 - If it's been modified → program calls `__stack_chk_fail()` → **abort**
 - Set at program start, stored in `gs:0x28` (thread-local storage)
 ```bash
 mov    rax,QWORD PTR fs:0x28          # Strong indication of a canary
-mov    QWORD PTR [rbp-0x8],rax        # Canary is located at [rbp-0x8] (inspect it usi)
+mov    QWORD PTR [rbp-0x8],rax        # Canary is located at [rbp-0x8] (inspect it using x/gx $rbp-0x8)
 
 mov    rax,QWORD PTR [rbp-0x8]
 sub    rax,QWORD PTR fs:0x28
