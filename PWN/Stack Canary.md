@@ -52,12 +52,9 @@ Get flag
 
 ---
 
-### <span style="color:rgb(146, 208, 80)">Method 1 — Format String Leak</span>
+### <span style="color:rgb(255, 192, 0)">Method 1 — Format String Leak</span>
 
 If there's a `printf(buf)` vulnerability before the overflow:
-
-python
-
 ```python
 from pwn import *
 
