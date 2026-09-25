@@ -241,3 +241,8 @@ running (xxd file.data) alone doesnt change anything it just prints out the hex 
      `-I`: sends a HEAD request and only display response header
      `-A`: to set our User-Agent
      `-u`: provide credentials (`curl -u admin:admin http://<SERVER_IP>:<PORT>/`) or (`curl http://admin:admin@<SERVER_IP>:<PORT>/`)
+     `-X`: specify the HTTP method (`-X POST`)
+     `-d`: data you are sending in the request body (`-d 'username=admin&password=admin'`)
+     `-b`: send cookie with the request (`curl -b 'PHPSESSID=abc123' http://example.com`)
+     `-H`: set a request header (`curl -H 'Content-Type: application/json' http://example.com`)
+     
