@@ -237,4 +237,4 @@ running (xxd file.data) alone doesnt change anything it just prints out the hex 
 <span style="color:rgb(247, 145, 29)">curl</span>: send a basic HTTP request to any URL
      `-O`: download a page or a file and output the content into a file (`curl -O http://.../index.html `)
      `-k`: skip the certificate check for HTTPS websites
-     
+     `-v`: see the full HTTP response and request
