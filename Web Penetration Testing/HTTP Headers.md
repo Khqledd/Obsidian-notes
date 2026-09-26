@@ -39,3 +39,16 @@ Complete list of request headers: https://www.rfc-editor.org/info/rfc7231/#secti
 |`Content-Security-Policy`|`Content-Security-Policy: script-src 'self'`|Dictates the website's policy towards externally injected resources. This could be JavaScript code as well as script resources. This header instructs the browser to accept resources only from certain trusted domains, hence preventing attacks such as [Cross-site scripting (XSS)](https://en.wikipedia.org/wiki/Cross-site_scripting).|
 |`Strict-Transport-Security`|`Strict-Transport-Security: max-age=31536000`|Prevents the browser from accessing the website over the plaintext HTTP protocol, and forces all communication to be carried over the secure HTTPS protocol. This prevents attackers from sniffing web traffic and accessing protected information such as passwords or other sensitive data.|
 |`Referrer-Policy`|`Referrer-Policy: origin`|Dictates whether the browser should include the value specified via the `Referer` header or not. It can help in avoiding disclosing sensitive URLs and information while browsing the website.|
+
+# <span style="color:rgb(152, 226, 185)">CRUD API</span>
+
+| CRUD       | HTTP method     | Typical endpoint | CTF relevance           | What to look for                                           |
+| ---------- | --------------- | ---------------- | ----------------------- | ---------------------------------------------------------- |
+| **Create** | `POST`          | `/api/users`     | Create objects/accounts | Mass assignment, missing auth, parameter injection         |
+| **Read**   | `GET`           | `/api/users/123` | Retrieve data           | **IDOR/BOLA**, information disclosure, auth bypass         |
+| **Update** | `PUT` / `PATCH` | `/api/users/123` | Modify objects          | **IDOR/BOLA**, mass assignment, privilege changes          |
+| **Delete** | `DELETE`        | `/api/users/123` | Delete objects          | **IDOR/BOLA**, missing authorization                       |
+| **List**   | `GET`           | `/api/users`     | Enumerate objects       | Excessive data exposure, filtering bypass, pagination bugs |
+- Assuming users is the table name, 123 is an ID of a specific row
+- We can enumerate using curl
+- You add `Content-Type: application/json` when the **body of your HTTP request contains JSON**.
