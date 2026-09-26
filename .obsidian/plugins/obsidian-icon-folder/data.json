@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiCurlyBraces",
       "LiAlignHorizontalSpaceAround",
       "LiAmphora",
       "LiEye",
-      "LiAmpersand",
-      "LiChartBarStacked"
+      "LiAmpersand"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -68,5 +68,6 @@
   "PWN/General.md": "LiAmpersand",
   "PWN/Stack Canary.md": "LiEye",
   "Web Penetration Testing/HTTP Headers.md": "LiAmphora",
-  "PWN/ASLR.md": "LiAlignHorizontalSpaceAround"
+  "PWN/ASLR.md": "LiAlignHorizontalSpaceAround",
+  "Web Penetration Testing/curl.md": "LiCurlyBraces"
 }
