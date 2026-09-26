@@ -68,7 +68,7 @@ info functions     # or: p win
 # <span style="color:rgb(255, 192, 0)">STEP (2) Pick a method</span>
 ### <span style="color:rgb(255, 255, 0)">Method 1 — Format String Leak</span>
 
-If there's a `printf(buf)` vulnerability before the overflow:
+If there's a `printf(buf)` vulnerability before the overflow: (`printf(buf)` instead of `printf("%s", buf)`).
 Step 1: find canary's format-string index
 ```python
 from pwn import *
@@ -116,7 +116,7 @@ p.interactive()                  # hand control to us — type commands if we go
 ### <span style="color:rgb(255, 255, 0)">Method 2 — Null Byte Overwrite Leak</span>
 
 If the binary **prints back your buffer** (e.g. `printf(buf)` or `puts(buf)`) and there's a separate read:
-
+Use this when there's only the buffer overflow itself, but the program **echoes your buffer back** with something null-terminated like `puts()`
 - Canary's first byte is always `\x00` — this is what stops `puts()` from reading past your buffer into the canary
 - Fill the buffer completely → your last byte overwrites that `\x00` → `puts()` has no null terminator to stop at, so it bleeds into the 7 remaining canary bytes and prints them
 - Grab those 7 bytes, manually prepend `\x00` → you have the full 8-byte canary
