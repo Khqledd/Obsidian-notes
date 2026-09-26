@@ -153,7 +153,6 @@ p.interactive()
 ```
 
 
-
 # <span style="color:rgb(255, 255, 0)">Things that go wrong</span>
 
 | PROBLEM                      | FIX                                                                                              |
