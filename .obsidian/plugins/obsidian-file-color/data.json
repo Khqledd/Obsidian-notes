@@ -179,6 +179,10 @@
     {
       "path": "Web Penetration Testing/curl.md",
       "color": "tEVkFWbeBb4tTkITU3iOp"
+    },
+    {
+      "path": "PWN/PIE.md",
+      "color": "oXceK6COXelTC3UxZGw5z"
     }
   ]
 }
