@@ -12,7 +12,7 @@ Do you see how the last three digits (e.g., 12 bits, or 1.5 bytes, or affectiona
 
 So, realistically, we know the last three nibbles of any address in the binary as these nibbles never change due to the page-alignment (to `0x1000` bytes). This gives us a workaround: we can overwrite the least significant byte of the saved return address, which we can know from debugging the binary, to retarget the return to main to any instruction that shares the other 7 bytes. Since that last byte will be constant between executions (due to page alignment), this will always work. If the address we want to redirect execution to is a bit farther away from the saved return address, and we need to write two bytes, then one of those nibbles (the fourth least-significant one) will be a guess, and it will be incorrect 15 of 16 times. This is okay: we can just run our exploit a few times until it works (statistically, ~50% chance after 11 times and ~90% chance after 36 times).
 
-EXAMPLE SCRIPT:
+EXAMPLE SCRIPT (might have to run it many times to work):
 ```python
 from pwn import *
 
