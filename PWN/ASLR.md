@@ -9,6 +9,6 @@
 
 ## <span style="color:rgb(255, 0, 0)">Simple demonstration</span>:
 1- Win function at 0x555555551d7
-2- `set *(unsigned char *)$rsp 0xd7`
+2- `set *(unsigned char *)$rsp = 0xd7`
 3- `x/gx $rsp` (to make sure its at 0x5555551d7)
 4- `continue`
