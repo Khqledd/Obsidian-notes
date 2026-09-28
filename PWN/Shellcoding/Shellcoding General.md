@@ -1,13 +1,40 @@
 
 - Shellcode = **raw machine code bytes** you inject into a vulnerable program so the CPU executes them directly.
 - Requires the target memory region to be **executable** (stack/heap with NX off). If NX is on, shellcoding alone won't work — you'd need ROP instead.
+- **Goal**: Find a way to write your bytes into memory ↓ Redirect execution (RIP) to those bytes ↓ Your bytes run as CPU instructions ↓ Spawn a shell / read the flag ↓ Get flag
 
 ---
-## <span style="color:rgb(146, 208, 80)">The Goal:</span>
-Find a way to write your bytes into memory ↓ Redirect execution (RIP) to those bytes ↓ Your bytes run as CPU instructions ↓ Spawn a shell / read the flag ↓ Get flag
+### <span style="color:rgb(146, 208, 80)">0- When does shellcoding actually get triggered?</span>
+
+Shellcoding isn't its own bug, it's the **payload** you drop in once some other bug lets you redirect execution. It works whenever attacker-controlled data ends up being treated as something the CPU jumps to or calls. Two common triggers:
+
+- **Return address overwrite** — classic stack buffer overflow, overwrite the saved return address so `ret` jumps into your shellcode.
+- **Function pointer overwrite** — a variable/argument that's supposed to hold a function pointer gets overwritten (or swapped) with attacker data, and later gets `call`ed.
+
+Example of the function-pointer case (classic pwn.college demo):
+
+```c
+void hello(char *name, void (*bye_func)()) {
+    printf("Hello %s!\n", name);
+    bye_func();               // calls whatever address is in bye_func
+}
+
+int main(int argc, char **argv) {
+    char name[1024];
+    gets(name);                // unbounded input, fully attacker-controlled
+
+    if (rand() % 2) hello(bye1, name);   // normal: bye1 is a real function pointer
+    else             hello(name, bye2);  // BUG: attacker's buffer fills the bye_func slot!
+}
+```
+
+In the buggy branch, `name` (your raw input) lands in the `bye_func` parameter. So `bye_func()` doesn't call a real function — it jumps to whatever address your input put there. If that's your shellcode's address (or your shellcode itself), you win.
+
+Two conditions always need to hold for shellcoding to work:
+1. You can **redirect execution** to an address you control (via one of the vectors above).
+2. That address is in **executable memory** (NX has to be off — otherwise the CPU refuses to run it).
 
 ---
-
 ### <span style="color:rgb(146, 208, 80)">1- Why "shell"code?</span>
 
 Goal is usually arbitrary command execution. Classic target: `execve("/bin/sh", NULL, NULL)`.
@@ -33,14 +60,13 @@ Common x86-64 syscall numbers to remember:
 |`execve`|59|path, argv, envp|
 |`exit`|60|status|
 |`sendfile`|40|out_fd, in_fd, offset, count|
-
-(Find more with `man 2 syscall` or the syscall table online if a challenge needs one not listed here.)
+(Find more with `man 2 syscall` )
 
 ---
 
 ### <span style="color:rgb(146, 208, 80)">2- Non-shell shellcode (reading a flag file directly)</span>
 
-pwn.college challenges often can't give you an interactive shell (no stdin/stdout hooked up the normal way) — instead you write shellcode that **reads `/flag` and prints it**.
+write shellcode that **reads `/flag` and prints it**.
 
 ```asm
 mov rbx, 0x00000067616c662f  ; "/flag" packed into a register (little-endian)
