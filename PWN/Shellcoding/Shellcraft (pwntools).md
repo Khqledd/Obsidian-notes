@@ -1,4 +1,3 @@
-# Shellcraft & pwntools Notes (pwn CTF)
 
 **shellcraft** is pwntools' built-in shellcode generator — instead of hand-writing assembly, you call a Python function and get ready-made shellcode (spawn a shell, read a file, etc), with problem bytes already avoided for you.
 
@@ -96,9 +95,9 @@ p.interactive()
 
 ## <span style="color:rgb(146, 208, 80)">Things that go wrong:</span>
 
-|PROBLEM|FIX|
-|---|---|
-|`NameError: shellcraft not defined`|Use `from pwn import *`, not `import pwn`|
-|Wrong architecture bytes generated|Set `context.arch` / `context.os` **before** calling `shellcraft`/`asm`|
-|Sent the wrong thing|`shellcraft.sh()` alone is assembly text — you must wrap it in `asm()` before sending|
-|Want to see what it actually generated|`print(shellcraft.sh())` to view the raw assembly before assembling|
+| PROBLEM                                | FIX                                                                                   |
+| -------------------------------------- | ------------------------------------------------------------------------------------- |
+| `NameError: shellcraft not defined`    | Use `from pwn import *`, not `import pwn`                                             |
+| Wrong architecture bytes generated     | Set `context.arch` / `context.os` **before** calling `shellcraft`/`asm`               |
+| Sent the wrong thing                   | `shellcraft.sh()` alone is assembly text — you must wrap it in `asm()` before sending |
+| Want to see what it actually generated | `print(shellcraft.sh())` to view the raw assembly before assembling                   |
