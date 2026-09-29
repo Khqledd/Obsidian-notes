@@ -61,6 +61,31 @@
       "id": "3tobGF_Q1drdCFhFy3Soy",
       "name": "",
       "value": "#f04747"
+    },
+    {
+      "id": "W02KI_sxVcC0o8V1lOU_F",
+      "name": "",
+      "value": "#ffffff"
+    },
+    {
+      "id": "10KPkcoX7SvRbQGD7PO0e",
+      "name": "",
+      "value": "#ec4680"
+    },
+    {
+      "id": "HBctFtqg3aZqAye3NyC2T",
+      "name": "",
+      "value": "#838b13"
+    },
+    {
+      "id": "7uAj9Ya2cH0IH84Q75m0Y",
+      "name": "",
+      "value": "#ffb3b3"
+    },
+    {
+      "id": "KpE0pQ7EllyXelIbtF4AM",
+      "name": "",
+      "value": "#4e56d0"
     }
   ],
   "fileColors": [
@@ -187,6 +212,14 @@
     {
       "path": "PWN/Shellcoding/Shellcoding General.md",
       "color": "4Y9N0giwSuvoEGus2B_nJ"
+    },
+    {
+      "path": "PWN/Shellcoding/Common Challenges.md",
+      "color": "W02KI_sxVcC0o8V1lOU_F"
+    },
+    {
+      "path": "PWN/Shellcoding/Shellcraft (pwntools).md",
+      "color": "HBctFtqg3aZqAye3NyC2T"
     }
   ]
 }
