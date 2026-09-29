@@ -1,3 +1,5 @@
+ **x86 and amd64 instruction reference**: https://www.felixcloutier.com/x86/
+
 <span style="color:rgb(0, 176, 80)">Hex value conversion:</span>
 ![[Pasted image 20260718022143.png|384]]
 
