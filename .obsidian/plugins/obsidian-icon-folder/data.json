@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiFileSliders",
       "LiAlignEndHorizontal",
       "LiAngry",
       "LiAlarmClockOff",
-      "🥧",
-      "LiCurlyBraces"
+      "🥧"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -73,5 +73,6 @@
   "PWN/PIE.md": "🥧",
   "PWN/Shellcoding/Shellcoding General.md": "LiAlarmClockOff",
   "PWN/Shellcoding/Common Challenges.md": "LiAngry",
-  "PWN/Shellcoding/Shellcraft (pwntools).md": "LiAlignEndHorizontal"
+  "PWN/Shellcoding/Shellcraft (pwntools).md": "LiAlignEndHorizontal",
+  "PWN/Shellcoding/NOP Sleds.md": "LiFileSliders"
 }

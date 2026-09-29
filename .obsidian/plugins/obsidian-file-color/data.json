@@ -220,6 +220,10 @@
     {
       "path": "PWN/Shellcoding/Shellcraft (pwntools).md",
       "color": "HBctFtqg3aZqAye3NyC2T"
+    },
+    {
+      "path": "PWN/Shellcoding/NOP Sleds.md",
+      "color": "lkdZlhfpThGoJI21QfCEy"
     }
   ]
 }
