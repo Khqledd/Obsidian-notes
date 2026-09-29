@@ -130,25 +130,7 @@ objcopy --dump-section .text=shellcode-raw shellcode-elf
 `shellcode-raw` now contains the raw machine code bytes — this is exactly what you inject into the target program (e.g. `payload = open("shellcode-raw","rb").read()` in pwntools).
 
 ---
-
-### <span style="color:rgb(146, 208, 80)">5- Testing/running shellcode locally</span>
-
-Just run the ELF you built:
-
-```bash
-gcc -nostdlib -static shellcode.s -o shellcode-elf
-./shellcode-elf
-```
-
-To compile a vulnerable C target with an executable stack for practice (mirrors pwn.college labs where NX is intentionally disabled):
-
-```bash
-gcc -z execstack -o hello hello.c
-```
-
----
-
-### <span style="color:rgb(146, 208, 80)">6- Debugging shellcode</span>
+### <span style="color:rgb(146, 208, 80)">5- Debugging shellcode</span>
 
 **High-level check — strace** (see which syscalls actually fire):
 
