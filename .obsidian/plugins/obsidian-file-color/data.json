@@ -224,6 +224,10 @@
     {
       "path": "PWN/Shellcoding/NOP Sleds.md",
       "color": "lkdZlhfpThGoJI21QfCEy"
+    },
+    {
+      "path": "PWN/Shellcoding/Hijacking to Shellcode.md",
+      "color": "cZHYgt23Axy2cthIocVTu"
     }
   ]
 }
