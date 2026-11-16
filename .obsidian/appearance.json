@@ -2,5 +2,6 @@
   "theme": "obsidian",
   "accentColor": "#578fff",
   "textFontFamily": "Arial",
-  "baseFontSize": 19
+  "baseFontSize": 19,
+  "showRibbon": true
 }
